@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{minitoc}
+\usepackage{graphicx, caption, subcaption}
+\usepackage[font={small,it}]{caption}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{geometry}
+\usepackage{xcolor} % to access the named colour LightGray
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{grey}{rgb}{0.9,0.9,0.9} % Colour of the box surrounding the title
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\usepackage{minted}
+\usepackage{booktabs}
+\setlength{\parindent}{0px} %makes paragraph indents go away
+\usepackage{accents}
+\usepackage{listings}
+% Matrix notation
+\newcommand{\matr}[1]{\mathbf{#1}}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[font=footnotesize]{caption}
+\usepackage[british]{babel}
+
+\newcommand\uvec[1]{\underaccent{\vec}{#1}}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\input{chapters/title.tex}
+
+\begin{abstract}
+    \input{chapters/abstract.tex}
+\end{abstract}
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{section}{Table of Contents}
+\tableofcontents
+\clearpage
+\newpage
+\pagenumbering{arabic}
+\input{chapters/introduction.tex}
+\newpage
+\input{chapters/methods.tex}
+\newpage
+\input{chapters/results.tex}
+\newpage
+\input{chapters/conclusions.tex}
+%\input{chapters/examples}
+
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{ieeetr}
+\bibliography{resources/literature.bib}
+
+
+\end{document}
