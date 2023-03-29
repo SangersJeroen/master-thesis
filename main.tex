@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage{siunitx}
+\usepackage[free-standing-units=true]{siunitx}
 \usepackage{gensymb}
 \usepackage{amsmath, amssymb}
 \usepackage[T1]{fontenc}
@@ -21,6 +21,10 @@
 \setlength{\parindent}{0px} %makes paragraph indents go away
 \usepackage{accents}
 \usepackage{listings}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
 % Matrix notation
 \newcommand{\matr}[1]{\mathbf{#1}}
 \usepackage[font=small,labelfont=bf]{caption}
@@ -28,6 +32,11 @@
 \usepackage[british]{babel}
 
 \newcommand\uvec[1]{\underaccent{\vec}{#1}}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./resources/figures/}{#1.pdf_tex}
+}
 
 \begin{document}
 
@@ -49,6 +58,7 @@
 \newpage
 \input{chapters/theory.tex}
 \input{chapters/methods.tex}
+\newpage
 \input{chapters/results.tex}
 \newpage
 \input{chapters/conclusions.tex}
@@ -58,6 +68,5 @@
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{ieeetr}
 \bibliography{resources/literature.bib}
-
 
 \end{document}
