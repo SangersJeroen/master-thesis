@@ -1,5 +1,43 @@
 \section{Theory}
 \subsection{TMDC/Crystal structure}
+\subsubsection{Transition metal dichalcogenides}
+\subsubsection{Crystal lattice and band structure}
+An infinitely repeating group of atoms is called an ideal crystal, such a crystal is constructed by attaching the same group of atoms, often called a unit cell, to a lattice.
+The lattice can be constructed from $n$ independent lattice vectors. $n=1$ for an atomic chain, $n=2$ for a two-dimensional monolayer, and, $n=3$ for a three-dimensional crystal.
+If no smaller repeating group of atoms can be constructed to fill the lattice then this group of atoms is called the primitive unit cell and the $n$-independent lattice vectors are then called the primitive translation vectors $a_{n}$ \cite{Kittel1995-qt}.
+Each of the $n$ lattice vectors signifies a direction and length of displacement needed such that the shifted crystal lattice is indistinguishable from the original crystal lattice \ref{eq:lattice_equivalent}.
+Lattice vectors are also used to specify the orientation of a crystal plane by denoting where the plane intersects the lattice vector, this procedure allows for unique indexing of crystallographic planes. The use of these planes will be discussed in \ref{sec:diffraction}.
+\begin{equation}
+    \vec{r}' = \vec{r} + u_1 \vec{a_1} +u_2 \vec{a_2} + u_3 \vec{a_3}
+    \label{eq:lattice_equivalent}
+\end{equation}
+
+\subsubsection{Reciprocal lattice and electron diffraction}
+\label{sec:diffraction}
+In the previous section the crystal lattice was introduced, and it was mentioned that there were unique planes characterized by the points where they intersect the lattice vectors.
+In reciprocal space every lattice point is equivalent to one set of these planes.
+To best understand a crystal, it is helpful to conceptualize it as having two lattices. The first lattice pertains to the organization of the atoms within the crystal's unit cells. The second lattice is a pattern of points that is specific to each crystal and does not correspond to the atom arrangement. Rather, each point in the lattice is linked to a particular set of planes within the crystal \cite{Williams2009-ww}.
+Both lattice constructions are equally valid but are helpful under different circumstances; the reciprocal lattice, for instance, is a useful geometrical construct when talking about diffraction.
+
+The reciprocal lattice, just like the crystal lattice, is constructed by vectors; in the case for the reciprocal lattice these are the reciprocal lattice vectors $\vec{b}_n$.
+The reciprocal lattice vectors are constructed from the real-space lattice vectors using equation (\ref{eq:lattice_ortho_norm}) and satisfy relation (\ref{eq:lattice_vec_prop}) with their real-space counterpart.
+Using these definitions the reciprocal lattice vectors are unique.
+Any reciprocal vector can now be composed uniquely by a linear combination of the reciprocal lattice vectors, such that any vector is scaled and summed. If the scalars are integers they are the miller indices and correspond to a crystallographic plane. \\
+
+\begin{minipage}{0.5\textwidth}
+    \begin{equation}
+        \vec{b}_i = 2 \pi \vec{a}_j \times \vec{a}_k \cdot \left[ \vec{a}_i \cdot ( \vec{a}_j \times \vec{a}_k ) \right]^{-1} 
+    \label{eq:lattice_ortho_norm}
+   \end{equation}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+    \begin{equation}
+        \vec{b}_i \cdot \vec{a}_j = 2\pi \delta_{ij}
+    \label{eq:lattice_vec_prop}
+   \end{equation}
+\end{minipage}
+
+
 \begin{enumerate}
     \item crystal lattice
     \item diffraction pattern / reciprocal space
