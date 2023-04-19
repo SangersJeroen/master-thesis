@@ -1,5 +1,6 @@
 \section{Methods}
 \subsection{Mechanical transfer}
+Mechanical transfer relates to the method of moving a sample from one substrate to another whilst minimising the amount of imperfections introduced. This transfer is usually from the growth substrate to a target substrate used for an electrical device or to a TEM grid for characterization in a transmission electron microscope.
 \subsection{TEM / EMPAD / EELS? / HRTEM}
 \begin{enumerate}
     \item Electron microscope workings and explanation of all detectors
@@ -14,17 +15,43 @@ The Transmission electron microscope (TEM) is a microscope that far exceeds the 
 A normal light microscope can amplify an image up to about 1500$\times$ and is limited by the diffraction limit of light. Assuming an average wavelength of \SI{550}{\nm} for green light, a high-end microscope is limited to resolving features \SI{100}{\nm} apart.
 This limit is insufficient for looking at atomic structures \cite{PhysRevLett.106.193905}.\\
 An electron microscope circumvents this limit by using electrons, not light, to probe the specimen. Electrons when accelerated have a smaller wavelength than light thus allowing for images with resolved features as small as \SI{0.05}{\nm}. \cite{kisielowski_freitag_bischoff_van}
-The TEM works by releasing electrons from an electron source and accelerating them to an energy typically expressed in kilo-electronvolt.
-After being accelerated the electrons pass multiple electromagnetic lenses and a condenser aperture to shape the beam before it 'illuminates' the specimen as illustrated in \ref{fig:tem}.
-The beam incident on the sample is limited to an illumination semi-angle $\alpha$ which is inversely proportional to the resolution, but limiting $\alpha$ decreases the amount of electrons incident on the specimen and thus a frame needs more time for an exposure.
-After having interacted with the specimen the beam is again limited by an aperture, this aperture sets the collection semi-angle $\beta$ which controls the limit of scattering angles allowed into the imaging lenses.
-After the beam is conditioned by the imaging lenses it passes through four electromagnetic prisms which make up an energy filter called an $\Omega$-filter named after the shape it needs to have to keep the TEM stack aligned with the CCD-camera to limit aberrations.
-The $\Omega$-filter is used for the energy filtered TEM images discussed in section \ref{sec:eftem}.\\
-Two types of images can be made with the TEM, a normal image which shows the magnified sample and a diffraction pattern image which can be made by placing the capture device in the focal point of the lens and filter system.
-A diffraction mode image shows the diffraction peaks that are characteristic of the sample and yields information on the reciprocal lattice of the sample. \cite{Egerton_2008}
+The TEM works by releasing electrons from an electron source and accelerating them to an energy typically expressed in kilo-electronvolt; as shown in equation \ref{eq:acc_volts}, the higher the accelerating voltage of the microscope the smaller the de Broglie wavelength of an electron, which results in a higher resolving power. Modern electron microscopes accelerate electrons up to \SI{300}{\kilo \electronvolt}
+
+\begin{equation}
+    \lambda_e = h\cdot \left[ 2 \cdot e \cdot m_e \cdot V_a \right]^{-1/2}
+    \label{eq:acc_volts}
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[keepaspectratio, width=0.5\linewidth]{resources/Figures/feg.png} 
+    \caption{A field emission gun, \cite{Williams2009-ww}}
+    \label{fig:feg}
+\end{figure}
+
+In a TEM the electrons are released from a field emission gun (FEG, pictured in Figure \ref{fig:feg}). 
+The FEG is placed in proximity to two anodes, the first anode is positively charged to several kilovolts such that it extracts electrons from the tip of the FEG, the second anode is charged to the wanted acceleration voltage \cite{Williams2009-ww}.
+FEGs are about three orders of magnitude brighter than thermionic emission electron sources \cite{field-emission}.
+After being emitted the electrons pass through a monochromator that reduces the energy spread of the emitted electrons. An electron then continues along the optical axis into an illuminating system consisting of multiple electromagnetic lenses, which lenses are activated and to what extent depends on the operating mode of the electron microscope.
 
 \subsubsection{Bright Field}
+A bright field (BF) image of the sample is acquired by using a parallel electron beam. This beam is formed using the lens configuration shown in figure \ref{fig:tem_operating}. This parallel beam is typically several micrometers in size at magnifications up to 20k-100k$\times$.
+In normal operating mode a BF image is captured by a camera looking at a phosphorous screen or by a camera directly, this method of imaging is most analogues to a normal light microscope.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth, keepaspectratio]{resources/Figures/tem_operating.png}
+    \caption{Illumination system for parallel beam.}
+    \label{fig:tem_operating}
+\end{figure}
 \subsubsection{Dark Field, Z-contrast and high-resolution TEM}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth, keepaspectratio]{resources/Figures/stem_operating.png}
+    \caption{Illumination system for convergent beam.}
+    \label{fig:stem_operating}
+\end{figure}
+
+
 \subsubsection{Electron microscope pixel-array detector}
 \subsubsection{Electron energy-loss spectroscopy}
 In a TEM setup electrons are essentially shot through a sample in which the electrons can either simply pass through or scatter, in the latter scenario there are two possibilities, electrons can scatter elastically or inelastically.
