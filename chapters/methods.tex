@@ -37,6 +37,8 @@ After being emitted the electrons pass through a monochromator that reduces the 
 \subsubsection{Bright Field}
 A bright field (BF) image of the sample is acquired by using a parallel electron beam. This beam is formed using the lens configuration shown in figure \ref{fig:tem_operating}. This parallel beam is typically several micrometers in size at magnifications up to 20k-100k$\times$.
 In normal operating mode a BF image is captured by a camera looking at a phosphorous screen or by a camera directly, this method of imaging is most analogues to a normal light microscope.
+The electron beam is focused in such a way that it illuminates the sample with a parallel beam, such a beam is also used for creating the clearest diffraction patterns.
+%A bright field image can also be formed in STEM operating mode.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth, keepaspectratio]{resources/Figures/tem_operating.png}
@@ -44,6 +46,10 @@ In normal operating mode a BF image is captured by a camera looking at a phospho
     \label{fig:tem_operating}
 \end{figure}
 \subsubsection{Dark Field, Z-contrast and high-resolution TEM}
+For dark field and Z-contrast the electron beam is focused to a small area, this creates a higher intensity electron beam with a probe-like point as can be seen in Figure \ref{fig:stem_operating}. Since all the electrons are focused on a small area there is no contrast information that can be used to form an image. To form an image using such a beam the probe point needs to be scanned over the sample leading to the term Scanning Transmission Electron Microscopy.
+Dark field images use electrons scattered away from the optical axis to form an image, to achieve this most STEMs have a series of annular dark field detectors.
+These ring shaped detectors encircle the central bright field detector and can collect electrons that have been scattered at various angles. Normal dark field detectors collect electrons scattered up to an angle of \SI{50}{\milli \radian}. The outermost detector is the high-angle annular dark field detector (HAADF) which collects electrons scattered beyond \SI{50}{\milli \radian} and can be used to create Z-contrast (atomic number Z) or mass-thickness images.
+The HAADF detector is used since the electrons it collect are almost exclusively incoherently elastically scattered which is proportional to the atomic number Z.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth, keepaspectratio]{resources/Figures/stem_operating.png}
