@@ -1,12 +1,18 @@
 \section{Theory}
 \subsection{TMDC/Crystal structure}
 \subsubsection{Transition metal dichalcogenides}
+Transition metal dichalcogenides or TMDCs are a family of materials consisting of transition metals (group 3 through 12 on the periodic table) and chalcogen atoms (Sulphur, Selenium or Tellurium) in an \ce{MX_2}-configuration, where \ce{M} is the metal atom and \ce{X_2} are the chalcogen atoms \cite{C7TA04268J}.
+The properties of TMDCs depend greatly on the amount of stacked layers and with individual layers being as thin as \SI{6.5}{\angstrom} for \ce{MoS_2} these materials are often referred to as layered or two-dimensional materials.
+Decreasing the amount of layers from bulk changes electrical properties such as the bandgap which for some TMDCs can go from an indirect to a direct bandgap.
+These electrical properties make TMDCs useful in electronics as transistors and in optoelectronics as emitters and detectors \cite{emerg_photolum, LopezSanchez2013, Radisavljevic2011}. 
+If present, multiple layers of TMDCs are held together by weak interlayer Van der Waals forces making these materials flexible and transferable using polymer based techniques \cite{reganEmergingExcitonPhysics2022a}.
+
 \subsubsection{Crystal lattice and band structure}
 An infinitely repeating group of atoms is called an ideal crystal, such a crystal is constructed by attaching the same group of atoms, often called a unit cell, to a lattice.
 The lattice can be constructed from $n$ independent lattice vectors. $n=1$ for an atomic chain, $n=2$ for a two-dimensional monolayer, and, $n=3$ for a three-dimensional crystal.
 If no smaller repeating group of atoms can be constructed to fill the lattice then this group of atoms is called the primitive unit cell and the $n$-independent lattice vectors are then called the primitive translation vectors $a_{n}$ \cite{Kittel1995-qt}.
 Each of the $n$ lattice vectors signifies a direction and length of displacement needed such that the shifted crystal lattice is indistinguishable from the original crystal lattice \ref{eq:lattice_equivalent}.
-Lattice vectors are also used to specify the orientation of a crystal plane by denoting where the plane intersects the lattice vector, this procedure allows for unique indexing of crystallographic planes. The use of these planes will be discussed in \ref{sec:diffraction}.
+Lattice vectors are also used to specify the orientation of a crystal plane by denoting where the plane intersects the lattice vectors, this procedure allows for unique indexing of crystallographic planes. The use of these planes will be discussed in \ref{sec:diffraction}.
 \begin{equation}
     \vec{r}' = \vec{r} + u_1 \vec{a_1} +u_2 \vec{a_2} + u_3 \vec{a_3}
     \label{eq:lattice_equivalent}
@@ -53,6 +59,7 @@ If both outgoing rays from the same incoming beam wavefront are then in phase, m
 \end{equation}
 
 This shows that scattering allows for a finite quantized momentum transfer from the electron to the crystal lattice or vice versa. In a crystalline sample this results in bright spots in the diffraction image, where each bright spot can be indexed and attributed to a family of planes in the crystal that facilitate the momentum transfer for the electrons to reach that spot on the detector or phosphor film.
+Just as the real-space lattice has a unit cell so does the reciprocal lattice. In reciprocal space this unit cell is called the Brillouin zone.
 
 \begin{figure}
     \centering
@@ -74,7 +81,7 @@ This shows that scattering allows for a finite quantized momentum transfer from 
     \item crystal lattice
     \item diffraction pattern / reciprocal space
 \end{enumerate}
-\subsection{Moiré}
+\subsection{Moiré Physics in two-dimensional heterostructures}
 \begin{enumerate}
     \item moire pattern -> stacking
     \item lattice relaxation

@@ -25,7 +25,7 @@ The TEM works by releasing electrons from an electron source and accelerating th
 \begin{figure}[h]
     \centering
     \includegraphics[keepaspectratio, width=0.5\linewidth]{resources/Figures/feg.png} 
-    \caption{A field emission gun, \cite{Williams2009-ww}}
+    \caption{Pictured is the tip of a field emission gun \cite{Williams2009-ww}. The tapered tip facilitates the creation of a strongly varying potential that eases the expulsion of electrons from the material. These electrons are then accelerated along the optical axis.}
     \label{fig:feg}
 \end{figure}
 
@@ -45,11 +45,13 @@ The electron beam is focused in such a way that it illuminates the sample with a
     \caption{Illumination system for parallel beam.}
     \label{fig:tem_operating}
 \end{figure}
-\subsubsection{Dark Field, Z-contrast and high-resolution TEM}
+\subsubsection{Dark Field, Z-contrast}
 For dark field and Z-contrast the electron beam is focused to a small area, this creates a higher intensity electron beam with a probe-like point as can be seen in Figure \ref{fig:stem_operating}. Since all the electrons are focused on a small area there is no contrast information that can be used to form an image. To form an image using such a beam the probe point needs to be scanned over the sample leading to the term Scanning Transmission Electron Microscopy.
 Dark field images use electrons scattered away from the optical axis to form an image, to achieve this most STEMs have a series of annular dark field detectors.
 These ring shaped detectors encircle the central bright field detector and can collect electrons that have been scattered at various angles. Normal dark field detectors collect electrons scattered up to an angle of \SI{50}{\milli \radian}. The outermost detector is the high-angle annular dark field detector (HAADF) which collects electrons scattered beyond \SI{50}{\milli \radian} and can be used to create Z-contrast (atomic number Z) or mass-thickness images.
-The HAADF detector is used since the electrons it collect are almost exclusively incoherently elastically scattered which is proportional to the atomic number Z.
+The HAADF detector is used since the electrons it collects are almost exclusively incoherently elastically scattered which is proportional to the atomic number Z.
+The scanning beam then gathers this atomic number information as intensity information for every probe position in the sample.
+Layering two monolayers such that the atoms are aligned, and the probe is perpendicularly incident on the sample will sum the intensity of the two atomic weights of the stacked atoms in the image. The stacking pattern can then be determined by looking at a line plot of the atomic mass over atoms.  
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth, keepaspectratio]{resources/Figures/stem_operating.png}
@@ -57,8 +59,14 @@ The HAADF detector is used since the electrons it collect are almost exclusively
     \label{fig:stem_operating}
 \end{figure}
 
+\subsubsection{Energy-dispersive x-ray spectroscopy}
+Pagina 581
+
 
 \subsubsection{Electron microscope pixel-array detector}
+In TEM operating mode a parallel electron beam is used to illuminate the sample and form an image on either the phosphorous screen or digital camera, this spreads the beam over a larger area such that the local electron dose is relatively uniform. In a scanning mode the beam is focused to a small probe-like point that can easily saturate or damage the phosphorous screen and camera which is why for STEM operation, usually, a singular annular detector is used. This single annular detector bunches electrons scattered at different angles together, losing valuable information.
+
+
 \subsubsection{Electron energy-loss spectroscopy}
 In a TEM setup electrons are essentially shot through a sample in which the electrons can either simply pass through or scatter, in the latter scenario there are two possibilities, electrons can scatter elastically or inelastically.
 Scattering is a result of the interaction between the sampling electrons from the TEM source and the charged particles in the specimen.\\
