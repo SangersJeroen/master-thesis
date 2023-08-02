@@ -1,4 +1,65 @@
 \section{Theory}
+
+\subsection{The Transmission electron microscope}
+The Transmission electron microscope (TEM) is a microscope that far exceeds the capabilities of a normal light microscope. Both types of microscope use a series of lenses to magnify the image of a specimen.
+A normal light microscope can amplify an image up to about 1500$\times$ and is limited by the diffraction limit of light. Assuming an average wavelength of \SI{550}{\nm} for green light, a high-end microscope is limited to resolving features \SI{100}{\nm} apart.
+This limit is insufficient for looking at atomic structures \cite{PhysRevLett.106.193905}.\\
+An electron microscope circumvents this limit by using electrons, not light, to probe the specimen. Electrons when accelerated have a smaller wavelength than light thus allowing for images with resolved features as small as \SI{0.05}{\nm}. \cite{kisielowski_freitag_bischoff_van}
+The TEM works by releasing electrons from an electron source and accelerating them to an energy typically expressed in kilo-electronvolt; as shown in equation \ref{eq:acc_volts}, the higher the accelerating voltage of the microscope the smaller the de Broglie wavelength of an electron, which results in a higher resolving power. Modern electron microscopes accelerate electrons up to \SI{300}{\kilo \electronvolt}
+
+\begin{equation}
+    \lambda_e = h\cdot \left[ 2 \cdot e \cdot m_e \cdot V_a \right]^{-1/2}
+    \label{eq:acc_volts}
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[keepaspectratio, width=0.5\linewidth]{resources/Figures/feg.png} 
+    \caption{Pictured is the tip of a field emission gun \cite{Williams2009-ww}. The tapered tip facilitates the creation of a strongly varying potential that eases the expulsion of electrons from the material. These electrons are then accelerated along the optical axis.}
+    \label{fig:feg}
+\end{figure}
+
+In a TEM the electrons are released from a field emission gun (FEG, pictured in Figure \ref{fig:feg}). 
+The FEG is placed in proximity to two anodes, the first anode is positively charged to several kilovolts such that it extracts electrons from the tip of the FEG, the second anode is charged to the wanted acceleration voltage \cite{Williams2009-ww}.
+FEGs are about three orders of magnitude brighter than thermionic emission electron sources \cite{field-emission}.
+After being emitted the electrons pass through a monochromator that reduces the energy spread of the emitted electrons. An electron then continues along the optical axis into an illuminating system consisting of multiple electromagnetic lenses, which lenses are activated and to what extent depends on the operating mode of the electron microscope.
+
+\subsubsection{Bright Field}
+A bright field (BF) image of the sample is acquired by using a parallel electron beam. This beam is formed using the lens configuration shown in figure \ref{fig:tem_operating}. This parallel beam is typically several micrometers in size at magnifications up to 20k-100k$\times$.
+In normal operating mode a BF image is captured by a camera looking at a phosphorous screen or by a camera directly, this method of imaging is most analogues to a normal light microscope.
+The electron beam is focused in such a way that it illuminates the sample with a parallel beam, such a beam is also used for creating the clearest diffraction patterns.
+%A bright field image can also be formed in STEM operating mode.
+\begin{figure}[h]
+    \centering
+    \def\svgwidth{.66\linewidth}
+    \import{resources/Figures}{parallel_op_mode.pdf_tex}
+    \caption{Illumination system for parallel beam.}
+    \label{fig:tem_operating}
+\end{figure}
+\subsubsection{Dark Field, Z-contrast}
+For dark field and Z-contrast the electron beam is focused to a small area, this creates a higher intensity electron beam with a probe-like point as can be seen in Figure \ref{fig:stem_operating}. Since all the electrons are focused on a small area there is no contrast information that can be used to form an image. To form an image using such a beam the probe point needs to be scanned over the sample leading to the term Scanning Transmission Electron Microscopy.
+Dark field images use electrons scattered away from the optical axis to form an image, to achieve this most STEMs have a series of annular dark field detectors.
+These ring shaped detectors encircle the central bright field detector and can collect electrons that have been scattered at various angles. Normal dark field detectors collect electrons scattered up to an angle of \SI{50}{\milli \radian}. The outermost detector is the high-angle annular dark field detector (HAADF) which collects electrons scattered beyond \SI{50}{\milli \radian} and can be used to create Z-contrast (atomic number Z) or mass-thickness images.
+The HAADF detector is used since the electrons it collects are almost exclusively incoherently elastically scattered which is proportional to the atomic number Z.
+The scanning beam then gathers this atomic number information as intensity information for every probe position in the sample.
+Layering two monolayers such that the atoms are aligned, and the probe is perpendicularly incident on the sample will sum the intensity of the two atomic weights of the stacked atoms in the image. The stacking pattern can then be determined by looking at a line plot of the atomic mass over atoms.  
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth, keepaspectratio]{resources/Figures/stem_operating.png}
+    \caption{Illumination system for convergent beam.}
+    \label{fig:stem_operating}
+\end{figure}
+
+\subsubsection{Energy-dispersive x-ray spectroscopy}
+%Pagina 581 W\&C
+\begin{minipage}[h]{0.6\linewidth}
+        \def\svgwidth{0.66\linewidth}
+        \import{resources/Figures}{Titan_full_column.pdf_tex}
+        \captionof{figure}{Cross-section of an aberration corrected electron microscope}
+        \label{fig:tem_crossection}
+\end{minipage}
+
+
 \subsection{TMDC/Crystal structure}
 \subsubsection{Transition metal dichalcogenides}
 Transition metal dichalcogenides or TMDCs are a family of materials consisting of transition metals (group 3 through 12 on the periodic table) and chalcogen atoms (Sulphur, Selenium or Tellurium) in an \ce{MX_2}-configuration, where \ce{M} is the metal atom and \ce{X_2} are the chalcogen atoms \cite{C7TA04268J}.
