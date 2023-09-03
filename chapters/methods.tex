@@ -10,13 +10,27 @@ Thirdly, the flakes present on the PDMS stamp were inspected using an optical mi
 If no ML material is present on a stamp the third step can be repeated until there is ML material or the flakes have broken up into unusable small pieces.
 Furthermore, sacrificial or pristine PDMS stamps can be used to either remove unwanted small flakes or transfer large flakes to a newer and cleaner PDMS stamp, this selective transfer is performed under a microscope such that existing ML material can be avoided as this will likely break if exposed to the force caused by peeling away the sacrificial PDMS stamp.
 
+\subsubsection{Verification of monolayer material}
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{1\linewidth}
+	\import{resources/Figures}{spectroscope_traces.pdf_tex}
+	\caption{Transmittance spectra, recorded using a light spectrometer, of flakes of varying thicknesses. A) Transmittance spectra for 1 to 6 layers of $WSe_2$ exfoliated, using the previously described method, onto a PDMS on glass substrate. B) transmittance spectra of 1 to 3 layers of $MoSe_2$. C,D) The flakes used for the collecting the spectra of $WSe_2$ (A, C) and $MoSe_2$ (B,D) respectively.
+    In A) the square, circular, and, diamond marker; denote the location of the peaks of the \textit{a}-,\textit{c}-, and, \textit{d}-exciton of $WSe_2$ found by fitting to a linear combination of lorentzian peaks. The shaded blue region denotes the photon energy range in which the \textit{b}-exciton peaks is expected but not found by the fitting model.
+Similarly, in B) the square and circular marker denote the location of the \textit{a}- and \textit{b}-exciton peaks of $MoSe_2$.}
+	\label{fig:spectroscope_traces}
+\end{figure}
+
+Since the bandgap of TMDCs becomes direct in a single layer and most interesting moiré effects come into play for monolayer flake heterostructures its is important to determine the number of layers in the flakes that are used for heterostructures. For the first round of samples, optical inspection with a transmittance light microscope proved to be too crude to determine the layer number for flakes thinner than three layers.
+Solving this issue included setting up a new transmittance- and reflectance-mode microscope with a spectroscope attached, the whole set-up is copied from another lab and proven to be able to differentiate between amount of layers in a flake \cite{frisendaMicroreflectanceTransmittanceSpectroscopy2017,niuThicknessDependentDifferentialReflectance2018}
+
 \subsubsection{Assembling a heterostructure}
 \begin{figure}[h]
-    \centering
-    \def\svgwidth{1\linewidth}
-    \import{resources/Figures}{stamping.pdf_tex}
-    \caption{Schematic outline of the stamping process. 1: Before starting, two PDMS stamps with monolayer material and a silicon substrate coated with PVA should be prepared. 2: The first flake is stamped, preferably as close to the centre of rotation of the substrate stage as possible as this makes aligning the next flake easier. 3: The micromanipulator with the PDMS stamp is slowly raised to peel the PDMS stamp off of the substrate, leaving behind the first monolayer flake. 4: The second stamp with monolayer material is aligned by rotating the substrate stage and moving the stamping micromanipulator. 5: The stamp is then carefully lowered and misalignment is corrected if necessary. 6: The second stamp is removed slowly, and both flakes are transferred to the substrate.}
-    \label{fig:stamping_process}
+	\centering
+	\def\svgwidth{1\linewidth}
+	\import{resources/Figures}{stamping.pdf_tex}
+	\caption{Schematic outline of the stamping process. 1: Before starting, two PDMS stamps with monolayer material and a silicon substrate coated with PVA should be prepared. 2: The first flake is stamped, preferably as close to the centre of rotation of the substrate stage as possible as this makes aligning the next flake easier. 3: The micromanipulator with the PDMS stamp is slowly raised to peel the PDMS stamp off of the substrate, leaving behind the first monolayer flake. 4: The second stamp with monolayer material is aligned by rotating the substrate stage and moving the stamping micromanipulator. 5: The stamp is then carefully lowered and misalignment is corrected if necessary. 6: The second stamp is removed slowly, and both flakes are transferred to the substrate.}
+	\label{fig:stamping_process}
 \end{figure}
 
 Once two suitably matching monolayer flakes have been located on different PDMS stamps they can be assembled to form a heterostructure.
@@ -33,11 +47,11 @@ After stamping of the second flake is completed the PDMS needs to be slowly peel
 
 \subsubsection{Transferring to a TEM grid}
 \begin{figure}[h]
-    \centering
-    \def\svgwidth{1\linewidth}
-    \import{resources/Figures}{wet_transfer.pdf_tex}
-    \caption{Schematic illustration of the transfer process. 1: A previously prepared heterostructure is located on the substrate and suitable TEM grid is placed on the substrate over the heterostructures with tweezers. 2: The TEM grid is held in place, for the samples transferred for this work the TEM grid was held in place by pressing a microscope slide onto the rim of the TEM grid with the stamping micromanipulator taking care in not pressing too hard as this will push the TEM grid into the PVA sealing the inside in such a way that the IPA cannot reach the inside. 3: After wetting the grid with a drop of IPA the resulting surface tension will hold onto the carbon film as the drop evaporates pulling it onto the PVA coated substrate and heterostructure. 4: After all the IPA has evaporated and the glass slide is removed a single drop of distilled water is added to dissolve the PVA releasing the TEM grid and allowing it to float on the drop, ready to be picked up with tweezers.}
-    \label{fig:wet_transfer}
+	\centering
+	\def\svgwidth{1\linewidth}
+	\import{resources/Figures}{wet_transfer.pdf_tex}
+	\caption{Schematic illustration of the transfer process. 1: A previously prepared heterostructure is located on the substrate and suitable TEM grid is placed on the substrate over the heterostructures with tweezers. 2: The TEM grid is held in place, for the samples transferred for this work the TEM grid was held in place by pressing a microscope slide onto the rim of the TEM grid with the stamping micromanipulator taking care in not pressing too hard as this will push the TEM grid into the PVA sealing the inside in such a way that the IPA cannot reach the inside. 3: After wetting the grid with a drop of IPA the resulting surface tension will hold onto the carbon film as the drop evaporates pulling it onto the PVA coated substrate and heterostructure. 4: After all the IPA has evaporated and the glass slide is removed a single drop of distilled water is added to dissolve the PVA releasing the TEM grid and allowing it to float on the drop, ready to be picked up with tweezers.}
+	\label{fig:wet_transfer}
 \end{figure}
 
 Transfer of the heterostructure to a TEM grid was performed using a previously devised polymer assisted method \cite{kosterPolymerassistedTEMSpecimen2021}, where a diced silicon wafer is coated using a polymer before stamping.
@@ -55,6 +69,7 @@ The heterostructures transferred for this thesis were stamped on a diced silicon
 In a scanning-TEM (STEM) mode the beam is focused to a small probe-like point at the specimen. Elastic scattering then deflects the electrons from the optical axis onto one of the ring shaped detectors encircling the optical axis, these detectors are called the dark field detectors. These singular annular detectors bunch the elastically scattered electrons together, losing valuable information on the exact scattering angle. The electron microscope pixel-array detector (EMPAD) solves this problem by replacing the annular dark field and singular bright field detectors with a single fast-readout, high dynamic range pixel grid on which every pixels' electron dose is stored separately such that after acquisition of a complete STEM scan the bright- and dark-field detectors can be virtually recreated by integrating the electron dose using annular or circular masks on the data.
 The pixelated nature of the detector enables the precise computation of the intensity distribution of not only the whole CBED patten but also within each diffraction disk within the CBED pattern, greatly improving the potential resolution of ptychography methods \cite{pennycookEfficientPhaseContrast2015, yangEfficientPhaseContrast2015a} as well as enabling charge density analysis \cite{hachtelSubAngstromElectricField2018,wenMapping1DConfined2022,fangAtomicElectrostaticMaps2019}.
 A greater accuracy in scattering angle is also available since every pixel in the array has its own smaller range of scattering angles whose electrons the pixel collects.
+
 
 
 \subsubsection{Strain analysis}
