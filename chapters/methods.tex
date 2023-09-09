@@ -16,13 +16,48 @@ Furthermore, sacrificial or pristine PDMS stamps can be used to either remove un
 	\def\svgwidth{1\linewidth}
 	\import{resources/Figures}{spectroscope_traces.pdf_tex}
 	\caption{Transmittance spectra, recorded using a light spectrometer, of flakes of varying thicknesses. A) Transmittance spectra for 1 to 6 layers of $WSe_2$ exfoliated, using the previously described method, onto a PDMS on glass substrate. B) transmittance spectra of 1 to 3 layers of $MoSe_2$. C,D) The flakes used for the collecting the spectra of $WSe_2$ (A, C) and $MoSe_2$ (B,D) respectively.
-    In A) the square, circular, and, diamond marker; denote the location of the peaks of the \textit{a}-,\textit{c}-, and, \textit{d}-exciton of $WSe_2$ found by fitting to a linear combination of lorentzian peaks. The shaded blue region denotes the photon energy range in which the \textit{b}-exciton peaks is expected but not found by the fitting model.
+    In A) the square, circular, and, diamond marker; denote the location of the peaks of the \textit{a}-,\textit{c}-, and, \textit{d}-exciton of $WSe_2$ found by fitting to a linear combination of Lorentzian peaks. The shaded blue region denotes the photon energy range in which the \textit{b}-exciton peaks is expected but not found by the fitting model.
 Similarly, in B) the square and circular marker denote the location of the \textit{a}- and \textit{b}-exciton peaks of $MoSe_2$.}
 	\label{fig:spectroscope_traces}
 \end{figure}
 
+\begin{minipage}[b]{0.4\textwidth}
+    \begin{tabular}{c|cc|}
+    \cline{2-3}
+    \multicolumn{1}{l|}{}         & \multicolumn{2}{l|}{Photon Energy of  Exciton {[\si{\electronvolt}]}} \\ \hline
+    \multicolumn{1}{|c|}{lay. \#} & \multicolumn{1}{c|}{A}                                        & B                                       \\ \hline
+    \multicolumn{1}{|c|}{1}       & \multicolumn{1}{c|}{1.54}                                     & 1.79                                    \\ \hline
+    \multicolumn{1}{|c|}{2}       & \multicolumn{1}{c|}{1.55}                                     & 1.80                                    \\ \hline
+    \multicolumn{1}{|c|}{3}       & \multicolumn{1}{c|}{1.56}                                     & 1.80                                    \\ \hline
+\end{tabular}
+\captionof{table}{Measurements of the dip positions for the A- and B-exciton in $MoSe_2$ flakes of varying layer thickness}
+\label{tab:mose2_measurement_spectra}
+\end{minipage}%
+\hspace{0.1\textwidth}%
+\begin{minipage}[b]{0.4\textwidth}
+    \begin{tabular}{c|ccc|}
+    \cline{2-4}
+    \multicolumn{1}{l|}{}         & \multicolumn{3}{l|}{Photon Energy of  Exciton {[\si{\electronvolt}]}} \\ \hline
+    \multicolumn{1}{|c|}{lay. \#} & \multicolumn{1}{c|}{A}                   & \multicolumn{1}{c|}{C}                  & D                  \\ \hline
+    \multicolumn{1}{|c|}{1}       & \multicolumn{1}{c|}{1.666}               & \multicolumn{1}{c|}{2.429}              & 2.813              \\ \hline
+    \multicolumn{1}{|c|}{2}       & \multicolumn{1}{c|}{1.654}               & \multicolumn{1}{c|}{2.323}              & 2.742              \\ \hline
+    \multicolumn{1}{|c|}{3}       & \multicolumn{1}{c|}{1.644}               & \multicolumn{1}{c|}{2.226}              & 2.716              \\ \hline
+    \multicolumn{1}{|c|}{4}       & \multicolumn{1}{c|}{1.632}               & \multicolumn{1}{c|}{2.200}              & 2.726              \\ \hline
+    \multicolumn{1}{|c|}{5}       & \multicolumn{1}{c|}{1.623}               & \multicolumn{1}{c|}{2.200}              & 2.820              \\ \hline
+    \multicolumn{1}{|c|}{6}       & \multicolumn{1}{c|}{1.622}               & \multicolumn{1}{c|}{2.182}              & 2.794              \\ \hline
+\end{tabular}
+\captionof{table}{Measurements of the dip positions for the A-, C- and D-excition in light transmittance spectra of $WSe_2$ of varying thickness.}
+\label{tab:wse2_measurement_spectra}
+\end{minipage}
+\vspace{1cm}
+
+
 Since the bandgap of TMDCs becomes direct in a single layer and most interesting moiré effects come into play for monolayer flake heterostructures its is important to determine the number of layers in the flakes that are used for heterostructures. For the first round of samples, optical inspection with a transmittance light microscope proved to be too crude to determine the layer number for flakes thinner than three layers.
-Solving this issue included setting up a new transmittance- and reflectance-mode microscope with a spectroscope attached, the whole set-up is copied from another lab and proven to be able to differentiate between amount of layers in a flake \cite{frisendaMicroreflectanceTransmittanceSpectroscopy2017,niuThicknessDependentDifferentialReflectance2018}
+Solving this issue included setting up a new transmittance- and reflectance-mode microscope with a spectroscope attached, the whole set-up is copied from another lab and proven to be able to differentiate between amount of layers in a flake. \cite{frisendaMicroreflectanceTransmittanceSpectroscopy2017,niuThicknessDependentDifferentialReflectance2018}
+Using this set-up transmittance- and reflectance-spectra were recorded for both $WSe_2$ and $MoSe_2$ flakes for varying layer numbers, the transmittance spectra are displayed in Figure \ref{fig:spectroscope_traces}A,B for both materials respectively. Even though both light sources used for transmittance and reflectance spectra in transmission and epi-illumination mode should be the same halogen bulbs, the reflectance spectra suffered from greater noise in the $\leq \SI{1.6}{\electronvolt}$ range due to the lower intensity of light emitted by the epi-illumination bulb in this region. For this reason the reflectance spectra proved less suited to identifying flake thickness and are thus omitted from this work.
+All spectra were collected using a $100\times$-magnification $0.55NA$ objective and \SI{150}{\micro\meter} thick core glass fibre leading to the spectrometer. The spectrometer collected and averaged 50 spectra that were integrated over \SI{500}{\milli\second}. To improve the rejection of stray light, the field aperture of the light was closed fully.
+As can be seen in the transmittance spectra, the overall intensity difference is the best indicator for flake thickness beyond 2 layers whereas the location of the A-exciton is the key differentiator between 1 or 2 layers.
+Using the spectroscope and the new microscope has greatly decreased the time required and greatly increased the ease of finding thin material and verifying its thickness.
 
 \subsubsection{Assembling a heterostructure}
 \begin{figure}[h]
