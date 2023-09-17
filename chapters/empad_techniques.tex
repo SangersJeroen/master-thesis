@@ -1,0 +1,32 @@
+\section{Advanced electron microscopy techniques to map moiré physics at the nanoscale; an electron microscope pixelated array detector.}
+
+\subsection{Electron microscope pixel-array detector}
+%In TEM operating mode a parallel electron beam is used to illuminate the sample and form an image on either the phosphorous screen or digital camera, this spreads the beam over a larger area such that the local electron dose is relatively uniform.
+
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{0.5\linewidth}
+	\import{resources/Figures}{empad-haadf.pdf_tex}
+	\caption{Figure schematically shows the difference between a monolithic fixed geometry high-angle annular dark field (HAADF) detector and a pixelated-array detector on the left- and right-hand side of the image respectively. As shown, the HAADF detector is only able to resolve features whose scattering diffracts the beam onto the monolithic annular detector. Since the Bragg angle is fixed for each feature, the signal can only be captures at a certain camera length. The HAADF detector is a single large punctured "pixel" that bunches all incident signals together. In contrast, the EMPAD is able to capture signals diffracted over a wider range of angles for every camera length as well as spatially separate the different signals, a HAADF and bright field detector could then be simulated by virtually masking and integrating the equivalent regions of the data after a measurement.}
+	\label{fig:empad_haadf_comparison}
+\end{figure}
+The electron microscope pixel-array detector, colloquially called the EMPAD for short, is as the name suggest a sensor for electron microscopes that consists of a grid of direct electron detecting pixels. Even though the EMPAD can be used in standard transmission electron imaging its strengths lie in scanning-TEM imaging due to the relatively little pixels but greater dynamic range of said pixels.
+In a scanning-TEM (STEM) mode the beam is cone-shaped and converges to a thin point-like spot that scans over the specimen, for small semi-convergence angles the zeroth order diffraction disk is a magnitude higher in intensity than the first order Bragg reflection disks. Since there is valuable information in the distribution of intensity in all disks its important that the detector has sufficient dynamic range to count individual electrons at all intensity ranges simultaneously using a high-gain per pixel charge integration circuit. The second major advantage of the EMPAD is the pixelated-array of detectors that, contrary to the regular monolithic annular dark field detectors, preserves the deflection angle information of the transmitted electron beams.
+Traditionally, elastic scattering deflects the electrons from the optical axis onto one of the annular ring shaped detectors encircling the optical axis, these detectors are called the dark field detectors. These singular annular detectors have a fixed detector geometry that only captures signals at certain camera lengths when diffracted beams are impinging on the detector, as schematically shown in Figure \ref{fig:empad_haadf_comparison}. The EMPAD solves this problem by measuring the whole convergent-beam electron-diffraction (CBED) pattern using a single fast-readout, high dynamic range pixel grid on which every pixels' electron dose is stored separately such that after acquisition of a complete STEM scan the bright- and dark-field detectors can be virtually recreated by integrating the electron dose using annular or circular masks on the data.
+The pixelated nature of the detector enables the precise computation of the intensity distribution of not only the whole CBED patten but also within each diffraction disk within the CBED pattern, greatly improving the potential resolution by means of ptychography methods \cite{pennycookEfficientPhaseContrast2015, yangEfficientPhaseContrast2015a} as well as enabling charge density analysis \cite{hachtelSubAngstromElectricField2018,wenMapping1DConfined2022,fangAtomicElectrostaticMaps2019} and strain analysis \cite{hanStrainMappingTwoDimensional2018, ophusFourDimensionalScanningTransmission2019}.
+
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{1\linewidth}
+	\import{resources/Figures}{4d-dataset.pdf_tex}
+    \caption{a) Schematic overview of an EMPAD measurement where a convergent electron beam probes the sample at positions $\vec{r}_1$ through $\vec{r}_5$ producing convergent-beam electron diffraction (CBED) pattern images of 128 by 128 pixels for each such position. b) Nine such CBED patterns imaged at different positions within a moiré cell using electric field measurement conditions. c) A virtual annular dark field image made by masking a thin annulus in the 4d-dataset. With only the first order Bragg reflections captured by the mask the atomic periodicity is visible within the image.}
+	\label{fig:4d_dataset}
+\end{figure}
+
+\subsection{Strain analysis}
+\subsubsection{Micrometer field-of-view strain analysis}
+\subsubsection{Nanometre field-of-view strain analysis}
+
+\subsection{Ptychography}
+
+\subsection{Charge density analysis}
