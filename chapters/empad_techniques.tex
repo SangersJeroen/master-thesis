@@ -20,17 +20,27 @@ The EMPAD's sensor is made up of a grid of 128 by 128 pixels and will thus alway
 	\centering
 	\def\svgwidth{1\linewidth}
 	\import{resources/Figures}{4d-dataset.pdf_tex}
-    \caption{a) Schematic overview of an EMPAD measurement where a convergent electron beam probes the sample at positions $\vec{r}_1$ through $\vec{r}_5$ producing convergent-beam electron diffraction (CBED) pattern images of 128 by 128 pixels for each such position. b) Nine such CBED patterns imaged at different positions within a moiré cell using electric field measurement conditions. c) A virtual annular dark field image made by masking a thin annulus in the 4d-dataset. With only the first order Bragg reflections captured by the mask the atomic periodicity is visible within the image.}
+    \caption{\textbf{a}) Schematic overview of an EMPAD measurement where a convergent electron beam probes the sample at positions $\vec{r}_1$ through $\vec{r}_5$ producing convergent-beam electron diffraction (CBED) pattern images of 128 by 128 pixels for each such position.\textbf{b}) Nine such CBED patterns imaged at different positions within a moiré cell using electric field measurement conditions.\textbf{c}) A virtual annular dark field image made by masking a thin annulus in the 4d-dataset. With only the first order Bragg reflections captured by the mask the atomic periodicity is visible within the image.}
 	\label{fig:4d_dataset}
 \end{figure}
 
 \subsection{Strain analysis}
 Strain analysis in electron microscopy can be achieved through a multitude of ways, the main distinction between all of them is whether they are performed by analysing a real-space image captured by high-resolution TEM techniques or performed by analysing reciprocal space images captured through scanning-TEM techniques. An example of the first method is geometric phase analysis where displacements of atoms in a crystal are directly observed in the high-resolution image and strain can be computed \cite{HYTCH1998131, hytchGEOMETRICPHASEANALYSIS, nguyenAtomicDefectsDoping2017}. The second method relies primarily on the fact that a CBED/NBED pattern for a small enough convergent electron probe directly measures the local crystal structure. The reciprocal-space unit cell of the local crystal structure and thus the positions of the peak in the CBED pattern are directly correlated with the size of the real-space unit cell such that a compressing force in the real-space unit cell will elongate the reciprocal-space unit cell in the same direction and vice-versa for a tensile strain \cite{ophusFourDimensionalScanningTransmission2019, vanwinkleRotationalDilationalReconstruction2023, kazmierczakStrainFieldsTwisted2021, hanStrainMappingTwoDimensional2018}, tracking the peaks then gives access to the strain information.  In the following sections the second method will be applied for both large and small field-of-views.
 
-
 \subsubsection{Micrometer field-of-view strain analysis}
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{0.9\linewidth}
+	\import{resources/Figures}{adf_cbed_ewpc.pdf_tex}
+    \caption{\textbf{a}) virtual annular dark-field image reconstructed by masking the dataset such that the detector geometry is equivalent to that of the HAADF-detector. Image is taken at the transition region of monolayer $MoSe_2$ (bottom) to a heterostructure of $MoSe_2$ and $WSe_2$ (top) on a lacy carbon grid. The faint circles in the middle of the image are contamination from inspection in TEM mode. Contamination in STEM mode caused the bright white spots on the left side of the image. \textbf{b}) logarithm of the nanobeam electron-diffraction pattern captured in the heterobilayer region of the image in \textbf{a}. Two sets of six diffraction disks, one set of six for each material, can be seen in the pattern. Due to local tilt of the crystalline layers diffraction disks on one side of the central $000$-disk, in this case the bottom, are brighter than disks on the opposing side. \textbf{c}) Exit-wave power cepstrum (EWPC) transform of the NBED pattern displayed in \textbf{b}. The EWPC pattern does not suffer from unequal intensity distributions. Peaks in the pattern are distinguishable in the EWPC transform.}
+	\label{fig:adf_nbed_ewpc}
+\end{figure}
+
+
+
 \subsubsection{Nanometre field-of-view strain analysis}
 
 \subsection{Ptychography}
 
 \subsection{Charge density analysis}
+
