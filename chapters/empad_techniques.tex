@@ -32,11 +32,29 @@ Strain analysis in electron microscopy can be achieved through a multitude of wa
 	\centering
 	\def\svgwidth{0.9\linewidth}
 	\import{resources/Figures}{adf_cbed_ewpc.pdf_tex}
+    \marginnote{TODO: Change the CBED and EWPC in this figure to one of an actually used dataset}
     \caption{\textbf{a}) virtual annular dark-field image reconstructed by masking the dataset such that the detector geometry is equivalent to that of the HAADF-detector. Image is taken at the transition region of monolayer $MoSe_2$ (bottom) to a heterostructure of $MoSe_2$ and $WSe_2$ (top) on a lacy carbon grid. The faint circles in the middle of the image are contamination from inspection in TEM mode. Contamination in STEM mode caused the bright white spots on the left side of the image. \textbf{b}) logarithm of the nanobeam electron-diffraction pattern captured in the heterobilayer region of the image in \textbf{a}. Two sets of six diffraction disks, one set of six for each material, can be seen in the pattern. Due to local tilt of the crystalline layers diffraction disks on one side of the central $000$-disk, in this case the bottom, are brighter than disks on the opposing side. \textbf{c}) Exit-wave power cepstrum (EWPC) transform of the NBED pattern displayed in \textbf{b}. The EWPC pattern does not suffer from unequal intensity distributions. Peaks in the pattern are distinguishable in the EWPC transform.}
 	\label{fig:adf_nbed_ewpc}
 \end{figure}
+\begin{equation*}
+    PC\{f(t)\} = \left| \mathscr{F} \left\{ \ln{\left| \mathscr{F}\{f(t)\} \right|^2} \right\} \right|^2
+    \label{eq:cepstrum}
+\end{equation*}
 
+\begin{alignat*}{2}
+    I(\vec{q}) &&= \left| \Phi(\vec{q}) \otimes \left( E(\vec{q}) \cdot \mathcal{O}(\vec{q}) \right) \right|^2 &= \left| \psi(\vec{q}) \right|^2\\
+    \ArrowBetweenLines*[\downarrow^1\hspace{-3cm}]%
+    I(\vec{q}) &&\approx \left|E(\vec{q}) \right|^2 \left|\Phi(\vec{q}) \otimes \mathcal{O}(\vec{q}) \right|^2 &
+    \label{eq:cbed_approx}
+\end{alignat*}
 
+\begin{alignat*}{3}
+    EWPC_{\psi(\vec{q})} &= \mathscr{F}\ln{\left| E(\vec{q}) \right|^2}&&+\ln{\left| \Phi(\vec{q}) \otimes \mathcal{O}(\vec{q}) \right|^2}&\\
+    \ArrowBetweenLines*[\downarrow^2\hspace{-4cm}]%
+                         & &&\approx \Phi(\vec{q}) \otimes \ln{\left| \mathcal{O}(\vec{q}) \right|^2}&\\
+                         &\approx PC\left\{ \epsilon(\vec{x})\right\}+&&\left| \phi(\vec{x})\right|^2 \cdot PC\left\{ o(\vec{x})\right\}&
+    \label{eq:sep_env_obj}
+\end{alignat*}
 
 \subsubsection{Nanometre field-of-view strain analysis}
 
