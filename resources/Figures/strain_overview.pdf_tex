@@ -1,4 +1,4 @@
-%% Creator: Inkscape 1.2.2 (b0a8486, 2022-12-01), www.inkscape.org
+%% Creator: Inkscape 1.3 (0e150ed6c4, 2023-07-21), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file 'strain_overview.pdf' (pdf, eps, ps)
 %%
@@ -50,18 +50,21 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.67357846)%
+  \begin{picture}(1,1.70161933)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{strain_overview.pdf}}%
-    \put(0.13703741,1.29696413){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}A\end{tabular}}}}%
-    \put(0.13567233,0.86598733){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}B\end{tabular}}}}%
-    \put(0.13631602,0.43501052){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}C\end{tabular}}}}%
-    \put(0.13417406,0.00403367){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}D\end{tabular}}}}%
-    \put(0.52715425,1.29696413){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}E\end{tabular}}}}%
-    \put(0.52748716,0.86598733){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}F\end{tabular}}}}%
-    \put(0.52520094,0.43503204){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}G\end{tabular}}}}%
-    \put(0.52540068,0.00403367){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}H\end{tabular}}}}%
+    \put(0.13703741,1.32500501){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a\end{tabular}}}}%
+    \put(0.13567233,0.8940282){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b\end{tabular}}}}%
+    \put(0.13631602,0.4630514){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}c\end{tabular}}}}%
+    \put(0.13417406,0.03207454){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}e\end{tabular}}}}%
+    \put(0.52715425,1.32500501){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}e\end{tabular}}}}%
+    \put(0.52748716,0.8940282){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}f\end{tabular}}}}%
+    \put(0.52520094,0.46307292){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}d\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{strain_overview.pdf}}%
+    \put(0.52540068,0.03207454){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}h\end{tabular}}}}%
+    \put(0.61836629,0.00515584){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}bottom layer\end{tabular}}}}%
+    \put(0.23892008,0.00529499){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}top layer\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{strain_overview.pdf}}%
   \end{picture}%
 \endgroup%
