@@ -1,21 +1,55 @@
-\section{Advanced electron microscopy techniques to map moiré physics at the nanoscale; an electron microscope pixelated array detector.}
+\section{Four-Dimensional Scanning Transmission Electron Microscopy (4D-STEM) technique for mapping Moiré physics at the nanoscale}
 
 \subsection{Electron microscope pixel-array detector}
 %In TEM operating mode a parallel electron beam is used to illuminate the sample and form an image on either the phosphorous screen or digital camera, this spreads the beam over a larger area such that the local electron dose is relatively uniform.
 
+%-------------------------------------------------------
 \begin{figure}[h]
 	\centering
-	\def\svgwidth{0.5\linewidth}
+	\def\svgwidth{0.65\linewidth}
 	\import{resources/Figures}{empad-haadf.pdf_tex}
-	\caption{Figure schematically shows the difference between a monolithic fixed geometry high-angle annular dark field (HAADF) detector and a pixelated-array detector on the left- and right-hand side of the image respectively. As shown, the HAADF detector is only able to resolve features whose scattering diffracts the beam onto the monolithic annular detector. Since the Bragg angle is fixed for each feature, the signal can only be captures at a certain camera length. The HAADF detector is a single large punctured "pixel" that bunches all incident signals together. In contrast, the EMPAD is able to capture signals diffracted over a wider range of angles for every camera length as well as spatially separate the different signals, a HAADF and bright field detector could then be simulated by virtually masking and integrating the equivalent regions of the data after a measurement.}
+	\caption{The figure schematically shows the difference between a monolithic fixed geometry high-angle annular dark field (HAADF) detector and a pixelated-array detector on the left- and right-hand side of the image respectively. 
+    %
+    As shown, the HAADF detector is only able to resolve features whose scattering diffracts the beam onto the monolithic annular detector. Since the Bragg angle is fixed for each feature, the signal can only be captures at a certain camera length. 
+    %
+    The HAADF detector is a single large punctured "pixel" that bunches all incident signals together.
+    %
+    In contrast, the EMPAD is able to capture signals diffracted over a wider range of angles for every camera length as well as spatially separate the different signals, a HAADF and bright field detector could then be simulated by virtually masking and integrating the equivalent regions of the data after a measurement.}
 	\label{fig:empad_haadf_comparison}
 \end{figure}
-The electron microscope pixel-array detector, colloquially called the EMPAD for short, is as the name suggest a sensor for electron microscopes that consists of a grid of direct electron detecting pixels. Even though the EMPAD can be used in standard transmission electron imaging its strengths lie in scanning-TEM imaging due to the relatively little pixels but greater dynamic range of said pixels.
-In a scanning-TEM (STEM) mode the beam is cone-shaped and converges to a thin point-like spot that scans over the specimen, for small semi-convergence angles the zeroth order diffraction disk is a magnitude higher in intensity than the first order Bragg reflection disks. Since there is valuable information in the distribution of intensity in all disks its important that the detector has sufficient dynamic range to count individual electrons at all intensity ranges simultaneously using a high-gain per pixel charge integration circuit. The second major advantage of the EMPAD is the pixelated-array of detectors that, contrary to the regular monolithic annular dark field detectors, preserves the deflection angle information of the transmitted electron beams.
-Traditionally, elastic scattering deflects the electrons from the optical axis onto one of the annular ring shaped detectors encircling the optical axis, these detectors are called the dark field detectors. These singular annular detectors have a fixed detector geometry that only captures signals at certain camera lengths when diffracted beams are impinging on the detector, as schematically shown in Figure \ref{fig:empad_haadf_comparison}. The EMPAD solves this problem by measuring the whole convergent-beam electron-diffraction (CBED) pattern using a single fast-readout, high dynamic range pixel grid on which every pixels' electron dose is stored separately such that after acquisition of a complete STEM scan the bright- and dark-field detectors can be virtually recreated by integrating the electron dose using annular or circular masks on the data.
-The pixelated nature of the detector enables the precise computation of the intensity distribution of not only the whole CBED patten but also within each diffraction disk within the CBED pattern, greatly improving the potential resolution by means of ptychography methods \cite{pennycookEfficientPhaseContrast2015, yangEfficientPhaseContrast2015a} as well as enabling charge density analysis \cite{hachtelSubAngstromElectricField2018,wenMapping1DConfined2022,fangAtomicElectrostaticMaps2019} and strain analysis \cite{hanStrainMappingTwoDimensional2018, ophusFourDimensionalScanningTransmission2019}.
-The EMPAD's sensor is made up of a grid of 128 by 128 pixels and will thus always image the CBED or NBED pattern at this resolution. Every pixel counts single electron charges and stores the count in a 32-bit number. The EMPAD is able to equal the field-of-view of the HAADF-detector with a maximum of 512 by 512 equally positioned scan points. A schematic showing the geometry of a measurement is given in Figure \ref{fig:4d_dataset}a where a scanning probe is shown to scan over a diamond shaped moiré unit cell creating a CBED pattern on the EMPAD's pixel-array sensor. Nine CBED patterns for differing probe positions are displayed in Figure \ref{fig:4d_dataset}b. By virtually masking and integrating the first-order Bragg reflections for every CBED pattern to a single electron count one is able to recover a virtual annular dark-field image.
+%-------------------------------------------------------
 
+The electron microscope pixel-array detector (EMPAD),  is as the name suggest a sensor for electron microscopes that consists of a grid of direct electron detecting pixels. 
+%
+Even though the EMPAD can be used in standard transmission electron imaging its strengths lie in scanning-TEM imaging due to the relatively little pixels but greater dynamic range of said pixels.
+%
+In a scanning-TEM (STEM) mode the beam is cone-shaped and converges to a thin point-like spot that scans over the specimen, for small semi-convergence angles the zeroth order diffraction disk is a magnitude higher in intensity than the first order Bragg reflection disks.
+%
+Since there is valuable information in the distribution of intensity in all disks its important that the detector has sufficient dynamic range to count individual electrons at all intensity ranges simultaneously using a high-gain per pixel charge integration circuit. 
+%
+The second major advantage of the EMPAD is the pixelated-array of detectors that, contrary to the regular monolithic annular dark field detectors, preserves the deflection angle information of the transmitted electron beams.
+%
+Traditionally, elastic scattering deflects the electrons from the optical axis onto one of the annular ring shaped detectors encircling the optical axis, these detectors are called the dark field detectors.
+%
+These singular annular detectors have a fixed detector geometry that only captures signals at certain camera lengths when diffracted beams are impinging on the detector, as schematically shown in Figure \ref{fig:empad_haadf_comparison}. 
+
+The EMPAD solves this problem by measuring the whole convergent-beam electron-diffraction (CBED) pattern using a single fast-readout, high dynamic range pixel grid on which every pixels' electron dose is stored separately such that after acquisition of a complete STEM scan the bright- and dark-field detectors can be virtually recreated by integrating the electron dose using annular or circular masks on the data.
+%
+The pixelated nature of the detector enables the precise computation of the intensity distribution of not only the whole CBED pattern but also within each diffraction disk within the CBED pattern, greatly improving the potential resolution by means of ptychography methods \cite{pennycookEfficientPhaseContrast2015, yangEfficientPhaseContrast2015a} as well as enabling charge density analysis \cite{hachtelSubAngstromElectricField2018,wenMapping1DConfined2022,fangAtomicElectrostaticMaps2019} and strain analysis \cite{hanStrainMappingTwoDimensional2018, ophusFourDimensionalScanningTransmission2019}.
+%
+The EMPAD's sensor is made up of a grid of 128 by 128 pixels and will thus always image the CBED or NBED pattern at this resolution. 
+% SC, move this up
+
+%
+Every pixel counts single electron charges and stores the count in a 32-bit number. 
+%
+The EMPAD is able to equal the field-of-view of the HAADF-detector with a maximum of 512 by 512 equally positioned scan points. 
+%
+A schematic showing the geometry of a measurement is given in Figure \ref{fig:4d_dataset}a where a scanning probe is shown to scan over a diamond shaped Moiré unit cell creating a CBED pattern on the EMPAD's pixel-array sensor. 
+%
+Nine CBED patterns for differing probe positions are displayed in Figure \ref{fig:4d_dataset}b. By virtually masking and integrating the first-order Bragg reflections for every CBED pattern to a single electron count one is able to recover a virtual annular dark-field image. % SC, define first-order bragg
+
+%-------------------------------------------------------
 \begin{figure}[h]
 	\centering
 	\def\svgwidth{1\linewidth}
@@ -23,17 +57,31 @@ The EMPAD's sensor is made up of a grid of 128 by 128 pixels and will thus alway
 	\caption{\textbf{a}) Schematic overview of an EMPAD measurement where a convergent electron beam probes the sample at positions $\vec{r}_1$ through $\vec{r}_5$ producing convergent-beam electron diffraction (CBED) pattern images of 128 by 128 pixels for each such position.\textbf{b}) Nine such CBED patterns imaged at different positions within a moiré cell using electric field measurement conditions.\textbf{c}) A virtual annular dark field image made by masking a thin annulus in the 4d-dataset. With only the first order Bragg reflections captured by the mask the atomic periodicity is visible within the image.}
 	\label{fig:4d_dataset}
 \end{figure}
+%-------------------------------------------------------
 
-\subsection{Strain analysis}
-Strain analysis in electron microscopy can be achieved through a multitude of ways, the main distinction between all of them is whether they are performed by analysing a real-space image captured by high-resolution TEM techniques or performed by analysing reciprocal space images captured through scanning-TEM techniques. An example of the first method is geometric phase analysis where displacements of atoms in a crystal are directly observed in the high-resolution image and strain can be computed \cite{HYTCH1998131, hytchGEOMETRICPHASEANALYSIS1997, nguyenAtomicDefectsDoping2017}. The second method relies primarily on the fact that a CBED/NBED pattern for a small enough convergent electron probe directly measures the local crystal structure. The reciprocal-space unit cell of the local crystal structure and thus the positions of the peak in the CBED pattern are directly correlated with the size of the real-space unit cell such that a compressing force in the real-space unit cell will elongate the reciprocal-space unit cell in the same direction and vice-versa for a tensile strain \cite{ophusFourDimensionalScanningTransmission2019, vanwinkleRotationalDilationalReconstruction2023, kazmierczakStrainFieldsTwisted2021, hanStrainMappingTwoDimensional2018}, tracking the peaks then gives access to the strain information.  In the following sections the second method will be applied for both large and small field-of-views.
+\subsection{Strain analysis}% State of the art
+%
+Strain analysis in electron microscopy can be achieved through a multitude of ways, the main distinction between all of them is whether they are performed by analysing a real-space image captured by high-resolution TEM techniques or performed by analysing reciprocal space images captured through scanning-TEM techniques. 
+%
+An example of the first method is Geometric Phase Analysis (GPA) where displacements of atoms in a crystal are directly observed in the high-resolution image and strain can be computed \cite{HYTCH1998131, hytchGEOMETRICPHASEANALYSIS1997, nguyenAtomicDefectsDoping2017}. 
+%
+The second method relies primarily on the fact that a CBED/NBED pattern for a small enough convergent electron probe directly measures the local crystal structure. 
+%
+The reciprocal-space unit cell of the local crystal structure and thus the positions of the peak in the CBED pattern are directly correlated with the size of the real-space unit cell such that a compressing force in the real-space unit cell will elongate the reciprocal-space unit cell in the same direction and vice-versa for a tensile strain \cite{ophusFourDimensionalScanningTransmission2019, vanwinkleRotationalDilationalReconstruction2023, kazmierczakStrainFieldsTwisted2021, hanStrainMappingTwoDimensional2018}, tracking the peaks then gives access to the strain information.  In the following sections the second method will be applied for both large and small field-of-views.
 
 \subsubsection{Micrometre field-of-view strain analysis}
+%
+%-------------------------------------------------------
 \begin{equation}
 	PC\{f(t)\} = \left| \mathscr{F} \left\{ \ln{\left| \mathscr{F}\{f(t)\} \right|^2} \right\} \right|^2
 	\label{eq:cepstrum}
 \end{equation}
+%-------------------------------------------------------
 
-Strain analysis at the micrometre-scale hinges on capturing clear convergent- or nano-beam electron diffraction patterns as the locations of the peaks therein hold the valuable crystallographic information and the by strain induced deviation thereof, thickness and local sample tilt affect the intensity distributions of the patterns in such a way that tracking the peaks over micrometre distances is challenging. The average distance between folds, wrinkles, or, the sides of holes in the lacy carbon grids is typically smaller than a micrometre-scale field-of-view; these features tilt the crystalline sample such that the optical axis of the electron microscope is no longer parallel to the crystal zone-axis. Overcoming the effects of local tilt, wrinkles, folds, and, multilayeredness found in stamped heterostructures is achieved by implementing a power cepstrum transform before peak tracking.
+Strain analysis at the micrometre-scale hinges on capturing clear convergent- or nano-beam electron diffraction patterns as the locations of the peaks therein hold the valuable crystallographic information and the by strain induced deviation thereof, thickness and local sample tilt affect the intensity distributions of the patterns in such a way that tracking the peaks over micrometre distances is challenging. % SC show this with an image
+%
+The average distance between folds, wrinkles, or, the sides of holes in the lacy carbon grids is typically smaller than a micrometre-scale field-of-view; these features tilt the crystalline sample such that the optical axis of the electron microscope is no longer parallel to the crystal zone-axis. Overcoming the effects of local tilt, wrinkles, folds, and, multilayeredness found in stamped heterostructures is achieved by implementing a power cepstrum transform before peak tracking.
+%
 The power cepstrum transform (equation \ref{eq:cepstrum}) was originally developed for speech analysis \cite{1570854175999207936, oppenheimDspHistoryFrequency2004,nollCepstrumPitchDetermination1967} and later adapted for application to the post-specimen electron exit-wave ($\psi(\mathbf{q})$) whose magnitude is directly probed by the EMPAD \cite{padgettExitwavePowercepstrumTransform2020} as this is the CBED/NBED pattern.
 
 \begin{alignat}{2}
@@ -44,7 +92,9 @@ The power cepstrum transform (equation \ref{eq:cepstrum}) was originally develop
 	\label{eq:cbed_approx}
 \end{alignat}
 
-The intensity of the recorded pattern can be described as a convolution between the image of the electron beam probe function in momentum-space ($\Phi(\mathbf{q})$) convolved with the by the envelope function ($E(\mathbf{q})$) multiplied true object function ($\mathcal{O}(\mathbf{q})$) (equation \ref{eq:cbed_comp}); the envelope function encompasses the intensity attenuation due to local sample tilt and thickness, the true tilt-free object function is a sum of delta-peaks describing the crystal structure in momentum space; such that the result is an attenuated pattern formed by placing an image of the electron-beam probe on each delta-peak. As can be seen in Figure \ref{fig:adf_nbed_ewpc}b where the intensity of the disks is suppressed towards the edges of the pattern. Under the ideal conditions used for strain-analysis the probe-image is very small, and the envelope function varies little over the whole pattern resulting in a relatively unvarying offset. Therefore; assumption $\downarrow^1$ states that multiplication by the envelope function after convolution is approximately similar to convolution of the multiplied result, such that the intensity distribution can be rewritten to the form of equation \ref{eq:cbed_approx}. Using this simplification, the definition of the power-cepstrum, and, the knowledge that the CBED/NBED patterns are a mechanically computed Fourier transform of the real-space intensity distribution; the exit-wave power-cepstrum of the CBED/NBED pattern can be written as in equation \ref{eq:cepstrum_unsimp}.
+The intensity of the recorded pattern can be described as a convolution between the image of the electron beam probe function in momentum-space ($\Phi(\mathbf{q})$) convoluted with the by the envelope function ($E(\mathbf{q})$) multiplied true object function ($\mathcal{O}(\mathbf{q})$) (equation \ref{eq:cbed_comp}); the envelope function encompasses the intensity attenuation due to local sample tilt and thickness, the true tilt-free object function is a sum of delta-peaks describing the crystal structure in momentum space; such that the result is an attenuated pattern formed by placing an image of the electron-beam probe on each delta-peak. 
+
+As can be seen in Figure \ref{fig:adf_nbed_ewpc}b where the intensity of the disks is suppressed towards the edges of the pattern. Under the ideal conditions used for strain-analysis the probe-image is very small, and the envelope function varies little over the whole pattern resulting in a relatively unvarying offset. Therefore; assumption $\downarrow^1$ states that multiplication by the envelope function after convolution is approximately similar to convolution of the multiplied result, such that the intensity distribution can be rewritten to the form of equation \ref{eq:cbed_approx}. Using this simplification, the definition of the power-cepstrum, and, the knowledge that the CBED/NBED patterns are a mechanically computed Fourier transform of the real-space intensity distribution; the exit-wave power-cepstrum of the CBED/NBED pattern can be written as in equation \ref{eq:cepstrum_unsimp}.
 
 \begin{alignat}{3}
 	EWPC_{\psi(\vec{q})} & =\left| \mathscr{F}\left\{\ln{\left| E(\vec{q}) \right|^2}\right.\right. &  & +\left. \left.\ln{\left| \Phi(\vec{q}) \otimes \mathcal{O}(\vec{q}) \right|^2}\right\} \right|^2 & \label{eq:cepstrum_unsimp} \\
@@ -53,8 +103,13 @@ The intensity of the recorded pattern can be described as a convolution between 
 	                     & \approx PC\left\{ \epsilon(\vec{x})\right\}+                             &  & \left| \phi(\vec{x})\right|^2 \cdot PC\left\{ o(\vec{x})\right\}                                 & \label{eq:cepstrum_simp}
 \end{alignat}
 
-Furthermore, if the ronchigram is well-formed and corrected, and a small aperture is used to select only the centre; the second term in equation \ref{eq:cepstrum_unsimp} can be simplified further if the Bragg-spot separation is larger than the convergence angle of the electron-probe, such that the Bragg disks do not overlap. This assumption $\downarrow^2$ allows for the separation of the EWPC in to a summation of the power-cepstrum of the envelope function and the power-cepstrum of the crystal-structure information \cite{padgettExitwavePowercepstrumTransform2020}. Since the envelope function in the CBED/NBED pattern varies slowly over the image and the diffraction Bragg-spots are a high frequency repeating pattern both features occupy a different frequency band in the image, they are thus separated by the power-cepstrum transform. The tilt and thickness information is then transformed to and muddles the centre of the EWPC pattern in Figure \ref{fig:adf_nbed_ewpc}c, the crystal-structure information is well separated and occupies a different section in the image.
+Furthermore, if the ronchigram is well-formed and corrected, and a small aperture is used to select only the centre; the second term in equation \ref{eq:cepstrum_unsimp} can be simplified further if the Bragg-spot separation is larger than the convergence angle of the electron-probe, such that the Bragg disks do not overlap. 
+%
+This assumption $\downarrow^2$ allows for the separation of the EWPC in to a summation of the power-cepstrum of the envelope function and the power-cepstrum of the crystal-structure information \cite{padgettExitwavePowercepstrumTransform2020}. 
+%
+Since the envelope function in the CBED/NBED pattern varies slowly over the image and the diffraction Bragg-spots are a high frequency repeating pattern both features occupy a different frequency band in the image, they are thus separated by the power-cepstrum transform. The tilt and thickness information is then transformed to and muddles the centre of the EWPC pattern in Figure \ref{fig:adf_nbed_ewpc}c, the crystal-structure information is well separated and occupies a different section in the image.
 
+%-------------------------------------------------------
 \begin{figure}
 	\centering
 	\def\svgwidth{0.9\linewidth}
@@ -63,8 +118,11 @@ Furthermore, if the ronchigram is well-formed and corrected, and a small apertur
 	\caption{\textbf{a}) virtual annular dark-field image reconstructed by masking the dataset such that the detector geometry is equivalent to that of the HAADF-detector. Image is taken at the transition region of monolayer $MoSe_2$ (bottom) to a heterostructure of $MoSe_2$ and $WSe_2$ (top) on a lacy carbon grid. The faint circles in the middle of the image are contamination from inspection in TEM mode. Contamination in STEM mode caused the bright white spots on the left side of the image. \textbf{b}) logarithm of the nanobeam electron-diffraction pattern captured in the heterobilayer region of the image in \textbf{a}. Two sets of six diffraction disks, one set of six for each material, can be seen in the pattern. Due to local tilt of the crystalline layers diffraction disks on one side of the central $000$-disk, in this case the bottom, are brighter than disks on the opposing side. \textbf{c}) Exit-wave power cepstrum (EWPC) transform of the NBED pattern displayed in \textbf{b}. The EWPC pattern does not suffer from unequal intensity distributions. Peaks in the pattern are distinguishable in the EWPC transform.}
 	\label{fig:adf_nbed_ewpc}
 \end{figure}
+%-------------------------------------------------------
 
-Beam conditions optimized for strain analysis at the micrometre-scale need to result in being able to separate the Bragg disk on the EMPAD sensor as well as fitting as many spots within the bright part of the envelope on the sensor by optimizing the camera length. Generally a smaller spotsize, around 5-6, is used to increase electron brightness and the semi-convergence angle of the electron probe is situated around $\approx$\SI{5}{\milli\radian} to achieve well-defined round disks. This is achieved using a \SI{10}{\micro\meter} to \SI{50}{\micro\meter} aperture in Probe-L mode on the Titan running at \SI{300}{\kilo\electronvolt}.\marginnote{TODO: Change This.}
+Beam conditions optimised for strain analysis at the micrometre-scale need to result in being able to separate the Bragg disk on the EMPAD sensor as well as fitting as many spots within the bright part of the envelope on the sensor by optimising the camera length. Generally a smaller spot size, around 5-6, is used to increase electron brightness and the semi-convergence angle of the electron probe is situated around $\approx$\SI{5}{\milli\radian} to achieve well-defined round disks. 
+%
+This is achieved using a \SI{10}{\micro\meter} to \SI{50}{\micro\meter} aperture in Probe-L mode on the Titan running at \SI{300}{\kilo\electronvolt}.\marginnote{TODO: Change This.}
 
 
 
