@@ -126,21 +126,50 @@ This is achieved using a \SI{10}{\micro\meter} to \SI{50}{\micro\meter} aperture
 
 
 
-\subsection{Centre-of-mass Analysis}
+\subsection{Centre-of-mass Analysis, an approach to potential field mapping and phase object retrieval}
+Centre-of-mass (COM) analysis is a continuation of differential phase contrast where using a segmented annular detector one could measure the difference in beam intensity on two pairs of opposing detectors to gain information on the deflection of the electron due to the sample, the technique allows for the retrieval of phase information and has since been extended towards pixelated-array detectors that can capture the first moment of the electron beam on the detector plane. 
+
+Thus far it was stated that the central Bragg diffraction spot or disk is unscattered, this is partially correct as the spot/disk is not scattered by the crystal structure; it can be deflected away from the unperturbed position by angles much smaller that the Bragg angles due to the phase acquired by the electrons in the beam by interaction with electric or magnetic fields.
+This shift in position is only visible when the electron probe is physically much smaller than the electric or magnetic field it interacts with, if the probe is much larger than the probed feature one instead sees a redistribution of the intensity within the bright field disk. Both cases will require a different analysis process but start from the same assumption that the electron probe wavefunction $\psi_{in}(\vec{k})$ interacts with a sample that can be modelled as a pure phase object such that interaction only adds a phase component to the incoming wavefunction\cite{caoTheoryPracticeElectron2018, lazicPhaseContrastSTEM2016}. The outgoing wavefunction can then be described as in Equation \ref{eq:out_wav} where $\vec{r}_p$ denotes the position of the probe, $\Delta k$ the phase shift, and, $\psi_{in}$ the incoming wave modelled as a plane wave whose semi-convergence angle is imposed by an aperture $A(\vec{k})$.
+
+\begin{equation}
+    \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\exp(2\pi i \Delta \vec{k})\\
+    \label{eq:out_wav}
+\end{equation}
+
+\begin{equation}
+    \psi_{in}(\vec{r})=\mathcal{F}^{-1}\left\{A(\vec{k})\exp(i\chi(\vec{k}))\right\}(\vec{r})
+    \label{eq:in_wav}
+\end{equation}
+
 \subsubsection{Probe << Features}
+
+%-------------------------------------------------------
 \begin{figure}[h]
 	\centering
 	\def\svgwidth{1\linewidth}
 	\import{resources/Figures}{probe_small_features_biig.pdf_tex}
-	\caption{}
-	\label{fig:4d_dataset}
+    \caption{\textbf{Left}) For electron probes whose crossover areas are much smaller than the features being imaged the whole diffracted outgoing wavefunction is wholly deflected. \textbf{Right}) This manifests itself by a uniform translation on the imaging plane, here indicated by an arrow highlighting the deflection from the centre.}
+	\label{fig:small_probe}
 \end{figure}
-\subsubsection{Probe >> Features}
+%-------------------------------------------------------
 
+When the probe's cross-sectional area is much smaller than the feature being imaged it can be assumed that the sample potential is a linear ramp across the probes cross-sectional \cite{caoTheoryPracticeElectron2018}. At the detectors the magnitude of the Fourier transformed wavefunction is measured. The phase shift in real space is then transformed in a displacement in reciprocal-space When the phase. With the shift written in terms of interaction with the electric and/or magnetic field the displacement in reciprocal space is linearly dependent on both/either field. The final diffraction pattern recorded on a sensor in STEM imaging is then given by Equation \ref{eq:lin_shift} in which $t$ is the thickness of the sample, $\sigma$ and $\mu$ are the interaction parameters for the perpendicular electric $\vec{E}_{perp}$ and magnetic field $\vec{B}_{\perp}$ respectively and equal to $m\cdot e \lambda / h^ 2$ and $e / h$.
+
+\begin{equation}
+    \vert \Psi(\vec{k},\vec{r}_p)\vert^2 = \vert \psi_{in}(\vec{k}-t(\sigma \vec{E}_{\perp}+\mu \vec{B}_{\perp})\vert^2
+    \label{eq:lin_shift}
+\end{equation}
+
+
+\subsubsection{Probe >> Features}
+%-------------------------------------------------------
 \begin{figure}[h]
 	\centering
 	\def\svgwidth{1\linewidth}
     \import{resources/Figures}{probe_bigg_features_smol.pdf_tex}
 	\caption{}
-	\label{fig:4d_dataset}
+	\label{fig:big_boii_probe}
 \end{figure}
+%-------------------------------------------------------
+
