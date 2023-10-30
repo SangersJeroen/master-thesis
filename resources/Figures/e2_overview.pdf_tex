@@ -54,7 +54,7 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{e2_overview.pdf}}%
-    \put(0.74861449,0.20392318){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$2.3\degree$\end{tabular}}}}%
+    \put(0.78614111,0.20392318){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$2.3\degree$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{e2_overview.pdf}}%
     \put(0.019887,0.30077669){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a\end{tabular}}}}%
     \put(0.3515256,0.2981841){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b\end{tabular}}}}%
