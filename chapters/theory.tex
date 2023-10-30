@@ -24,18 +24,18 @@ The FEG is placed in proximity to two anodes, the first anode is positively char
 FEGs are about three orders of magnitude brighter than thermionic emission electron sources \cite{field-emission}.
 After being emitted the electrons pass through a monochromator that reduces the energy spread of the emitted electrons. An electron then continues along the optical axis into an illuminating system consisting of multiple electromagnetic lenses, which lenses are activated and to what extent depends on the operating mode of the electron microscope.
 
-\subsubsection{Bright Field}
-A bright field (BF) image of the sample is acquired by using a parallel electron beam. This beam is formed using the lens configuration shown in figure \ref{fig:tem_operating}. This parallel beam is typically several micrometers in size at magnifications up to 20k-100k$\times$.
-In normal operating mode a BF image is captured by a camera looking at a phosphorous screen or by a camera directly, this method of imaging is most analogues to a normal light microscope.
-The electron beam is focused in such a way that it illuminates the sample with a parallel beam, such a beam is also used for creating the clearest diffraction patterns.
-%A bright field image can also be formed in STEM operating mode.
-\begin{figure}[h]
-    \centering
-    \def\svgwidth{.66\linewidth}
-    \import{resources/Figures}{parallel_op_mode.pdf_tex}
-    \caption{Illumination system for parallel beam.}
-    \label{fig:tem_operating}
-\end{figure}
+% \subsubsection{Bright Field}
+% A bright field (BF) image of the sample is acquired by using a parallel electron beam. This beam is formed using the lens configuration shown in figure \ref{fig:tem_operating}. This parallel beam is typically several micrometers in size at magnifications up to 20k-100k$\times$.
+% In normal operating mode a BF image is captured by a camera looking at a phosphorous screen or by a camera directly, this method of imaging is most analogues to a normal light microscope.
+% The electron beam is focused in such a way that it illuminates the sample with a parallel beam, such a beam is also used for creating the clearest diffraction patterns.
+% %A bright field image can also be formed in STEM operating mode.
+% \begin{figure}[h]
+%     \centering
+%     \def\svgwidth{.66\linewidth}
+%     \import{resources/Figures}{parallel_op_mode.pdf_tex}
+%     \caption{Illumination system for parallel beam.}
+%     \label{fig:tem_operating}
+% \end{figure}
 \subsubsection{Dark Field, Z-contrast}
 For dark field and Z-contrast the electron beam is focused to a small area, this creates a higher intensity electron beam with a probe-like point as can be seen in Figure \ref{fig:stem_operating}. Since all the electrons are focused on a small area there is no contrast information that can be used to form an image. To form an image using such a beam the probe point needs to be scanned over the sample leading to the term Scanning Transmission Electron Microscopy.
 Dark field images use electrons scattered away from the optical axis to form an image, to achieve this most STEMs have a series of annular dark field detectors.
@@ -50,17 +50,17 @@ Layering two monolayers such that the atoms are aligned, and the probe is perpen
     \label{fig:stem_operating}
 \end{figure}
 
-\subsubsection{Energy-dispersive x-ray spectroscopy}
-%Pagina 581 W\&C
-\begin{minipage}[h]{0.6\linewidth}
-        \def\svgwidth{0.66\linewidth}
-        \import{resources/Figures}{Titan_full_column.pdf_tex}
-        \captionof{figure}{Cross-section of an aberration corrected electron microscope}
-        \label{fig:tem_crossection}
-\end{minipage}
+% \subsubsection{Energy-dispersive x-ray spectroscopy}
+% %Pagina 581 W\&C
+% \begin{minipage}[h]{0.6\linewidth}
+%         \def\svgwidth{0.66\linewidth}
+%         \import{resources/Figures}{Titan_full_column.pdf_tex}
+%         \captionof{figure}{Cross-section of an aberration corrected electron microscope}
+%         \label{fig:tem_crossection}
+% \end{minipage}
 
 
-\subsection{TMDC/Crystal structure}
+\subsection{Transition-metal dichalcogenides and their crystal structure}
 \subsubsection{Transition metal dichalcogenides}
 Transition metal dichalcogenides or TMDCs are a family of materials consisting of transition metals (group 3 through 12 on the periodic table) and chalcogen atoms (Sulphur, Selenium or Tellurium) in an \ce{MX_2}-configuration, where \ce{M} is the metal atom and \ce{X_2} are the chalcogen atoms \cite{C7TA04268J}.
 The properties of TMDCs depend greatly on the amount of stacked layers and with individual layers being as thin as \SI{6.5}{\angstrom} for \ce{MoS_2} these materials are often referred to as layered or two-dimensional materials.
@@ -68,7 +68,7 @@ Decreasing the amount of layers from bulk changes electrical properties such as 
 These electrical properties make TMDCs useful in electronics as transistors and in optoelectronics as emitters and detectors \cite{emerg_photolum, LopezSanchez2013, Radisavljevic2011}. 
 If present, multiple layers of TMDCs are held together by weak interlayer Van der Waals forces making these materials flexible and transferable using polymer based techniques \cite{reganEmergingExcitonPhysics2022a}.
 
-\subsubsection{Crystal lattice and band structure}
+\subsubsection{Crystal lattice}
 An infinitely repeating group of atoms is called an ideal crystal, such a crystal is constructed by attaching the same group of atoms, often called a unit cell, to a lattice.
 The lattice can be constructed from $n$ independent lattice vectors. $n=1$ for an atomic chain, $n=2$ for a two-dimensional monolayer, and, $n=3$ for a three-dimensional crystal.
 If no smaller repeating group of atoms can be constructed to fill the lattice then this group of atoms is called the primitive unit cell and the $n$-independent lattice vectors are then called the primitive translation vectors $a_{n}$ \cite{Kittel1995-qt}.
@@ -137,16 +137,18 @@ Just as the real-space lattice has a unit cell so does the reciprocal lattice. I
 \end{figure}
 
 \subsubsection{Convergent beam electron diffraction}
+In convergent beam electron diffraction the sample is not illuminated by a parallel beam of electrons but instead the electron microscope forms a cone-like shape such that all electrons are focused onto a area only a few atoms wide. The convergence of the electron beam is characterised by the semi-convergence angle $\alpha$ and is usually few to tens of \si{\milli\radian} in size.
+Since the local crystal structure is now imaged by a cone-like probe, and not a parallel beam, it is illuminated from multiple different incoming angles; this distribution of incoming angles is then scattered due to the planes in the crystal lattice with the effect of opening the Bragg spots from the previous section to Bragg disks. A typical CBED pattern is displayed in Figure \ref{fig:pacbed}.
 
-
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth, keepaspectratio]{resources/Figures/pacbed_hole.png}
+    \caption{A convergent-beam electron diffraction pattern imaged using the EMPAD sensor. Image was calibrated by determining the distance in pixels between Bragg disks and comparing to the FFT of the same crystal imaged using the calibrated CETA camera.}
+    \label{fig:pacbed}
+\end{figure}
 
 \subsection{Moiré Physics in two-dimensional heterostructures}
-\begin{enumerate}
-    \item moire pattern -> stacking
-    \item lattice relaxation
-\end{enumerate}
 
-\subsubsection{Diffraction pattern and Brillouin zones of moiré heterostructures}
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth, keepaspectratio]{resources/Figures/moire_transition.png}
@@ -154,6 +156,15 @@ Just as the real-space lattice has a unit cell so does the reciprocal lattice. I
     \caption{\textbf{a} High-resolution TEM image of a transition region between singular TMDC material and a twisted heterostructure showing the smallest possible moiré supercell. Dashed regions correspond to subfigures of the same letter, the with white outlined inset is a post-measurement zoomed in image of the transition region with a dashed line guiding the eye towards the flake edge that causes the visual transition. \textbf{b,c} Fast-Fourier transforms of the dashed regions in \textbf{a}. \textbf{b} Shows twelve first-order diffraction peaks indicating that this region consists of two different layers with a roughly \SI{30}{\degree} twist, leading to the smallest possible moiré cell. \textbf{c} Shows six first-order diffraction peaks indicating that its from a single untwisted  crystal. }
     \label{fig:moire_trans}
 \end{figure}
+
+Interaction between imaging electrons and crystal lattices lead to the effects described in the previous section, adding a second crystalline structure rotated with respect to the first will affect both lattices as well as create a larger also periodic moiré lattice.
+Figure \ref{fig:moire_trans}\textbf{a} shows the transition from single crystal layer to a bilayer region where the constituent layers are rotated from one another, in this bilayer region the effective enlargement of periodic structure is visible as the repeating moiré unit cell is significantly larger than the periodic unit cell of the single layer. The periodicity of the moiré cell is dependent on the rotation between layers and is smallest for \SI{30}{\degree} rotation and increases as the rotation is decreased. The exact periodicity depends on the combination of materials but can be as large as tens of nanometres for transition-metal dichalcogenides with small lattice mismatch \cite{rosenbergerAtomicReconstructionMoire}.
+
+\subsubsection{Diffraction patterns of moiré heterostructures}
+The diffraction patterns displayed in Figure \ref{fig:moire_trans}\textbf{b,c} corresponding to the moiré region and the single layer region in Figure \ref{fig:moire_trans}\textbf{a} respectively share some peaks but not all and the extra peaks can not be explained by rotating the diffraction pattern in Figure \ref{fig:moire_trans}\textbf{c} and superimposing in on the pattern in Figure \ref{fig:moire_trans}\textbf{b}.
+These extra satellite peaks that emerge between the main Bragg spots and surround the central spot are attributed to the electrons scattering twice, once of off the first layer and then a second time of off the second layer, transferring momentum between the layers while doing so. As these satellite peaks are second order effects they appear dimmer than the main Bragg diffraction spots.
+These extra momenta transfer possibilities that open up are displayed schematically in Figure \ref{fig:moire_saed}. In Figure \ref{fig:moire_saed}\textbf{a} the diffraction patterns of two crystal lattice, one red and one blue, are presented; these two lattices each allow six first order momenta transfers by themselves but when brought into proximity the second layer allows scattered electrons to scatter again of its lattice creating the compounded scattering vectors displayed in orange in Figure \ref{fig:moire_saed}\textbf{a,b}. In Figure \ref{fig:moire_saed}\textbf{c} a moiré diffraction pattern is indexed by the cause of the peaks.
+
 
 \begin{figure}[h]
     \centering
