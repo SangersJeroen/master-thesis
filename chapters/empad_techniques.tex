@@ -154,7 +154,7 @@ This shift in position is only visible when the electron probe is physically muc
 \end{figure}
 %-------------------------------------------------------
 
-When the probe's cross-sectional area is much smaller than the feature being imaged it can be assumed that the sample potential is a linear ramp across the probes cross-sectional \cite{caoTheoryPracticeElectron2018}. At the detectors the magnitude of the Fourier transformed wavefunction is measured. The phase shift in real space is then transformed in a displacement in reciprocal-space When the phase. With the shift written in terms of interaction with the electric and/or magnetic field the displacement in reciprocal space is linearly dependent on both/either field. The final diffraction pattern recorded on a sensor in STEM imaging is then given by Equation \ref{eq:lin_shift} in which $t$ is the thickness of the sample, $\sigma$ and $\mu$ are the interaction parameters for the perpendicular electric $\vec{E}_{perp}$ and magnetic field $\vec{B}_{\perp}$ respectively and equal to $m\cdot e \lambda / h^ 2$ and $e / h$.
+When the probe's cross-sectional area is much smaller than the feature being imaged it can be assumed that the sample potential is a linear ramp across the probes cross-sectional \cite{caoTheoryPracticeElectron2018}. At the detectors the magnitude of the Fourier transformed wavefunction is measured. The phase shift in real space is then transformed in a displacement in reciprocal-space When the phase. With the shift written in terms of interaction with the electric and/or magnetic field the displacement in reciprocal space is linearly dependent on both/either field. The final diffraction pattern recorded on a sensor in STEM imaging is then given by Equation \ref{eq:lin_shift} in which $t$ is the thickness of the sample, $\sigma$ and $\mu$ are the interaction parameters for the perpendicular electric $\vec{E}_{perp}$ and magnetic field $\vec{B}_{\perp}$ respectively and equal to $m\cdot e \lambda / h^ 2$ and $e / h$. Figure \ref{fig:small_probe} displays the expected displacement of the wavefunction on the sensor surface.
 
 \begin{equation}
     \vert \Psi(\vec{k},\vec{r}_p)\vert^2 = \vert \psi_{in}(\vec{k}-t(\sigma \vec{E}_{\perp}+\mu \vec{B}_{\perp})\vert^2
@@ -172,4 +172,15 @@ When the probe's cross-sectional area is much smaller than the feature being ima
 	\label{fig:big_boii_probe}
 \end{figure}
 %-------------------------------------------------------
+In the case where the probe is much larger than the feature it can be assumed that the potential interacting with the probe is a delta potential therein and only weakly affects our probe. The outgoing wavefunction can then be modelled as in Equation \ref{eq:prob_smol_out}. Then by taking the Fourier transform the magnitude of the diffraction pattern on the sensor's imaging plane is defined as in Equation \ref{eq:prob_smol_diff}, where $P(r)$ is the inverse Fourier transform of our aperture function $A(\vec{k})$
 
+\begin{equation}
+    \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\left[ 1+2\pi i \Delta \vec{k}\delta(\vec{r})\right]
+    \label{eq:prob_smol_out}
+\end{equation}
+
+
+\begin{equation}
+    \vert \Psi_{out}(\vec{r},\vec{r}_p)\vert^2 = \vert A(\vec{k})\vert^2-4\pi \Delta \vec{k} A(\vec{k})P(\vec{r})\sin(r) + \vert 2\pi\Delta \vec{k}\vert^2 \psi_{in}(\vec{r})\psi^*_{in}(\vec{r})
+    \label{eq:prob_smol_diff}
+\end{equation}
