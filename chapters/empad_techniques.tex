@@ -126,35 +126,71 @@ This is achieved using a \SI{10}{\micro\meter} to \SI{50}{\micro\meter} aperture
 
 
 
-\subsection{Centre-of-mass Analysis, an approach to potential field mapping and phase object retrieval}
-Centre-of-mass (COM) analysis is a continuation of differential phase contrast where using a segmented annular detector one could measure the difference in beam intensity on two pairs of opposing detectors to gain information on the deflection of the electron due to the sample, the technique allows for the retrieval of phase information and has since been extended towards pixelated-array detectors that can capture the first moment of the electron beam on the detector plane. 
+\subsection{Centre-of-Mass (COM) Analysis for Potential Field Mapping and Phase Object Retrieval}
+%
+In the context of electron diffraction, the Bragg condition, as described by Bragg's law, play a crucial role. It states that the interference of waves becomes constructive when the path difference between them is an integer multiple of the wavelength. This fundamental principle leads to the formation of the Bragg diffraction spots or disks, which are the prominent features in the diffraction pattern.
 
-Thus far it was stated that the central Bragg diffraction spot or disk is unscattered, this is partially correct as the spot/disk is not scattered by the crystal structure; it can be deflected away from the unperturbed position by angles much smaller that the Bragg angles due to the phase acquired by the electrons in the beam by interaction with electric or magnetic fields.
-This shift in position is only visible when the electron probe is physically much smaller than the electric or magnetic field it interacts with, if the probe is much larger than the probed feature one instead sees a redistribution of the intensity within the bright field disk. Both cases will require a different analysis process but start from the same assumption that the electron probe wavefunction $\psi_{in}(\vec{k})$ interacts with a sample that can be modelled as a pure phase object such that interaction only adds a phase component to the incoming wavefunction\cite{caoTheoryPracticeElectron2018, lazicPhaseContrastSTEM2016}. The outgoing wavefunction can then be described as in Equation \ref{eq:out_wav} where $\vec{r}_p$ denotes the position of the probe, $\Delta k$ the phase shift, and, $\psi_{in}$ the incoming wave modelled as a plane wave whose semi-convergence angle is imposed by an aperture $A(\vec{k})$.
+Centre-of-mass (COM) analysis is an innovation approach to potential field mapping and phase object retrieval. 
+%
+It serves as a continuation of differential phase contrast, where a segmented annular detector is utilised to measure the difference in beam intensity on two pairs of opposing detectors. 
+%
+This methodology offers valuable insights into the deflection of electrons caused by the sample. 
+%
+By employing the COM technique, we can effectively  retrieve phase information. 
+%
+Furthermore, this approach has evolved to accommodate pixelated-array detectors, enabling the capture of the first moment of the electron beam on the detector plane. 
+
+The central Bragg diffraction spot or disk is often described as unscattered, but this is a simplification. 
+%
+While it is true that the spot/disk is not scattered by the crystal structure, it can be deflected from its  unperturbed position by angles much smaller than the Bragg angles. 
+%
+This deflections occurs due to the phase acquired by the electrons in the beam during their interaction with electric or magnetic fields.
+
+This shift in position is only detectable when the electron probe is physically much smaller than the electric or magnetic field it interacts with.
+%
+Conversely,if the probe is much larger than the probed feature, one instead observed a redistribution of the intensity within the bright field disk.
+%
+Both these scenarios necessitate different analysis processes.
+
+However, they both start from the same assumption: that the electron probe wavefunction $\psi_{in}(\vec{k})$ interacts with a sample that can be modelled as a pure phase object. This interaction only adds a phase component to the incoming wavefunction\cite{caoTheoryPracticeElectron2018, lazicPhaseContrastSTEM2016}. 
+
+The outgoing wavefunction of the electron probe can be described as follows:
 
 \begin{equation}
     \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\exp(2\pi i \Delta \vec{k})\\
     \label{eq:out_wav}
 \end{equation}
 
+Here, $\vec{r}_p$ denotes the position of the probe, $\Delta k$ represents the phase shift, and, $\psi_{in}$ is the incoming wave modelled as a plane wave. The semi-convergence angle of this plane wave is imposed by an aperture $A(\vec{k})$.
+
+The incoming wave is given by the following equation:
+
 \begin{equation}
     \psi_{in}(\vec{r})=\mathcal{F}^{-1}\left\{A(\vec{k})\exp(i\chi(\vec{k}))\right\}(\vec{r})
     \label{eq:in_wav}
 \end{equation}
 
-\subsubsection{Probe << Features}
+%\subsubsection{Probe << Features}
+
+
 
 %-------------------------------------------------------
 \begin{figure}[h]
 	\centering
 	\def\svgwidth{1\linewidth}
 	\import{resources/Figures}{probe_small_features_biig.pdf_tex}
-    \caption{\textbf{Left}) For electron probes whose crossover areas are much smaller than the features being imaged the whole diffracted outgoing wavefunction is wholly deflected. \textbf{Right}) This manifests itself by a uniform translation on the imaging plane, here indicated by an arrow highlighting the deflection from the centre.}
+    \caption{\textbf{Left:} When electron probes have crossover areas much smaller than the features being imaged, the entire diffracted outgoing wavefunction is subjected to complete deflection. \textbf{Right:} This deflection becomes evident through a uniform translation on the imaging plane, as indicated by the arrow highlighting the shift from the centre.}
 	\label{fig:small_probe}
 \end{figure}
 %-------------------------------------------------------
 
-When the probe's cross-sectional area is much smaller than the feature being imaged it can be assumed that the sample potential is a linear ramp across the probes cross-sectional \cite{caoTheoryPracticeElectron2018}. At the detectors the magnitude of the Fourier transformed wavefunction is measured. The phase shift in real space is then transformed in a displacement in reciprocal-space When the phase. With the shift written in terms of interaction with the electric and/or magnetic field the displacement in reciprocal space is linearly dependent on both/either field. The final diffraction pattern recorded on a sensor in STEM imaging is then given by Equation \ref{eq:lin_shift} in which $t$ is the thickness of the sample, $\sigma$ and $\mu$ are the interaction parameters for the perpendicular electric $\vec{E}_{perp}$ and magnetic field $\vec{B}_{\perp}$ respectively and equal to $m\cdot e \lambda / h^ 2$ and $e / h$. Figure \ref{fig:small_probe} displays the expected displacement of the wavefunction on the sensor surface.
+In the scenario where the probe's cross-sectional area is much smaller than the feature being imaged, it can be assumed that the sample potential is a linear ramp across the probe's cross-sectional area ~\cite{caoTheoryPracticeElectron2018}. 
+%
+At the detectors, the magnitude of the Fourier transformed wavefunction is measured. The phase shift in real space is then transformed into a displacement in reciprocal space.
+%
+The displacement in reciprocal space is linearly dependent on the electric and/or magnetic field. The final diffraction pattern recorded on a sensor in STEM imaging is then given by Equation~\ref{eq:lin_shift}, where $t$ is the thickness of the sample, $\sigma$ and $\mu$ are the interaction parameters for the perpendicular electric $\vec{E}_{perp}$ and magnetic field $\vec{B}_{\perp}$ respectively, and are equal to $m\cdot e \lambda / h^ 2$ and $e / h$. 
+
+Figure~\ref{fig:small_probe} displays the expected displacement of the wavefunction on the sensor surface.
 
 \begin{equation}
     \vert \Psi(\vec{k},\vec{r}_p)\vert^2 = \vert \psi_{in}(\vec{k}-t(\sigma \vec{E}_{\perp}+\mu \vec{B}_{\perp}))\vert^2
@@ -162,7 +198,7 @@ When the probe's cross-sectional area is much smaller than the feature being ima
 \end{equation}
 
 
-\subsubsection{Probe >> Features}
+%\subsubsection{Probe >> Features}
 %-------------------------------------------------------
 \begin{figure}[h]
 	\centering
@@ -172,32 +208,46 @@ When the probe's cross-sectional area is much smaller than the feature being ima
 	\label{fig:big_boii_probe}
 \end{figure}
 %-------------------------------------------------------
-In the case where the probe is much larger than the feature it can be assumed that the potential interacting with the probe is a delta potential therein and only weakly affects our probe. The outgoing wavefunction can then be modelled as in Equation \ref{eq:prob_smol_out}. Then by taking the Fourier transform the magnitude of the diffraction pattern on the sensor's imaging plane is defined as in Equation \ref{eq:prob_smol_diff}, where $P(r)$ is the inverse Fourier transform of our aperture function $A(\vec{k})$. 
-Most conveniently in this approximation the outgoing wavefunction has only two terms whose contribution affects the intensity of the bright field disk. The aperture function $A(\vec{k})$ in Equation \ref{eq:prob_smol_diff} restricts the intensity in the bright field disk to an image of the incoming probe wavefunction and a redistribution due to the phase acquired. In this scenario the COM can be measured by looking at the first moment within the bright field disk instead of the displacement of this disk. 
+In the case where the probe is much larger than the feature, it can be assumed that the potential interacting with the probe is a delta potential, and only weakly affects the probe. The outgoing wavefunction can then be modelled as follows: 
 
 \begin{equation}
     \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\left[ 1+2\pi i \Delta \vec{k}\delta(\vec{r})\right]
     \label{eq:prob_smol_out}
 \end{equation}
 
+By taking the Fourier transform, the magnitude of the diffraction pattern on the sensor's imaging plane is defined as 
 
 \begin{equation}
     \vert \Psi_{out}(\vec{r},\vec{r}_p)\vert^2 = \vert A(\vec{k})\vert^2-4\pi \Delta \vec{k} A(\vec{k})P(\vec{r})\sin(r) + \vert 2\pi\Delta \vec{k}\vert^2 \psi_{in}(\vec{r})\psi^*_{in}(\vec{r})
     \label{eq:prob_smol_diff}
 \end{equation}
 
+where $P(r)$ is the inverse Fourier transform of our aperture function $A(\vec{k})$.
+%
+In this approximation, the outgoing wavefunction has only two terms whose contribution affects the intensity of the bright field disk. The aperture function $A(\vec{k})$ in Equation~\ref{eq:prob_smol_diff} restricts the intensity in the bright field disk to an image of the incoming probe wavefunction and a redistribution due to the phase acquired. 
+%
+In this scenario, the COM can be measured by looking at the first moment within the bright field disk instead of the displacement of this disk. 
+
 \subsubsection{Interpretation of centre-of-mass images}
-In either previously described scenario it is possible to measure the COM as the first moment of the intensity of the diffraction pattern on the sensor such that for every probe position $\vec{r}_p$ over the sample a vector with an $x$ and $y$ coordinate of the COM is recorded (Equation \ref{eq:com_int}).
+%
+In both previously described scenarios, it is possible to measure the COM as the first moment of the intensity of the diffraction pattern on the sensor. For every probe position $\vec{r}_p$ over the sample, a vector with an $x$ and $y$ coordinate of the COM is recorded. This is given by the equation:
 
 \begin{equation}
     I^{COM}_{i} (\vec{r}_p) = \iint_{-\infty}^{\infty} k_{i} I_D(\vec{k}, \vec{r}_p) \mathrm{d}^2\vec{k} = \iint_{-\infty}^{\infty}k_i \vert \Psi_{out}(\vec{k},\vec{r}_p)\vert^2 \mathrm{d}^2 \vec{k}; \qquad i = x,y
     \label{eq:com_int}
 \end{equation}
 
-The vector valued image $\vec{I}^{COM}(\vec{r}_p)$ is then proportional not only the electric or magnetic field in the sample but is also proportional to the gradient of the phase object $\vec{\nabla}\phi(\vec{r})$ of the image \cite{lazicPhaseContrastSTEM2016}.
-Integrating the $\vec{I}^{COM}(\vec{r}_p)$ vector field such that the scalar valued function $I^{iCOM}(\vec{r}_p)$ is retrieved gives a function directly proportional to the sample's phase object $\phi(r)$ that is normally imaged directly in TEM imaging. The integration is carried out iteratively in the Fourier domain similarly to the method described in \cite{varnavidesIterativePhaseRetrieval2023}.
+The vector-valued image $\vec{I}^{COM}(\vec{r}_p)$ is not only proportional to the electric or magnetic field in the sample but also to the gradient of the phase object $\vec{\nabla}\phi(\vec{r})$ of the image~ \cite{lazicPhaseContrastSTEM2016}.
 
-Instead of integrating the $\vec{I}^{COM}(\vec{r}_p)$ image to retrieve the phase object another differentiation operation can be applied to find the divergence of the phase acquired which is equal to the divergence of the electric field. Carrying out this operation the yields information on the distribution of charges in the sample plane.
+By integrating the $\vec{I}^{COM}(\vec{r}_p)$ vector field, a scalar-valued function $I^{iCOM}(\vec{r}_p)$ is retrieved. 
+%
+This function is directly proportional to the sample's phase object $\phi(r)$, which is normally imaged directly in TEM imaging. 
+%
+The integration is carried out iteratively in the Fourier domain, similar to the method described in~\cite{varnavidesIterativePhaseRetrieval2023}.
+
+Instead of integrating the $\vec{I}^{COM}(\vec{r}_p)$ image to retrieve the phase object, a  differentiation operation can be applied to find the divergence of the phase acquired, which is equal to the divergence of the electric field. This operation yields information on the distribution of charges in the sample plane.
+
+The equations associated with these processes are as follows:
 
 \begin{align}
     \vec{I}^{COM}(\vec{r}_p) &\propto -\sigma\vec{E}_{\perp}(\vec{r}_p) - \mu \vec{B}_{\perp}(\vec{r}_p)\\
