@@ -2,20 +2,19 @@
 
 \subsection{Verification of moiré pattern and its parameters}
 
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{.9\linewidth}
     \import{resources/Figures}{moire_flakes.pdf_tex}
     \caption{(\textbf{a}, \textbf{d}, \textbf{h}) HR-TEM images of three different $MoSe_2$/$WSe_2$-Moiré heterostructures stamped under different angles verified by the FFT of images (\textbf{b}, \textbf{e}, \textbf{i}) taken at $460k\times$ magnification (not shown). The Moiré angle can be determined by measurement of the angle in between the two diffraction peaks in a set, for \textbf{b}, \textbf{e}, \textbf{i} the angle was measured to be $16.6\degree$, $12.2\degree$, and, $8.3\degree$ respectively. (\textbf{c}, \textbf{f}, \textbf{j}) displaying a reconstruction of filtered diffraction patterns, showing a clear Moiré superlattice. The Moiré superlattice cell was measured to be \SI{0.47}{nm}, \SI{1.06}{nm}, and, \SI{1.69}{nm}; for \textbf{c}, \textbf{f}, and, \textbf{j}. (\textbf{a}) The two layers of material show a rough surface that seems to arise during or after transfer to the TEM grid.}
     \label{fig:moire_overview}
 \end{figure}
-% Figure above a) Sample C1, d) C2, h) C5.
 
-
+The samples displayed in Figure \ref{fig:moire_overview} have been fabricated using the method outlined in Section \ref{sec:fab_method} but had not been checked under the spectroscope as it had not arrived by then. The flakes were selected for stamping only by using a optical microscope and identifying thin regions. As can be seen in Figure \ref{fig:moire_overview}\textbf{a,d,h} not all flakes are equally thin and are thus not all composed of two layers of monolayer material. The high-resolution TEM images do however show that using the stamping method it is possible to create heterostructures comprised of monolayer material. Figures \ref{fig:moire_overview}\textbf{b,c,f} show the fast Fourier transforms of HRTEM images taken at $460\mathrm{k}\times$ and clearly depict the characteristic double set of Bragg spots that indicate the two crystal layers. Masking the diffraction peaks and taking the inverse Fourier transform then creates a noise-free representation of the moiré lattice (Figure \ref{fig:moire_overview}\textbf{c,f,j}), which shows the expected relation of increasing unit cell for decreasing moiré angles.
 
 
 \subsection{Analysis of in-plane strain}
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{.74\linewidth}
     \import{resources/Figures}{strain_overview.pdf_tex}
@@ -23,13 +22,13 @@
     \label{fig:strain_overview}
 \end{figure}
 
-Will this text force the figure to show? let's hope so!
-If not then the figures can be found after the references for some reason
+For the analysis of heterostrain the heterostructure displayed in Figure \ref{fig:moire_overview}\textbf{d} was selected as its transfer to the TEM grid went without issue thus leaving no ambiguity in material, whereas for the other two heterostructures depicted in Figure \ref{fig:moire_overview} there were a lot of flakes twirling around in the IPA when dissolving the PVA substrate. The two layers were stamped one on top of another at an angle of \SI{12.2}{\degree} creating a moiré lattice with \SI{1.06}{\nano\meter} periodicity.
+The heterostrain analysis was carried out using the exit-wave power cepstrum transform method. Both layers were analysed separately by tracking the corresponding EWPC peaks such that only the strain and rotation within each single layer are considered. In Figure \ref{fig:strain_overview} the results are presented for each layer in their own column. The rows, from top to bottom, denote the compressive/tensile strain in the $x$ and $y$ direction, the shear strain, and, the rotation of the layer; all relative to the reference area denoted by the red square. The rotation in the bottom row is not the same as the moiré angle under which the layers are stamped. The white regions denote the places where the to be tracked peaks were not found, and thus no information could be retrieved.
+In Figure \ref{fig:strain_overview}\textbf{a-c, e-d} it is shown that both layers are effected by between \SI{-5}{\percent} and \SI{5}{\percent} strain mostly concentrated near the edges of the supporting carbon mesh over which both layers are draped and for the top layer there also exist strain close to a vertically extending fold in the layer. The relative rotation plot for the top layer shows a stark difference in relative rotation between the left and right side of the fold, meaning that the rotation likely pushed the material in on itself creating the fold. The relative rotation tapers off as the fold also disappears when moving away from the flakes edge as can be seen in Figure \ref{fig:moire_overview}\textbf{b}.\\
 \newpage
 
-
 \section{Case study: An analysis of features in stamped $WSe_2$}
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{.95\linewidth}
     \import{resources/Figures}{e2_overview.pdf_tex}
@@ -37,10 +36,12 @@ If not then the figures can be found after the references for some reason
     \label{fig:dub_moire}
 \end{figure}
 
+This sample of stamped $WSe_2$ was created using the described mechanical transfer technique and was originally considered unsuccessful as the stamped flakes got jostled up during transfer negating any effort put into alignment of the flakes. Upon inspection in STEM mode the large features highlighted with the green outline in Figure \ref{fig:dub_moire}\textbf{a} appeared and are the effect of three different layers of material slightly out of alignment with one another. The resulting moiré unit cell is highlighted with the dashed outline in Figure \ref{fig:dub_moire}\textbf{b} and is measured to be caused a \SI{2.3}{\degree} rotation between the thin strip's crystal lattice (highlighted in green) and the moiré pattern present in the underlying layers (highlighted in blue).
+In the following sections three regions from the previously introduced sample will be looked at: a hole in otherwise uniform material to verify the centre-of-mass analysis tools, a large periodicity moiré lattice to see what can be expected, and finally, the double misaligned region.
 
 \subsection{Hole}
 
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{.95\linewidth}
     \import{resources/Figures}{hole_displacement.pdf_tex}
@@ -49,7 +50,7 @@ If not then the figures can be found after the references for some reason
 \end{figure}
 
 
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{.7\linewidth}
     \import{resources/Figures}{hole_momentum_transfered.pdf_tex}
@@ -59,7 +60,7 @@ If not then the figures can be found after the references for some reason
 
 \subsection{Small Moiré}
 
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{.95\linewidth}
     \import{resources/Figures}{moire_displacement.pdf_tex}
@@ -68,7 +69,7 @@ If not then the figures can be found after the references for some reason
 \end{figure}
 
 
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{.5\linewidth}
     \import{resources/Figures}{moire_efield_charge.pdf_tex}
@@ -78,7 +79,7 @@ If not then the figures can be found after the references for some reason
 
 \subsection{Large Moiré}
 
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{.95\linewidth}
     \import{resources/Figures}{trip_moire_displacement.pdf_tex}
@@ -86,7 +87,7 @@ If not then the figures can be found after the references for some reason
     \label{fig:trip_m_dis}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{.7\linewidth}
     \import{resources/Figures}{trip_moire_momentum.pdf_tex}
