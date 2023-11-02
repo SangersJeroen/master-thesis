@@ -1,0 +1,280 @@
+
+\section{Centre-of-Mass (COM) Analysis for Potential Field Mapping and Phase Object Retrieval}
+%
+In the context of electron diffraction, the Bragg condition, as described by Bragg's law, play a crucial role. It states that the interference of waves becomes constructive when the path difference between them is an integer multiple of the wavelength. This fundamental principle leads to the formation of the Bragg diffraction spots or disks, which are the prominent features in the diffraction pattern.
+
+Centre-of-mass (COM) analysis is an innovation approach to potential field mapping and phase object retrieval. 
+%
+It serves as a continuation of differential phase contrast, where a segmented annular detector is utilised to measure the difference in beam intensity on two pairs of opposing detectors. 
+%
+This methodology offers valuable insights into the deflection of electrons caused by the sample. 
+%
+By employing the COM technique, we can effectively  retrieve phase information. 
+%
+Furthermore, this approach has evolved to accommodate pixelated-array detectors, enabling the capture of the first moment of the electron beam on the detector plane. 
+
+The central Bragg diffraction spot or disk is often described as unscattered, but this is a simplification. 
+%
+While it is true that the spot/disk is not scattered by the crystal structure, it can be deflected from its  unperturbed position by angles much smaller than the Bragg angles. 
+%
+This deflections occurs due to the phase acquired by the electrons in the beam during their interaction with electric or magnetic fields.
+
+This shift in position is only detectable when the electron probe is physically much smaller than the electric or magnetic field it interacts with.
+%
+Conversely,if the probe is much larger than the probed feature, one instead observed a redistribution of the intensity within the bright field disk.
+%
+Both these scenarios necessitate different analysis processes.
+
+However, they both start from the same assumption: that the electron probe wavefunction $\psi_{in}(\vec{k})$ interacts with a sample that can be modelled as a pure phase object. This interaction only adds a phase component to the incoming wavefunction\cite{caoTheoryPracticeElectron2018, lazicPhaseContrastSTEM2016}. 
+
+The outgoing wavefunction of the electron probe can be described as follows:
+
+\begin{equation}
+    \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\exp(2\pi i \Delta \vec{k})\\
+    \label{eq:out_wav}
+\end{equation}
+
+Here, $\vec{r}_p$ denotes the position of the probe, $\Delta k$ represents the phase shift, and, $\psi_{in}$ is the incoming wave modelled as a plane wave. The semi-convergence angle of this plane wave is imposed by an aperture $A(\vec{k})$.
+
+The incoming wave is given by the following equation:
+
+\begin{equation}
+    \psi_{in}(\vec{r})=\mathcal{F}^{-1}\left\{A(\vec{k})\exp(i\chi(\vec{k}))\right\}(\vec{r})
+    \label{eq:in_wav}
+\end{equation}
+
+%\subsubsection{Probe << Features}
+
+
+
+%-------------------------------------------------------
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{1\linewidth}
+	\import{resources/Figures}{probe_small_features_biig.pdf_tex}
+    \caption{\textbf{Left:} When electron probes have crossover areas much smaller than the features being imaged, the entire diffracted outgoing wavefunction is subjected to complete deflection. \textbf{Right:} This deflection becomes evident through a uniform translation on the imaging plane, as indicated by the arrow highlighting the shift from the centre.}
+	\label{fig:small_probe}
+\end{figure}
+%-------------------------------------------------------
+
+In the scenario where the probe's cross-sectional area is much smaller than the feature being imaged, it can be assumed that the sample potential is a linear ramp across the probe's cross-sectional area ~\cite{caoTheoryPracticeElectron2018}. 
+%
+At the detectors, the magnitude of the Fourier transformed wavefunction is measured. The phase shift in real space is then transformed into a displacement in reciprocal space.
+%
+The displacement in reciprocal space is linearly dependent on the electric and/or magnetic field. The final diffraction pattern recorded on a sensor in STEM imaging is then given by Equation~\ref{eq:lin_shift}, where $t$ is the thickness of the sample, $\sigma$ and $\mu$ are the interaction parameters for the perpendicular electric $\vec{E}_{perp}$ and magnetic field $\vec{B}_{\perp}$ respectively, and are equal to $m\cdot e \lambda / h^ 2$ and $e / h$. 
+
+Figure~\ref{fig:small_probe} displays the expected displacement of the wavefunction on the sensor surface.
+
+\begin{equation}
+    \vert \Psi(\vec{k},\vec{r}_p)\vert^2 = \vert \psi_{in}(\vec{k}-t(\sigma \vec{E}_{\perp}+\mu \vec{B}_{\perp}))\vert^2
+    \label{eq:lin_shift}
+\end{equation}
+
+
+%\subsubsection{Probe >> Features}
+%-------------------------------------------------------
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{1\linewidth}
+    \import{resources/Figures}{probe_bigg_features_smol.pdf_tex}
+	\caption{}
+	\label{fig:big_boii_probe}
+\end{figure}
+%-------------------------------------------------------
+In the case where the probe is much larger than the feature, it can be assumed that the potential interacting with the probe is a delta potential, and only weakly affects the probe. The outgoing wavefunction can then be modelled as follows: 
+
+\begin{equation}
+    \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\left[ 1+2\pi i \Delta \vec{k}\delta(\vec{r})\right]
+    \label{eq:prob_smol_out}
+\end{equation}
+
+By taking the Fourier transform, the magnitude of the diffraction pattern on the sensor's imaging plane is defined as 
+
+\begin{equation}
+    \vert \Psi_{out}(\vec{k},\vec{r}_p)\vert^2 = \vert A(\vec{k})\vert^2-4\pi \Delta \vec{k} A(\vec{k})P(\vec{r})\sin(r) + \vert 2\pi\Delta \vec{k}\vert^2 \psi_{in}(\vec{r})\psi^*_{in}(\vec{r})
+    \label{eq:prob_smol_diff}
+\end{equation}
+
+where $P(r)$ is the inverse Fourier transform of our aperture function $A(\vec{k})$.
+%
+In this approximation, the outgoing wavefunction has only two terms whose contribution affects the intensity of the bright field disk. The aperture function $A(\vec{k})$ in Equation~\ref{eq:prob_smol_diff} restricts the intensity in the bright field disk to an image of the incoming probe wavefunction and a redistribution due to the phase acquired. 
+%
+In this scenario, the COM can be measured by looking at the first moment within the bright field disk instead of the displacement of this disk. 
+
+\subsection{Interpretation of centre-of-mass images}
+%
+In both previously described scenarios, it is possible to measure the COM as the first moment of the intensity of the diffraction pattern on the sensor. For every probe position $\vec{r}_p$ over the sample, a vector with an $x$ and $y$ coordinate of the COM is recorded. This is given by the equation:
+
+\begin{equation}
+    I^{COM}_{i} (\vec{r}_p) = \iint_{-\infty}^{\infty} k_{i} I_D(\vec{k}, \vec{r}_p) \mathrm{d}^2\vec{k} = \iint_{-\infty}^{\infty}k_i \vert \Psi_{out}(\vec{k},\vec{r}_p)\vert^2 \mathrm{d}^2 \vec{k}; \qquad i = x,y
+    \label{eq:com_int}
+\end{equation}
+
+The vector-valued image $\vec{I}^{COM}(\vec{r}_p)$ is not only proportional to the electric or magnetic field in the sample but also to the gradient of the phase object $\vec{\nabla}\phi(\vec{r})$ of the image~ \cite{lazicPhaseContrastSTEM2016}.
+
+By integrating the $\vec{I}^{COM}(\vec{r}_p)$ vector field, a scalar-valued function $I^{iCOM}(\vec{r}_p)$ is retrieved. 
+%
+This function is directly proportional to the sample's phase object $\phi(r)$, which is normally imaged directly in TEM imaging. 
+%
+The integration is carried out iteratively in the Fourier domain, similar to the method described in~\cite{varnavidesIterativePhaseRetrieval2023}.
+
+Instead of integrating the $\vec{I}^{COM}(\vec{r}_p)$ image to retrieve the phase object, a  differentiation operation can be applied to find the divergence of the phase acquired, which is equal to the divergence of the electric field. This operation yields information on the distribution of charges in the sample plane.
+
+The equations associated with these processes are as follows:
+
+\begin{align}
+    \vec{I}^{COM}(\vec{r}_p) &\propto -\sigma\vec{E}_{\perp}(\vec{r}_p) - \mu \vec{B}_{\perp}(\vec{r}_p)\\
+    I^{iCOM}(\vec{r}_p) &\propto \sigma \Phi_z(\vec{r}_p)\\
+    I^{dCOM}(\vec{r}_p) &\propto -\frac{\sigma}{\epsilon_0}\rho_z(\vec{r}_p) 
+\end{align}
+
+\subsection{Analysis of momentum transfer in twisted $WSe_2$ moiré superlattice}
+
+%---------------------------------------------------------------------------------------
+\begin{figure}
+    \centering
+    \def\svgwidth{.95\linewidth}
+    \import{resources/Figures}{e2_overview.pdf_tex}
+    \caption{\textbf{a}) High-angle annular dark field photograph, image shows material increasing in layer number from the bottom left to the top right. These layers were slightly rotated during transfer, leading to the formation of the moiré pattern. Across this material, another thin strip has settled during transfer, causing a further modulation of the moiré period. \textbf{b}) High-resolution TEM image of the region highlighted in \textbf{a} with a moiré unit cell outlined. \textbf{c}) FFT of the high-resolution image showing a \SI{2.3}{\degree} rotation between the strip and the larger layers.}
+    \label{fig:dub_moire}
+\end{figure}
+%---------------------------------------------------------------------------------------
+
+This sample of stamped $WSe_2$ was created using the described mechanical transfer. Upon inspection in STEM mode, the large features highlighted with the green outline in Figure~\ref{fig:dub_moire}\textbf{a} appeared and are the effect of three different layers of material slightly out of alignment with each other. 
+%
+The resulting moiré unit cell is highlighted with the dashed outline in Figure~\ref{fig:dub_moire}\textbf{b} and is measured to be caused a \SI{2.3}{\degree} rotation between the thin strip's crystal lattice (highlighted in green) and the moiré pattern present in the underlying layers (highlighted in blue).
+
+%Missing a justification what we are looking at "electric field measurements?"
+
+In the following sections, we will examine three distinct regions from our previously discussed sample: i) a singular hole in otherwise uniform material (to validate our centre-of-mass (COM) analysis tools), ii) a pronounced periodicity within the moiré lattice (to gauge anticipated outcomes), and  iii) a region characterised by double misalignment.
+
+\subsection{Validation of COM analysis tools}
+
+%-----------------------------------------------------------------------------------
+\begin{figure}
+    \centering
+    \def\svgwidth{.95\linewidth}
+    \import{resources/Figures}{hole_displacement.pdf_tex}
+    \caption{Result of performing CBED shift analysis on a large hole in otherwise uniform material. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift, and, the angle of the displacement respectively. All values are given are (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
+    \label{fig:hole_dis}
+\end{figure}
+%-----------------------------------------------------------------------------------
+
+In the previous theory section on centre-of-mass (COM) analysis, we highlighted two different scenarios, each necessitating a different analysis approach to COM due to varying effects on the diffracted electron beam.
+%
+One such scenario arises when the electron probe's cross-sectional area is significantly smaller than the feature under investigation, as seen with the hole in the otherwise uniform moiré bilayer depicted in Figure~\ref{fig:hole_dis}\textbf{e}. 
+%
+As reported in other works, changes in sample geometry, such as edges and slopes, can deflect the electron bundle. 
+%
+This deflection tends towards the thicker regions in the sample~\cite{ophusFourDimensionalScanningTransmission2019a,dekkers1974differential}. 
+%
+By monitoring the periphery of the bright field (BF) disk and its variation relative to its average position, we can discern the deflection of the BF disk in both the $x$- and $y$-directions. 
+%
+This deflection in the $x$ and $y$ direction is shown in Figure~\ref{fig:hole_dis}\textbf{a,b}, while the combined deflection magnitude and angle are illustrated in Figure~\ref{fig:hole_dis}\textbf{c,d} respectively. 
+%
+The observed phenomena align with expectations, with the electron beam displacements moving towards the material. 
+%
+Interestingly, several probe points in the hole's center show minimal displacement, indicating that the beam's cross-sectional area is indeed smaller than the hole itself.
+%
+Leveraging the data on  BF disk displacement, we can also calculate the momentum transfer conferred to the electron beam, using similar methods as described in~\cite{mullerAtomicElectricFields2014}. 
+%
+The net momentum transfer and its direction are plotted in Figure \ref{fig:hole_mom}, accompanied by a virtual-HAADF image for context. 
+%
+The plot shows higher momenta transfer at probe positions nearer to the hole's edge, which diminishes as the probe moves further across the sample or nearer to the hole's center.
+
+\begin{figure}
+    \centering
+    \def\svgwidth{.7\linewidth}
+    \import{resources/Figures}{hole_momentum_transfered.pdf_tex}
+    \caption{Left panel show a virtual-HAADF image taken by masking the dataset. Right panel shows the momentum transfer imparted on the electron beam by the sample, the electron beam gets deflected towards the thicker material.}
+    \label{fig:hole_mom}
+\end{figure}
+
+\subsection{Mapping electric field in a Sub-\SI{1}{\degree} $WSe_2$ Moiré superlattice}
+
+Data pertaining to the moiré lattice was collected from the region highlighted in blue in Figure~\ref{fig:moire_overview}.
+%
+The moiré angle is estimated to be \SI{\leq 1}{\degree}. Analogous to the hole dataset, we calculated the shift in the BF disk for probe positions and subsequently made corrections in the dataset to align all the BF disks appropriately. This shift in the BF disk is plotted in Figure~\ref{fig:m_dis}. 
+
+%--------------------------------------------------------------------------------------
+\begin{figure}[h]
+    \centering
+    \def\svgwidth{.95\linewidth}
+    \import{resources/Figures}{moire_displacement.pdf_tex}
+    \caption{Result of performing CBED shift analysis on the region of a moiré lattice highlighted in blue in Figure \ref{fig:dub_moire}. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift, and, the angle of the displacement respectively. All values are given are (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
+    \label{fig:m_dis}
+\end{figure}
+%--------------------------------------------------------------------------------------
+
+A clear distinction between the unit cell's interior and its walls is evident, as they appear to displace the electron beam diffraction pattern in opposing directions.
+%
+Upon aligning all the BF disks, we can calculate the COM based solely on the intensity distribution within these disks.
+%
+The results of this computation are presented in Figure~\ref{fig:m_mom}. 
+%
+This figure showcases, from top to bottom: a virtual-HAADF image created by masking the dataset, the magnitude and direction of the momentum transfer within the sample plane, and the distribution of charges responsible for this momentum transfer. 
+%
+Intriguingly, despite showcasing two moiré unit cells, no recurrent features within the COM analysis of the moiré unit cell are discernible.
+
+%--------------------------------------------------------------------------------------
+\begin{figure}
+    \centering
+    \def\svgwidth{.5\linewidth}
+    \import{resources/Figures}{moire_efield_charge.pdf_tex}
+    \caption{}
+    \label{fig:m_mom}
+\end{figure}
+
+\subsection{Mapping momentum transfer in a Sub-\SI{2.3}{\degree} $WSe_2$ Moiré superlattice}
+\label{sec:large_moire}
+% Vortices at the vertices
+%--------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------
+\begin{figure}
+    \centering
+    \def\svgwidth{.95\linewidth}
+    \import{resources/Figures}{trip_moire_displacement.pdf_tex}
+    \caption{Results from the centre-of-mass analysis performed bright field disk of the double moiré region highlighted in Figure \ref{fig:dub_moire} after the electron diffraction pattern shift was accounted for. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift, and, the angle of the displacement respectively. All values are given are (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
+    \label{fig:trip_m_dis}
+\end{figure}
+%--------------------------------------------------------------------------------------
+
+In the green-highlighted region of Figure~\ref{fig:moire_overview}\textbf{a}, a double moiré pattern emerges from three layers showcasing two distinct moiré angles.
+%
+One is near zero degrees, while the other is roughly \SI{2.3}{\degree}.
+%
+This forms a moiré unit cell about \SI{10}{\nano\meter} in size. 
+%
+From the virtual-HAADF image derived from this dataset, the probe's cross-sectional area approximates half the size of a moiré unit cell. 
+%
+Given this, we adjusted for the CBED shift and executed a COM analysis on the BF disk, aiming to delve deeper into the moiré unit cell's structure. 
+%
+The CBED shift analysis outcomes are displayed in Appendix \ref{appendix:a}.
+
+The subsequent COM analysis, targeting intensity variations due to electric and/or magnetic field, is depicted in Figure~\ref{fig:trip_m_dis}. 
+%
+One can observe a discernible periodicity in all displacement measurements that aligns with the nuances in the virtual-HAADF image, and a congruence in values across moiré unit cells. 
+%
+The magnitude of the COM displacement is showcased in Figure~\ref{fig:trip_m_dis}\textbf{c}.
+%
+Here, a clear distinction between the high-symmetry points, which manifest as white blobs in the virtual-HAADF image (see Figure~\ref{fig:trip_m_dis}\textbf{e}), and the thin semi-disordered regions that connect them.
+%
+Notably, the COM magnitude redistribution intensifies as one  moves radially from a high-symmetry region's center. 
+%
+The calculated momentum transfer, shown in Figure \ref{fig:dub_moire}, highlights this effect even more. 
+%
+For clarity,  the moiré unit cell's outline has been sketched, encircling two high symmetry points, with a third at the vertex. 
+%
+Interestingly, the two enclosed vortices have a greater magnitude than the vertex vortex, even if their intensity in the virtual-HAADF image don't match. 
+%
+This observation remains not fully grasped at present and calls for deeper analysis, and theoretical calculations.
+
+%--------------------------------------------------------------------------------------
+\begin{figure}
+    \centering
+    \def\svgwidth{.9\linewidth}
+    \import{resources/Figures}{trip_moire_momentum.pdf_tex}
+    \caption{Image shows the momentum transfer imparted on the electron beam by features in the sample. The moiré unit cell is highlighted and the same as in Figure \ref{fig:dub_moire}\textbf{b}.}
+    \label{fig:trip_m_mom}
+\end{figure}
+%--------------------------------------------------------------------------------------

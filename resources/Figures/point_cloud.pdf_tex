@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{523.1767309bp}%
+    \setlength{\unitlength}{466.92409245bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,19 +50,28 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.44459678)%
+  \begin{picture}(1,0.29941553)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{point_cloud.pdf}}%
-    \put(0.9333251,0.06489071){\color[rgb]{0,0,0}\transparent{0.20774601}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2000\end{tabular}}}}%
-    \put(0.93364404,0.13200781){\color[rgb]{0,0,0}\transparent{0.20774601}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4000\end{tabular}}}}%
-    \put(0.93333577,0.19912491){\color[rgb]{0,0,0}\transparent{0.20774601}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6000\end{tabular}}}}%
-    \put(0.93347552,0.26624201){\color[rgb]{0,0,0}\transparent{0.20774601}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}8000\end{tabular}}}}%
-    \put(0.93350332,0.33357221){\color[rgb]{0,0,0}\transparent{0.20774601}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10000\end{tabular}}}}%
-    \put(0.93469581,0.40047625){\color[rgb]{0,0,0}\transparent{0.20774601}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}12000\end{tabular}}}}%
-    \put(0.9988854,0.16465011){\color[rgb]{0,0,0}\transparent{0.20774601}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}amount of occurences\end{tabular}}}}}%
+    \put(0.65805989,0.1620979){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}9\end{tabular}}}}%
+    \put(0.67630838,0.21876002){\color[rgb]{0,0,0}\rotatebox{-0.10259959}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3\end{tabular}}}}}%
+    \put(0.72447533,0.25374437){\color[rgb]{0,0,0}\rotatebox{0.16775625}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}7\end{tabular}}}}}%
+    \put(0.78420306,0.25377251){\color[rgb]{0,0,0}\rotatebox{-0.12754196}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4\end{tabular}}}}}%
+    \put(0.82629361,0.21858552){\color[rgb]{0,0,0}\rotatebox{0.28979448}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}}%
+    \put(0.85036845,0.16217318){\color[rgb]{0,0,0}\rotatebox{-0.91691256}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{point_cloud.pdf}}%
-    \put(0.00683952,0.41854327){\color[rgb]{0,0,0}\transparent{0.98943698}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a\end{tabular}}}}%
-    \put(0.46445089,0.41854327){\color[rgb]{0,0,0}\transparent{0.98943698}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b\end{tabular}}}}%
+    \put(0.94627188,0.03948363){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.94648667,0.08468391){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4\end{tabular}}}}%
+    \put(0.94627906,0.12988419){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}6\end{tabular}}}}%
+    \put(0.94637318,0.17508448){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}8\end{tabular}}}}%
+    \put(0.94639191,0.22042828){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}10\end{tabular}}}}%
+    \put(0.94719499,0.26548508){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}12\end{tabular}}}}%
+    \put(0.99759004,0.02157472){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}number of occurences    $10^3$\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{point_cloud.pdf}}%
+    \put(0.0046061,0.27404481){\color[rgb]{0,0,0}\transparent{0.98943698}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a\end{tabular}}}}%
+    \put(0.31278636,0.27404481){\color[rgb]{0,0,0}\transparent{0.98943698}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{point_cloud.pdf}}%
+    \put(0.61761024,0.27479799){\color[rgb]{0,0,0}\transparent{0.98943698}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}c\end{tabular}}}}%
   \end{picture}%
 \endgroup%

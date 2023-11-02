@@ -1,7 +1,7 @@
-\section{Four-Dimensional Scanning Transmission Electron Microscopy (4D-STEM) technique for mapping Moiré physics at the nanoscale}
-\label{sec:empad}
+% \section{Four-Dimensional Scanning Transmission Electron Microscopy (4D-STEM) technique for mapping Moiré physics at the nanoscale}
 
 \subsection{Electron microscope pixel-array detector}
+\label{sec:empad}
 %In TEM operating mode a parallel electron beam is used to illuminate the sample and form an image on either the phosphorous screen or digital camera, this spreads the beam over a larger area such that the local electron dose is relatively uniform.
 
 %-------------------------------------------------------
@@ -60,198 +60,198 @@ Nine CBED patterns for differing probe positions are displayed in Figure \ref{fi
 \end{figure}
 %-------------------------------------------------------
 
-\subsection{Strain analysis}% State of the art
+% \subsection{Strain analysis}% State of the art
+% %
+% Strain analysis in electron microscopy can be achieved through a multitude of ways, the main distinction between all of them is whether they are performed by analysing a real-space image captured by high-resolution TEM techniques or performed by analysing reciprocal space images captured through scanning-TEM techniques. 
+% %
+% An example of the first method is Geometric Phase Analysis (GPA) where displacements of atoms in a crystal are directly observed in the high-resolution image and strain can be computed \cite{HYTCH1998131, hytchGEOMETRICPHASEANALYSIS1997, nguyenAtomicDefectsDoping2017}. 
+% %
+% The second method relies primarily on the fact that a CBED/NBED pattern for a small enough convergent electron probe directly measures the local crystal structure. 
+% %
+% The reciprocal-space unit cell of the local crystal structure and thus the positions of the peak in the CBED pattern are directly correlated with the size of the real-space unit cell such that a compressing force in the real-space unit cell will elongate the reciprocal-space unit cell in the same direction and vice-versa for a tensile strain \cite{ophusFourDimensionalScanningTransmission2019, vanwinkleRotationalDilationalReconstruction2023, kazmierczakStrainFieldsTwisted2021, hanStrainMappingTwoDimensional2018}, tracking the peaks then gives access to the strain information.  In the following sections the second method will be applied for both large and small field-of-views.
 %
-Strain analysis in electron microscopy can be achieved through a multitude of ways, the main distinction between all of them is whether they are performed by analysing a real-space image captured by high-resolution TEM techniques or performed by analysing reciprocal space images captured through scanning-TEM techniques. 
+% \subsubsection{Micrometre field-of-view strain analysis}
+% %
+% %-------------------------------------------------------
+% \begin{equation}
+% 	PC\{f(t)\} = \left| \mathscr{F} \left\{ \ln{\left| \mathscr{F}\{f(t)\} \right|^2} \right\} \right|^2
+% 	\label{eq:cepstrum}
+% \end{equation}
+% %-------------------------------------------------------
 %
-An example of the first method is Geometric Phase Analysis (GPA) where displacements of atoms in a crystal are directly observed in the high-resolution image and strain can be computed \cite{HYTCH1998131, hytchGEOMETRICPHASEANALYSIS1997, nguyenAtomicDefectsDoping2017}. 
+% Strain analysis at the micrometre-scale hinges on capturing clear convergent- or nano-beam electron diffraction patterns as the locations of the peaks therein hold the valuable crystallographic information and the by strain induced deviation thereof, thickness and local sample tilt affect the intensity distributions of the patterns in such a way that tracking the peaks over micrometre distances is challenging. % SC show this with an image
+% %
+% The average distance between folds, wrinkles, or, the sides of holes in the lacy carbon grids is typically smaller than a micrometre-scale field-of-view; these features tilt the crystalline sample such that the optical axis of the electron microscope is no longer parallel to the crystal zone-axis. Overcoming the effects of local tilt, wrinkles, folds, and, multilayeredness found in stamped heterostructures is achieved by implementing a power cepstrum transform before peak tracking.
+% %
+% The power cepstrum transform (equation \ref{eq:cepstrum}) was originally developed for speech analysis \cite{1570854175999207936, oppenheimDspHistoryFrequency2004,nollCepstrumPitchDetermination1967} and later adapted for application to the post-specimen electron exit-wave ($\psi(\mathbf{q})$) whose magnitude is directly probed by the EMPAD \cite{padgettExitwavePowercepstrumTransform2020} as this is the CBED/NBED pattern.
 %
-The second method relies primarily on the fact that a CBED/NBED pattern for a small enough convergent electron probe directly measures the local crystal structure. 
+% \begin{alignat}{2}
+% 	I(\vec{q}) &  & = \left| \Phi(\vec{q}) \otimes \left( E(\vec{q}) \cdot \mathcal{O}(\vec{q}) \right) \right|^2 & = \left| \psi(\vec{q}) \right|^2
+% 	\label{eq:cbed_comp}                                                                                                                             \\
+% 	\ArrowBetweenLines*[\downarrow^1\hspace{1cm}]%
+% 	I(\vec{q}) &  & \approx \left|E(\vec{q}) \right|^2 \left|\Phi(\vec{q}) \otimes \mathcal{O}(\vec{q}) \right|^2 &
+% 	\label{eq:cbed_approx}
+% \end{alignat}
 %
-The reciprocal-space unit cell of the local crystal structure and thus the positions of the peak in the CBED pattern are directly correlated with the size of the real-space unit cell such that a compressing force in the real-space unit cell will elongate the reciprocal-space unit cell in the same direction and vice-versa for a tensile strain \cite{ophusFourDimensionalScanningTransmission2019, vanwinkleRotationalDilationalReconstruction2023, kazmierczakStrainFieldsTwisted2021, hanStrainMappingTwoDimensional2018}, tracking the peaks then gives access to the strain information.  In the following sections the second method will be applied for both large and small field-of-views.
-
-\subsubsection{Micrometre field-of-view strain analysis}
+% The intensity of the recorded pattern can be described as a convolution between the image of the electron beam probe function in momentum-space ($\Phi(\mathbf{q})$) convoluted with the by the envelope function ($E(\mathbf{q})$) multiplied true object function ($\mathcal{O}(\mathbf{q})$) (equation \ref{eq:cbed_comp}); the envelope function encompasses the intensity attenuation due to local sample tilt and thickness, the true tilt-free object function is a sum of delta-peaks describing the crystal structure in momentum space; such that the result is an attenuated pattern formed by placing an image of the electron-beam probe on each delta-peak. 
 %
-%-------------------------------------------------------
-\begin{equation}
-	PC\{f(t)\} = \left| \mathscr{F} \left\{ \ln{\left| \mathscr{F}\{f(t)\} \right|^2} \right\} \right|^2
-	\label{eq:cepstrum}
-\end{equation}
-%-------------------------------------------------------
-
-Strain analysis at the micrometre-scale hinges on capturing clear convergent- or nano-beam electron diffraction patterns as the locations of the peaks therein hold the valuable crystallographic information and the by strain induced deviation thereof, thickness and local sample tilt affect the intensity distributions of the patterns in such a way that tracking the peaks over micrometre distances is challenging. % SC show this with an image
+% As can be seen in Figure \ref{fig:adf_nbed_ewpc}b where the intensity of the disks is suppressed towards the edges of the pattern. Under the ideal conditions used for strain-analysis the probe-image is very small, and the envelope function varies little over the whole pattern resulting in a relatively unvarying offset. Therefore; assumption $\downarrow^1$ states that multiplication by the envelope function after convolution is approximately similar to convolution of the multiplied result, such that the intensity distribution can be rewritten to the form of equation \ref{eq:cbed_approx}. Using this simplification, the definition of the power-cepstrum, and, the knowledge that the CBED/NBED patterns are a mechanically computed Fourier transform of the real-space intensity distribution; the exit-wave power-cepstrum of the CBED/NBED pattern can be written as in equation \ref{eq:cepstrum_unsimp}.
 %
-The average distance between folds, wrinkles, or, the sides of holes in the lacy carbon grids is typically smaller than a micrometre-scale field-of-view; these features tilt the crystalline sample such that the optical axis of the electron microscope is no longer parallel to the crystal zone-axis. Overcoming the effects of local tilt, wrinkles, folds, and, multilayeredness found in stamped heterostructures is achieved by implementing a power cepstrum transform before peak tracking.
+% \begin{alignat}{3}
+% 	EWPC_{\psi(\vec{q})} & =\left| \mathscr{F}\left\{\ln{\left| E(\vec{q}) \right|^2}\right.\right. &  & +\left. \left.\ln{\left| \Phi(\vec{q}) \otimes \mathcal{O}(\vec{q}) \right|^2}\right\} \right|^2 & \label{eq:cepstrum_unsimp} \\
+% 	\ArrowBetweenLines*[\downarrow^2\hspace{-2cm}]%
+% 	                     &                                                                          &  & \approx \Phi(\vec{q}) \otimes \ln{\left| \mathcal{O}(\vec{q}) \right|^2}                         &                            \\
+% 	                     & \approx PC\left\{ \epsilon(\vec{x})\right\}+                             &  & \left| \phi(\vec{x})\right|^2 \cdot PC\left\{ o(\vec{x})\right\}                                 & \label{eq:cepstrum_simp}
+% \end{alignat}
 %
-The power cepstrum transform (equation \ref{eq:cepstrum}) was originally developed for speech analysis \cite{1570854175999207936, oppenheimDspHistoryFrequency2004,nollCepstrumPitchDetermination1967} and later adapted for application to the post-specimen electron exit-wave ($\psi(\mathbf{q})$) whose magnitude is directly probed by the EMPAD \cite{padgettExitwavePowercepstrumTransform2020} as this is the CBED/NBED pattern.
-
-\begin{alignat}{2}
-	I(\vec{q}) &  & = \left| \Phi(\vec{q}) \otimes \left( E(\vec{q}) \cdot \mathcal{O}(\vec{q}) \right) \right|^2 & = \left| \psi(\vec{q}) \right|^2
-	\label{eq:cbed_comp}                                                                                                                             \\
-	\ArrowBetweenLines*[\downarrow^1\hspace{1cm}]%
-	I(\vec{q}) &  & \approx \left|E(\vec{q}) \right|^2 \left|\Phi(\vec{q}) \otimes \mathcal{O}(\vec{q}) \right|^2 &
-	\label{eq:cbed_approx}
-\end{alignat}
-
-The intensity of the recorded pattern can be described as a convolution between the image of the electron beam probe function in momentum-space ($\Phi(\mathbf{q})$) convoluted with the by the envelope function ($E(\mathbf{q})$) multiplied true object function ($\mathcal{O}(\mathbf{q})$) (equation \ref{eq:cbed_comp}); the envelope function encompasses the intensity attenuation due to local sample tilt and thickness, the true tilt-free object function is a sum of delta-peaks describing the crystal structure in momentum space; such that the result is an attenuated pattern formed by placing an image of the electron-beam probe on each delta-peak. 
-
-As can be seen in Figure \ref{fig:adf_nbed_ewpc}b where the intensity of the disks is suppressed towards the edges of the pattern. Under the ideal conditions used for strain-analysis the probe-image is very small, and the envelope function varies little over the whole pattern resulting in a relatively unvarying offset. Therefore; assumption $\downarrow^1$ states that multiplication by the envelope function after convolution is approximately similar to convolution of the multiplied result, such that the intensity distribution can be rewritten to the form of equation \ref{eq:cbed_approx}. Using this simplification, the definition of the power-cepstrum, and, the knowledge that the CBED/NBED patterns are a mechanically computed Fourier transform of the real-space intensity distribution; the exit-wave power-cepstrum of the CBED/NBED pattern can be written as in equation \ref{eq:cepstrum_unsimp}.
-
-\begin{alignat}{3}
-	EWPC_{\psi(\vec{q})} & =\left| \mathscr{F}\left\{\ln{\left| E(\vec{q}) \right|^2}\right.\right. &  & +\left. \left.\ln{\left| \Phi(\vec{q}) \otimes \mathcal{O}(\vec{q}) \right|^2}\right\} \right|^2 & \label{eq:cepstrum_unsimp} \\
-	\ArrowBetweenLines*[\downarrow^2\hspace{-2cm}]%
-	                     &                                                                          &  & \approx \Phi(\vec{q}) \otimes \ln{\left| \mathcal{O}(\vec{q}) \right|^2}                         &                            \\
-	                     & \approx PC\left\{ \epsilon(\vec{x})\right\}+                             &  & \left| \phi(\vec{x})\right|^2 \cdot PC\left\{ o(\vec{x})\right\}                                 & \label{eq:cepstrum_simp}
-\end{alignat}
-
-Furthermore, if the ronchigram is well-formed and corrected, and a small aperture is used to select only the centre; the second term in equation \ref{eq:cepstrum_unsimp} can be simplified further if the Bragg-spot separation is larger than the convergence angle of the electron-probe, such that the Bragg disks do not overlap. 
+% Furthermore, if the ronchigram is well-formed and corrected, and a small aperture is used to select only the centre; the second term in equation \ref{eq:cepstrum_unsimp} can be simplified further if the Bragg-spot separation is larger than the convergence angle of the electron-probe, such that the Bragg disks do not overlap. 
+% %
+% This assumption $\downarrow^2$ allows for the separation of the EWPC in to a summation of the power-cepstrum of the envelope function and the power-cepstrum of the crystal-structure information \cite{padgettExitwavePowercepstrumTransform2020}. 
+% %
+% Since the envelope function in the CBED/NBED pattern varies slowly over the image and the diffraction Bragg-spots are a high frequency repeating pattern both features occupy a different frequency band in the image, they are thus separated by the power-cepstrum transform. The tilt and thickness information is then transformed to and muddles the centre of the EWPC pattern in Figure \ref{fig:adf_nbed_ewpc}c, the crystal-structure information is well separated and occupies a different section in the image.
 %
-This assumption $\downarrow^2$ allows for the separation of the EWPC in to a summation of the power-cepstrum of the envelope function and the power-cepstrum of the crystal-structure information \cite{padgettExitwavePowercepstrumTransform2020}. 
+% %-------------------------------------------------------
+% \begin{figure}
+% 	\centering
+% 	\def\svgwidth{0.9\linewidth}
+% 	\import{resources/Figures}{adf_cbed_ewpc.pdf_tex}
+% 	\marginnote{TODO: Change the CBED and EWPC in this figure to one of an actually used dataset}
+% 	\caption{\textbf{a}) virtual annular dark-field image reconstructed by masking the dataset such that the detector geometry is equivalent to that of the HAADF-detector. Image is taken at the transition region of monolayer $MoSe_2$ (bottom) to a heterostructure of $MoSe_2$ and $WSe_2$ (top) on a lacy carbon grid. The faint circles in the middle of the image are contamination from inspection in TEM mode. Contamination in STEM mode caused the bright white spots on the left side of the image. \textbf{b}) logarithm of the nanobeam electron-diffraction pattern captured in the heterobilayer region of the image in \textbf{a}. Two sets of six diffraction disks, one set of six for each material, can be seen in the pattern. Due to local tilt of the crystalline layers diffraction disks on one side of the central $000$-disk, in this case the bottom, are brighter than disks on the opposing side. \textbf{c}) Exit-wave power cepstrum (EWPC) transform of the NBED pattern displayed in \textbf{b}. The EWPC pattern does not suffer from unequal intensity distributions. Peaks in the pattern are distinguishable in the EWPC transform.}
+% 	\label{fig:adf_nbed_ewpc}
+% \end{figure}
+% %-------------------------------------------------------
 %
-Since the envelope function in the CBED/NBED pattern varies slowly over the image and the diffraction Bragg-spots are a high frequency repeating pattern both features occupy a different frequency band in the image, they are thus separated by the power-cepstrum transform. The tilt and thickness information is then transformed to and muddles the centre of the EWPC pattern in Figure \ref{fig:adf_nbed_ewpc}c, the crystal-structure information is well separated and occupies a different section in the image.
-
-%-------------------------------------------------------
-\begin{figure}
-	\centering
-	\def\svgwidth{0.9\linewidth}
-	\import{resources/Figures}{adf_cbed_ewpc.pdf_tex}
-	\marginnote{TODO: Change the CBED and EWPC in this figure to one of an actually used dataset}
-	\caption{\textbf{a}) virtual annular dark-field image reconstructed by masking the dataset such that the detector geometry is equivalent to that of the HAADF-detector. Image is taken at the transition region of monolayer $MoSe_2$ (bottom) to a heterostructure of $MoSe_2$ and $WSe_2$ (top) on a lacy carbon grid. The faint circles in the middle of the image are contamination from inspection in TEM mode. Contamination in STEM mode caused the bright white spots on the left side of the image. \textbf{b}) logarithm of the nanobeam electron-diffraction pattern captured in the heterobilayer region of the image in \textbf{a}. Two sets of six diffraction disks, one set of six for each material, can be seen in the pattern. Due to local tilt of the crystalline layers diffraction disks on one side of the central $000$-disk, in this case the bottom, are brighter than disks on the opposing side. \textbf{c}) Exit-wave power cepstrum (EWPC) transform of the NBED pattern displayed in \textbf{b}. The EWPC pattern does not suffer from unequal intensity distributions. Peaks in the pattern are distinguishable in the EWPC transform.}
-	\label{fig:adf_nbed_ewpc}
-\end{figure}
-%-------------------------------------------------------
-
-Beam conditions optimised for strain analysis at the micrometre-scale need to result in being able to separate the Bragg disk on the EMPAD sensor as well as fitting as many spots within the bright part of the envelope on the sensor by optimising the camera length. Generally a smaller spot size, around 5-6, is used to increase electron brightness and the semi-convergence angle of the electron probe is situated around $\approx$\SI{5}{\milli\radian} to achieve well-defined round disks. 
+% Beam conditions optimised for strain analysis at the micrometre-scale need to result in being able to separate the Bragg disk on the EMPAD sensor as well as fitting as many spots within the bright part of the envelope on the sensor by optimising the camera length. Generally a smaller spot size, around 5-6, is used to increase electron brightness and the semi-convergence angle of the electron probe is situated around $\approx$\SI{5}{\milli\radian} to achieve well-defined round disks. 
+% %
+% This is achieved using a \SI{10}{\micro\meter} to \SI{50}{\micro\meter} aperture in Probe-L mode on the Titan running at \SI{300}{\kilo\electronvolt}.\marginnote{TODO: Change This.}
 %
-This is achieved using a \SI{10}{\micro\meter} to \SI{50}{\micro\meter} aperture in Probe-L mode on the Titan running at \SI{300}{\kilo\electronvolt}.\marginnote{TODO: Change This.}
 
 
-
-\subsection{Centre-of-Mass (COM) Analysis for Potential Field Mapping and Phase Object Retrieval}
+% \section{Centre-of-Mass (COM) Analysis for Potential Field Mapping and Phase Object Retrieval}
+% %
+% In the context of electron diffraction, the Bragg condition, as described by Bragg's law, play a crucial role. It states that the interference of waves becomes constructive when the path difference between them is an integer multiple of the wavelength. This fundamental principle leads to the formation of the Bragg diffraction spots or disks, which are the prominent features in the diffraction pattern.
 %
-In the context of electron diffraction, the Bragg condition, as described by Bragg's law, play a crucial role. It states that the interference of waves becomes constructive when the path difference between them is an integer multiple of the wavelength. This fundamental principle leads to the formation of the Bragg diffraction spots or disks, which are the prominent features in the diffraction pattern.
-
-Centre-of-mass (COM) analysis is an innovation approach to potential field mapping and phase object retrieval. 
+% Centre-of-mass (COM) analysis is an innovation approach to potential field mapping and phase object retrieval. 
+% %
+% It serves as a continuation of differential phase contrast, where a segmented annular detector is utilised to measure the difference in beam intensity on two pairs of opposing detectors. 
+% %
+% This methodology offers valuable insights into the deflection of electrons caused by the sample. 
+% %
+% By employing the COM technique, we can effectively  retrieve phase information. 
+% %
+% Furthermore, this approach has evolved to accommodate pixelated-array detectors, enabling the capture of the first moment of the electron beam on the detector plane. 
 %
-It serves as a continuation of differential phase contrast, where a segmented annular detector is utilised to measure the difference in beam intensity on two pairs of opposing detectors. 
+% The central Bragg diffraction spot or disk is often described as unscattered, but this is a simplification. 
+% %
+% While it is true that the spot/disk is not scattered by the crystal structure, it can be deflected from its  unperturbed position by angles much smaller than the Bragg angles. 
+% %
+% This deflections occurs due to the phase acquired by the electrons in the beam during their interaction with electric or magnetic fields.
 %
-This methodology offers valuable insights into the deflection of electrons caused by the sample. 
+% This shift in position is only detectable when the electron probe is physically much smaller than the electric or magnetic field it interacts with.
+% %
+% Conversely,if the probe is much larger than the probed feature, one instead observed a redistribution of the intensity within the bright field disk.
+% %
+% Both these scenarios necessitate different analysis processes.
 %
-By employing the COM technique, we can effectively  retrieve phase information. 
+% However, they both start from the same assumption: that the electron probe wavefunction $\psi_{in}(\vec{k})$ interacts with a sample that can be modelled as a pure phase object. This interaction only adds a phase component to the incoming wavefunction\cite{caoTheoryPracticeElectron2018, lazicPhaseContrastSTEM2016}. 
 %
-Furthermore, this approach has evolved to accommodate pixelated-array detectors, enabling the capture of the first moment of the electron beam on the detector plane. 
-
-The central Bragg diffraction spot or disk is often described as unscattered, but this is a simplification. 
+% The outgoing wavefunction of the electron probe can be described as follows:
 %
-While it is true that the spot/disk is not scattered by the crystal structure, it can be deflected from its  unperturbed position by angles much smaller than the Bragg angles. 
+% \begin{equation}
+%     \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\exp(2\pi i \Delta \vec{k})\\
+%     \label{eq:out_wav}
+% \end{equation}
 %
-This deflections occurs due to the phase acquired by the electrons in the beam during their interaction with electric or magnetic fields.
-
-This shift in position is only detectable when the electron probe is physically much smaller than the electric or magnetic field it interacts with.
+% Here, $\vec{r}_p$ denotes the position of the probe, $\Delta k$ represents the phase shift, and, $\psi_{in}$ is the incoming wave modelled as a plane wave. The semi-convergence angle of this plane wave is imposed by an aperture $A(\vec{k})$.
 %
-Conversely,if the probe is much larger than the probed feature, one instead observed a redistribution of the intensity within the bright field disk.
+% The incoming wave is given by the following equation:
 %
-Both these scenarios necessitate different analysis processes.
-
-However, they both start from the same assumption: that the electron probe wavefunction $\psi_{in}(\vec{k})$ interacts with a sample that can be modelled as a pure phase object. This interaction only adds a phase component to the incoming wavefunction\cite{caoTheoryPracticeElectron2018, lazicPhaseContrastSTEM2016}. 
-
-The outgoing wavefunction of the electron probe can be described as follows:
-
-\begin{equation}
-    \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\exp(2\pi i \Delta \vec{k})\\
-    \label{eq:out_wav}
-\end{equation}
-
-Here, $\vec{r}_p$ denotes the position of the probe, $\Delta k$ represents the phase shift, and, $\psi_{in}$ is the incoming wave modelled as a plane wave. The semi-convergence angle of this plane wave is imposed by an aperture $A(\vec{k})$.
-
-The incoming wave is given by the following equation:
-
-\begin{equation}
-    \psi_{in}(\vec{r})=\mathcal{F}^{-1}\left\{A(\vec{k})\exp(i\chi(\vec{k}))\right\}(\vec{r})
-    \label{eq:in_wav}
-\end{equation}
-
-%\subsubsection{Probe << Features}
-
-
-
-%-------------------------------------------------------
-\begin{figure}[h]
-	\centering
-	\def\svgwidth{1\linewidth}
-	\import{resources/Figures}{probe_small_features_biig.pdf_tex}
-    \caption{\textbf{Left:} When electron probes have crossover areas much smaller than the features being imaged, the entire diffracted outgoing wavefunction is subjected to complete deflection. \textbf{Right:} This deflection becomes evident through a uniform translation on the imaging plane, as indicated by the arrow highlighting the shift from the centre.}
-	\label{fig:small_probe}
-\end{figure}
-%-------------------------------------------------------
-
-In the scenario where the probe's cross-sectional area is much smaller than the feature being imaged, it can be assumed that the sample potential is a linear ramp across the probe's cross-sectional area ~\cite{caoTheoryPracticeElectron2018}. 
+% \begin{equation}
+%     \psi_{in}(\vec{r})=\mathcal{F}^{-1}\left\{A(\vec{k})\exp(i\chi(\vec{k}))\right\}(\vec{r})
+%     \label{eq:in_wav}
+% \end{equation}
 %
-At the detectors, the magnitude of the Fourier transformed wavefunction is measured. The phase shift in real space is then transformed into a displacement in reciprocal space.
+% %\subsubsection{Probe << Features}
 %
-The displacement in reciprocal space is linearly dependent on the electric and/or magnetic field. The final diffraction pattern recorded on a sensor in STEM imaging is then given by Equation~\ref{eq:lin_shift}, where $t$ is the thickness of the sample, $\sigma$ and $\mu$ are the interaction parameters for the perpendicular electric $\vec{E}_{perp}$ and magnetic field $\vec{B}_{\perp}$ respectively, and are equal to $m\cdot e \lambda / h^ 2$ and $e / h$. 
-
-Figure~\ref{fig:small_probe} displays the expected displacement of the wavefunction on the sensor surface.
-
-\begin{equation}
-    \vert \Psi(\vec{k},\vec{r}_p)\vert^2 = \vert \psi_{in}(\vec{k}-t(\sigma \vec{E}_{\perp}+\mu \vec{B}_{\perp}))\vert^2
-    \label{eq:lin_shift}
-\end{equation}
-
-
-%\subsubsection{Probe >> Features}
-%-------------------------------------------------------
-\begin{figure}[h]
-	\centering
-	\def\svgwidth{1\linewidth}
-    \import{resources/Figures}{probe_bigg_features_smol.pdf_tex}
-	\caption{}
-	\label{fig:big_boii_probe}
-\end{figure}
-%-------------------------------------------------------
-In the case where the probe is much larger than the feature, it can be assumed that the potential interacting with the probe is a delta potential, and only weakly affects the probe. The outgoing wavefunction can then be modelled as follows: 
-
-\begin{equation}
-    \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\left[ 1+2\pi i \Delta \vec{k}\delta(\vec{r})\right]
-    \label{eq:prob_smol_out}
-\end{equation}
-
-By taking the Fourier transform, the magnitude of the diffraction pattern on the sensor's imaging plane is defined as 
-
-\begin{equation}
-    \vert \Psi_{out}(\vec{k},\vec{r}_p)\vert^2 = \vert A(\vec{k})\vert^2-4\pi \Delta \vec{k} A(\vec{k})P(\vec{r})\sin(r) + \vert 2\pi\Delta \vec{k}\vert^2 \psi_{in}(\vec{r})\psi^*_{in}(\vec{r})
-    \label{eq:prob_smol_diff}
-\end{equation}
-
-where $P(r)$ is the inverse Fourier transform of our aperture function $A(\vec{k})$.
 %
-In this approximation, the outgoing wavefunction has only two terms whose contribution affects the intensity of the bright field disk. The aperture function $A(\vec{k})$ in Equation~\ref{eq:prob_smol_diff} restricts the intensity in the bright field disk to an image of the incoming probe wavefunction and a redistribution due to the phase acquired. 
 %
-In this scenario, the COM can be measured by looking at the first moment within the bright field disk instead of the displacement of this disk. 
-
-\subsubsection{Interpretation of centre-of-mass images}
+% %-------------------------------------------------------
+% \begin{figure}[h]
+% 	\centering
+% 	\def\svgwidth{1\linewidth}
+% 	\import{resources/Figures}{probe_small_features_biig.pdf_tex}
+%     \caption{\textbf{Left:} When electron probes have crossover areas much smaller than the features being imaged, the entire diffracted outgoing wavefunction is subjected to complete deflection. \textbf{Right:} This deflection becomes evident through a uniform translation on the imaging plane, as indicated by the arrow highlighting the shift from the centre.}
+% 	\label{fig:small_probe}
+% \end{figure}
+% %-------------------------------------------------------
 %
-In both previously described scenarios, it is possible to measure the COM as the first moment of the intensity of the diffraction pattern on the sensor. For every probe position $\vec{r}_p$ over the sample, a vector with an $x$ and $y$ coordinate of the COM is recorded. This is given by the equation:
-
-\begin{equation}
-    I^{COM}_{i} (\vec{r}_p) = \iint_{-\infty}^{\infty} k_{i} I_D(\vec{k}, \vec{r}_p) \mathrm{d}^2\vec{k} = \iint_{-\infty}^{\infty}k_i \vert \Psi_{out}(\vec{k},\vec{r}_p)\vert^2 \mathrm{d}^2 \vec{k}; \qquad i = x,y
-    \label{eq:com_int}
-\end{equation}
-
-The vector-valued image $\vec{I}^{COM}(\vec{r}_p)$ is not only proportional to the electric or magnetic field in the sample but also to the gradient of the phase object $\vec{\nabla}\phi(\vec{r})$ of the image~ \cite{lazicPhaseContrastSTEM2016}.
-
-By integrating the $\vec{I}^{COM}(\vec{r}_p)$ vector field, a scalar-valued function $I^{iCOM}(\vec{r}_p)$ is retrieved. 
+% In the scenario where the probe's cross-sectional area is much smaller than the feature being imaged, it can be assumed that the sample potential is a linear ramp across the probe's cross-sectional area ~\cite{caoTheoryPracticeElectron2018}. 
+% %
+% At the detectors, the magnitude of the Fourier transformed wavefunction is measured. The phase shift in real space is then transformed into a displacement in reciprocal space.
+% %
+% The displacement in reciprocal space is linearly dependent on the electric and/or magnetic field. The final diffraction pattern recorded on a sensor in STEM imaging is then given by Equation~\ref{eq:lin_shift}, where $t$ is the thickness of the sample, $\sigma$ and $\mu$ are the interaction parameters for the perpendicular electric $\vec{E}_{perp}$ and magnetic field $\vec{B}_{\perp}$ respectively, and are equal to $m\cdot e \lambda / h^ 2$ and $e / h$. 
 %
-This function is directly proportional to the sample's phase object $\phi(r)$, which is normally imaged directly in TEM imaging. 
+% Figure~\ref{fig:small_probe} displays the expected displacement of the wavefunction on the sensor surface.
 %
-The integration is carried out iteratively in the Fourier domain, similar to the method described in~\cite{varnavidesIterativePhaseRetrieval2023}.
-
-Instead of integrating the $\vec{I}^{COM}(\vec{r}_p)$ image to retrieve the phase object, a  differentiation operation can be applied to find the divergence of the phase acquired, which is equal to the divergence of the electric field. This operation yields information on the distribution of charges in the sample plane.
-
-The equations associated with these processes are as follows:
-
-\begin{align}
-    \vec{I}^{COM}(\vec{r}_p) &\propto -\sigma\vec{E}_{\perp}(\vec{r}_p) - \mu \vec{B}_{\perp}(\vec{r}_p)\\
-    I^{iCOM}(\vec{r}_p) &\propto \sigma \Phi_z(\vec{r}_p)\\
-    I^{dCOM}(\vec{r}_p) &\propto -\frac{\sigma}{\epsilon_0}\rho_z(\vec{r}_p) 
-\end{align}
+% \begin{equation}
+%     \vert \Psi(\vec{k},\vec{r}_p)\vert^2 = \vert \psi_{in}(\vec{k}-t(\sigma \vec{E}_{\perp}+\mu \vec{B}_{\perp}))\vert^2
+%     \label{eq:lin_shift}
+% \end{equation}
+%
+%
+% %\subsubsection{Probe >> Features}
+% %-------------------------------------------------------
+% \begin{figure}[h]
+% 	\centering
+% 	\def\svgwidth{1\linewidth}
+%     \import{resources/Figures}{probe_bigg_features_smol.pdf_tex}
+% 	\caption{}
+% 	\label{fig:big_boii_probe}
+% \end{figure}
+% %-------------------------------------------------------
+% In the case where the probe is much larger than the feature, it can be assumed that the potential interacting with the probe is a delta potential, and only weakly affects the probe. The outgoing wavefunction can then be modelled as follows: 
+%
+% \begin{equation}
+%     \Psi_{out}(\vec{r},\vec{r}_p)=\psi_{in}(\vec{r}-\vec{r}_p)\left[ 1+2\pi i \Delta \vec{k}\delta(\vec{r})\right]
+%     \label{eq:prob_smol_out}
+% \end{equation}
+%
+% By taking the Fourier transform, the magnitude of the diffraction pattern on the sensor's imaging plane is defined as 
+%
+% \begin{equation}
+%     \vert \Psi_{out}(\vec{k},\vec{r}_p)\vert^2 = \vert A(\vec{k})\vert^2-4\pi \Delta \vec{k} A(\vec{k})P(\vec{r})\sin(r) + \vert 2\pi\Delta \vec{k}\vert^2 \psi_{in}(\vec{r})\psi^*_{in}(\vec{r})
+%     \label{eq:prob_smol_diff}
+% \end{equation}
+%
+% where $P(r)$ is the inverse Fourier transform of our aperture function $A(\vec{k})$.
+% %
+% In this approximation, the outgoing wavefunction has only two terms whose contribution affects the intensity of the bright field disk. The aperture function $A(\vec{k})$ in Equation~\ref{eq:prob_smol_diff} restricts the intensity in the bright field disk to an image of the incoming probe wavefunction and a redistribution due to the phase acquired. 
+% %
+% In this scenario, the COM can be measured by looking at the first moment within the bright field disk instead of the displacement of this disk. 
+%
+% \subsubsection{Interpretation of centre-of-mass images}
+% %
+% In both previously described scenarios, it is possible to measure the COM as the first moment of the intensity of the diffraction pattern on the sensor. For every probe position $\vec{r}_p$ over the sample, a vector with an $x$ and $y$ coordinate of the COM is recorded. This is given by the equation:
+%
+% \begin{equation}
+%     I^{COM}_{i} (\vec{r}_p) = \iint_{-\infty}^{\infty} k_{i} I_D(\vec{k}, \vec{r}_p) \mathrm{d}^2\vec{k} = \iint_{-\infty}^{\infty}k_i \vert \Psi_{out}(\vec{k},\vec{r}_p)\vert^2 \mathrm{d}^2 \vec{k}; \qquad i = x,y
+%     \label{eq:com_int}
+% \end{equation}
+%
+% The vector-valued image $\vec{I}^{COM}(\vec{r}_p)$ is not only proportional to the electric or magnetic field in the sample but also to the gradient of the phase object $\vec{\nabla}\phi(\vec{r})$ of the image~ \cite{lazicPhaseContrastSTEM2016}.
+%
+% By integrating the $\vec{I}^{COM}(\vec{r}_p)$ vector field, a scalar-valued function $I^{iCOM}(\vec{r}_p)$ is retrieved. 
+% %
+% This function is directly proportional to the sample's phase object $\phi(r)$, which is normally imaged directly in TEM imaging. 
+% %
+% The integration is carried out iteratively in the Fourier domain, similar to the method described in~\cite{varnavidesIterativePhaseRetrieval2023}.
+%
+% Instead of integrating the $\vec{I}^{COM}(\vec{r}_p)$ image to retrieve the phase object, a  differentiation operation can be applied to find the divergence of the phase acquired, which is equal to the divergence of the electric field. This operation yields information on the distribution of charges in the sample plane.
+%
+% The equations associated with these processes are as follows:
+%
+% \begin{align}
+%     \vec{I}^{COM}(\vec{r}_p) &\propto -\sigma\vec{E}_{\perp}(\vec{r}_p) - \mu \vec{B}_{\perp}(\vec{r}_p)\\
+%     I^{iCOM}(\vec{r}_p) &\propto \sigma \Phi_z(\vec{r}_p)\\
+%     I^{dCOM}(\vec{r}_p) &\propto -\frac{\sigma}{\epsilon_0}\rho_z(\vec{r}_p) 
+% \end{align}
