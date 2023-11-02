@@ -8,9 +8,9 @@
 % engineering perfect meta-material for application specific needs
 % Stamping allows for fast prototyping
 
-The fabrication process of 2D Moir\'e heterostructures plays a pivotal role in determining the properties and performance of these structures. In this thesis, we refer to this process as 'mechanical transfer', where two monolayers are stamped together to form a bilayer heterostructure. This step significantly influences the properties and performance of these structures. 
+The fabrication process of 2D Moir\'e heterostructures plays a pivotal role in determining the properties and performance of these structures. In this thesis, we refer to this process as `mechanical transfer', where two monolayers are stamped together to form a bilayer heterostructure. This step significantly influences the properties and performance of these structures. 
 %
-Through the 'mechanical transfer' process, we gain control over important parameters such as layer thickness, orientation, and lattice mismatch of individual layers, which are key factors in determining the interference pattern and the overall properties of the heterostructure.
+Through the `mechanical transfer' process, we gain control over important parameters such as layer thickness, orientation, and lattice mismatch of individual layers, which are key factors in determining the interference pattern and the overall properties of the heterostructure.
 
 In the following, I will explain the step-by-step process we followed to fabricate these structures. This includes exfoliating single layers, verifying their thickness, assembling them, and transferring them to a specialised microscope.
 
@@ -32,7 +32,14 @@ If no ML material is present on a stamp, the third step can be repeated until th
 Furthermore, sacrificial or pristine PDMS stamps can be used to either remove unwanted small flakes or transfer large flakes to a newer and cleaner PDMS stamp, and this selective transfer is performed under a microscope such that existing ML material can be avoided as this will likely break if exposed to the force caused by peeling away the sacrificial PDMS stamp.
 
 \subsection{Verification of monolayer material}
-\begin{figure}[h]
+
+Since the bandgap of TMDCs becomes direct in a single layer,the  and most interesting moir/'e effects come into play for monolayer flake heterostructures, it is important to determine the number of layers in the flakes used for heterostructures. 
+For the first round of samples, optical inspection with a transmittance light microscope proved to be too crude to determine the layer number for flakes thinner than three layers.
+
+Solving this issue involved setting up a new transmittance- and reflectance-mode microscope with a spectroscope attached. The entire setup was copied from another lab and has been proven capable of differentiating between the number of layers in a flake~\cite{frisendaMicroreflectanceTransmittanceSpectroscopy2017,niuThicknessDependentDifferentialReflectance2018}.
+
+%---------------------------------------------------------------------------------------
+\begin{figure}[h!]
 	\centering
 	\def\svgwidth{1\linewidth}
 	\import{resources/Figures}{spectroscope_traces.pdf_tex}
@@ -42,12 +49,14 @@ Furthermore, sacrificial or pristine PDMS stamps can be used to either remove un
     %
     C,D) The flakes used to collect the spectra of $WSe_2$ (A, C) and $MoSe_2$ (B,D), respectively.
     %
-    In A), the square, circular, and diamond markers denote the location of the peaks of the \textit{a}-,\textit{c}-, and, \textit{d}-exciton of $WSe_2$, found by fitting a linear combination of Lorentzian peaks. The shaded blue region denotes the photon energy range in which the \textit{b}-exciton peaks are expected but not found by the fitting model.
+    In A), the square, circular, and diamond markers denote the location of the peaks of the \textit{A}-,\textit{C}-, and, \textit{D}-exciton of $WSe_2$, found by fitting a linear combination of Lorentzian peaks. The shaded blue region denotes the photon energy range in which the \textit{B}-exciton peaks are expected but not found by the fitting model.
     %
-    Similarly, in B), the square and circular marker denote the location of the \textit{a}- and \textit{b}-exciton peaks of $MoSe_2$.}
+    Similarly, in B), the square and circular marker denote the location of the \textit{A}- and \textit{B}-exciton peaks of $MoSe_2$.}
     %
 	\label{fig:spectroscope_traces}
 \end{figure}
+%---------------------------------------------------------------------------------------
+
 
 \begin{minipage}[b]{0.4\textwidth}
     \begin{tabular}{c|cc|}
@@ -79,13 +88,10 @@ Furthermore, sacrificial or pristine PDMS stamps can be used to either remove un
 \end{minipage}
 \vspace{1cm}
 
-Since the bandgap of TMDCs becomes direct in a single layer,the  and most interesting moir/'e effects come into play for monolayer flake heterostructures, it is important to determine the number of layers in the flakes used for heterostructures. 
-For the first round of samples, optical inspection with a transmittance light microscope proved to be too crude to determine the layer number for flakes thinner than three layers.
-
-Solving this issue involved setting up a new transmittance- and reflectance-mode microscope with a spectroscope attached. The entire setup was copied from another lab and has been proven capable of differentiating between the number of layers in a flake~\cite{frisendaMicroreflectanceTransmittanceSpectroscopy2017,niuThicknessDependentDifferentialReflectance2018}.
-
 Using this setup, we recorded transmittance and reflectance spectra for both $WSe_2$ and $MoSe_2$ flakes with varying layer numbers.
-%
+
+
+
 The transmittance spectra are displayed in Figure~\ref{fig:spectroscope_traces}A for $WSe_2$ and Figure~\ref{fig:spectroscope_traces}B for $MoSe_2$. 
 %
 While both transmittance and reflectance spectra should ideally have used the same halogen bulbs for illumination in both transmission and epi-illumination modes, the reflectance spectra exhibited more noise in the energy range of $\leq \SI{1.6}{\electronvolt}$ due to the lower intensity emitted by the epi-illumination bulb in this region. As a result, we omitted the reflectance spectra from this study.
@@ -117,8 +123,19 @@ The complete stamping setup is displayed in Figure \ref{fig:stamping_set-up}, ad
 	\centering
 	\def\svgwidth{1\linewidth}
 	\import{resources/Figures}{stamping.pdf_tex}
-	\caption{Schematic outline of the stamping process. 1: Before starting, two PDMS stamps with monolayer material and a silicon substrate coated with PVA should be prepared. 2: The first flake is stamped, preferably as close to the centre of rotation of the substrate stage as possible as this makes aligning the next flake easier. 3: The micromanipulator with the PDMS stamp is slowly raised to peel the PDMS stamp off of the substrate, leaving behind the first monolayer flake. 4: The second stamp with monolayer material is aligned by rotating the substrate stage and moving the stamping micromanipulator. 5: The stamp is then carefully lowered and misalignment is corrected if necessary. 6: The second stamp is removed slowly, and both flakes are transferred to the substrate.}
-	\label{fig:stamping_process}
+	\caption{Schematic outline of the stamping process: 1) Before strating the stamping process, two PDMS stamps with monolayer material need to be prepared, along with a silicon substrate coated with PVA.
+    %
+    2) The first flake is stamped, preferably as close to the centre of rotation of the substrate stage as possible, as this placement makes aligning the subsequent flake easier.
+    %
+    3) After stamping, the micromanipulator with the PDMS stamp is slowly raised, peeling the stamp off the substrate and leaving the first monolayer flake behind. 
+    %
+    4) The second stamp, carrying another layer of monolayer material, is then aligned by rotating the substrate stage and moving the stamping micromanipulator. 
+    %
+    5) This stamp is carefully lowered onto the substrate, and any misalignment are corrected as necessary. 
+    %
+    6) Finally, the second stamp is removed slowly, ensuring both flakes are properly transferred to the substrate.}
+    
+\label{fig:stamping_process}
 \end{figure}
 %--------------------------------------------------------------------------
 
@@ -135,7 +152,7 @@ To achieve this, the speed at which the stamp is peel-off is crucial, it should 
 Additionally, it is of utmost importance to avoid introducing any vibrations or other forces during this step, as they can easily damage or tear the flake.
 
 %--------------------------------------------------------------------------
-\begin{figure}[h]
+\begin{figure}[hb]
 	\centering
 	\def\svgwidth{1\linewidth}
 	\import{resources/Figures}{stamping_setup.pdf_tex}
@@ -167,17 +184,25 @@ After stamping of the stamping of the second flake, the PDMS needs to be slowly 
 Afterward, the result will be a heterostructure on the prepared substrate, ready for transfer to a TEM grid.
 
 \subsection{Transferring to a TEM grid}
+
+Transfer of the heterostructure to a TEM grid was performed using a previously devised polymer assisted method~\cite{kosterPolymerassistedTEMSpecimen2021}, in which a diced silicon wafer is coated with a polymer prior to stamping.
+%
+The flakes are then stamped directly onto the polymer coating in the same manner as described in the previous section. Afterward, they are covered with a TEM grid. The application of a single drop of either water or IPA,  depending on the polymer used, causes the flexible holey carbon film of the TEM grid to connect with the polymer coating by means of surface tension as the drop evaporates. This process "seals" the heterostructure between the holey-carbon film and the polymer.
+
+By adding another drop, this time the solvent for the polymer, the flake held by the TEM grid and the grid itself can separate from the silicon substrate, which then allows it to be picked up using tweezers.
+
+The process is illustrated in Figure \ref{fig:wet_transfer}.
+
+%------------------------------------------------------------------------------
 \begin{figure}[h]
 	\centering
 	\def\svgwidth{1\linewidth}
 	\import{resources/Figures}{wet_transfer.pdf_tex}
-	\caption{Schematic illustration of the transfer process. 1: A previously prepared heterostructure is located on the substrate and suitable TEM grid is placed on the substrate over the heterostructures with tweezers. 2: The TEM grid is held in place, for the samples transferred for this work the TEM grid was held in place by pressing a microscope slide onto the rim of the TEM grid with the stamping micromanipulator taking care in not pressing too hard as this will push the TEM grid into the PVA sealing the inside in such a way that the IPA cannot reach the inside. 3: After wetting the grid with a drop of IPA the resulting surface tension will hold onto the carbon film as the drop evaporates pulling it onto the PVA coated substrate and heterostructure. 4: After all the IPA has evaporated and the glass slide is removed a single drop of distilled water is added to dissolve the PVA releasing the TEM grid and allowing it to float on the drop, ready to be picked up with tweezers.}
+	\caption{Schematic illustration of the transfer process: 1) A previously prepared heterostructure is located on the substrate, and a suitable TEM grid is carefully placed over the heterostructures using tweezers. 2) The TEM grid is held in place, for the samples transferred in this work, it was secured by pressing a microscope slide onto the rim of the TEM grid using a stamping micromanipulator, taking care not to exert excessive pressure, which could push the TEM grid into the PVA sand prevent IPA from penetrating the interior. 3) After the grid is wetted with a drop of IPA, the resulting surface tension clings to the carbon film, pulling it onto the PVA-coated substrate and heterostructure as the drop evaporates. 4) Once all the IPA has evaporated and the glass slide is removed, a drop of distilled water is added to dissolve the PVA. This releases the TEM grid, allowing it to float on the water droplet and be ready to be picked up with tweezers.}
 	\label{fig:wet_transfer}
 \end{figure}
+%------------------------------------------------------------------------------
 
-Transfer of the heterostructure to a TEM grid was performed using a previously devised polymer assisted method \cite{kosterPolymerassistedTEMSpecimen2021}, where a diced silicon wafer is coated using a polymer before stamping.
-The flakes are then stamped directly on the polymer coating in the same manner as described in the previous section before being covered with a TEM grid, application of a single drop of either water or IPA  depending on the polymer used connects the flexible holey carbon film of the TEM grid with the polymer coating by means of surface tension as the drop evaporates. This "seals" the heterostructure in between the holey-carbon film and the polymer.
-Adding another drop, this time the solvent for the polymer, allows the flake held by the TEM grid and the grid itself to separate from the silicon substrate; allowing it to be picked up using tweezers.
-The process is illustrated in Figure \ref{fig:wet_transfer}.
-The authors of the previously cited paper demonstrated that both the use of PMMA and PVA are possible but require different solvents, acetone and water respectively.
-The heterostructures transferred for this thesis were stamped on a diced silicon wafer coated with \(\sim \) \SI{100}{\nm} thick PVA and were then annealed at \SI{400}{\degreeCelsius} in vacuum as there was significant contamination present.
+The authors of the previously cited paper demonstrated that the use of both PMMA and PVA is possible, but they require different solvents: acetone for PMMA and water for PVA, respectively.
+
+For this work, the heterostructures were stamped on a diced silicon wafer coated with \(\sim \) \SI{100}{\nm} thick PVA and were then annealed at \SI{400}{\degreeCelsius} in a vacuum due to significant contamination.
