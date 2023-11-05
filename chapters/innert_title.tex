@@ -1,0 +1,66 @@
+\begin{titlepage}
+
+\begin{center}
+
+%% Print the title
+{\makeatletter
+\largetitlestyle\fontsize{45}{45}\selectfont\@title
+\makeatother}
+
+%% Print the subtitle
+{\makeatletter
+\ifdefvoid{\@subtitle}{}{\bigskip\titlestyle\fontsize{20}{20}\selectfont\@subtitle}
+\makeatother}
+
+\bigskip
+\bigskip
+
+by
+
+\bigskip
+\bigskip
+
+%% Print the name of the author
+{\makeatletter
+\largetitlestyle\fontsize{25}{25}\selectfont\@author
+\makeatother}
+
+\bigskip
+\bigskip
+
+to obtain the degree of Master of Science
+%ter verkrijging van de graad van Master of Science
+
+at the Delft University of Technology,
+%aan de Technische Universiteit Delft,
+
+to be defended on Monday November 20th, 2023 at 13:00.
+%in het openbaar de verdedigen op maandag 1 januari om 10:00 uur.
+
+\vfill
+
+\begin{tabular}{lll}
+    Student number: & 4645197 \\
+    Project duration: & \multicolumn{2}{l}{February, 2022 -- November, 2023} \\
+    Thesis committee: & Assoc. Prof.\ Dr.\ S.\ Conesa-Boj, & TU Delft, supervisor \\
+        & Assoc. Prof.\ Dr.\ A.\ Akhmerov, & TU Delft \\
+        & Assoc. Prof.\ Dr.\ , & TU Delft
+\end{tabular}
+
+
+\bigskip
+\bigskip
+Faculty of Applied Sciences \\
+ConesaBoj Lab \\
+
+
+\end{center}
+
+%% Insert the TU Delft logo at the bottom of the page
+\begin{tikzpicture}[remember picture, overlay]
+    \node[above=10mm] at (current page.south) {%
+        \includegraphics{resources/Figures/logo-black.pdf}
+    };
+\end{tikzpicture}
+
+\end{titlepage}

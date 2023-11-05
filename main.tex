@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{report}
 \usepackage[utf8]{inputenc}
 \usepackage[free-standing-units=true]{siunitx}
 \usepackage{gensymb}
@@ -37,6 +37,8 @@
 \usepackage{mathtools}
 \usepackage{floatpag}
 \usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tikz}
 
 \DeclareSIUnit\angstrom{\text {Å}}
 \newcommand\uvec[1]{\underaccent{\vec}{#1}}
@@ -68,6 +70,16 @@
   \renewcommand{\headrulewidth}{0pt}% Remove header rule
 }
 
+\titleformat{\chapter}{\bfseries\Huge}{\arabic{chapter}~}{0pt}{}
+
+\title{Investigating Moiré Physics in 2D heterostructures using the EMPAD}
+% \subtitle{Automated Analysis of Two-Dimensional Layered Materials}
+\author{J.J.M Sangers}
+
+% \subject{Master's Thesis} % Cover only
+% \affiliation{Delft University of Technology} % Cover only
+
+
 \begin{document}
 \AddToShipoutPicture*{\BackgroundPic}
 
@@ -75,12 +87,14 @@
 
 \input{chapters/title.tex}
 
-\begin{abstract}
-    \input{chapters/abstract.tex}
-\end{abstract}
+\input{chapters/innert_title.tex}
+
+\input{chapters/abstract.tex}
+\addcontentsline{toc}{section}{Abstract}
+
 \newpage
 \thispagestyle{empty}
-\addcontentsline{toc}{section}{Table of Contents}
+\addcontentsline{toc}{section}{Contents}
 \tableofcontents
 \clearpage
 \newpage
