@@ -2,6 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[free-standing-units=true]{siunitx}
 \usepackage{gensymb}
+\usepackage{lipsum}
+\usepackage{footnote}
 \usepackage{amsmath, amssymb}
 \usepackage[T1]{fontenc}
 \usepackage{url}
@@ -78,7 +80,12 @@
 
 % \subject{Master's Thesis} % Cover only
 % \affiliation{Delft University of Technology} % Cover only
-
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 \begin{document}
 \AddToShipoutPicture*{\BackgroundPic}
