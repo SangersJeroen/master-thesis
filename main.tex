@@ -41,6 +41,7 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{tikz}
+\usepackage{float}
 
 \DeclareSIUnit\angstrom{\text {Å}}
 \newcommand\uvec[1]{\underaccent{\vec}{#1}}
@@ -109,7 +110,7 @@
 \input{chapters/introduction.tex}
 \newpage
 \input{chapters/theory.tex}
-\newpage
+% \newpage
 \input{chapters/empad_techniques.tex}
 \newpage
 \input{chapters/mechanical_transfer.tex}
@@ -123,12 +124,11 @@
 % \input{chapters/outlook.tex}
 
 \newpage
-\addcontentsline{toc}{section}{References}
+\addcontentsline{toc}{chapter}{References}
 \bibliographystyle{ieeetr}
 \bibliography{resources/latex_literature.bib}
 
 \newpage
-\addcontentsline{toc}{section}{Appendix}
 \input{chapters/appendix.tex}
 
 \end{document}

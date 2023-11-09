@@ -1,4 +1,4 @@
-\chapter{Analysis of heterostrain in twisted a $MoSe_2/WSe_2$ heterobilayer structure}
+\chapter{Analysis of heterostrain in twisted a \ce{MoSe_2}/\-\ce{WSe_2} heterobilayer structure}
 \label{sec:heterostrain}
 % State of the art
 %
@@ -14,12 +14,6 @@ The reciprocal-space unit cell of the local crystal structure and thus the posit
 
 \section{Micrometre field-of-view strain analysis}
 %
-%-------------------------------------------------------
-\begin{equation}
-	PC\{f(t)\} = \left| \mathscr{F} \left\{ \ln{\left| \mathscr{F}\{f(t)\} \right|^2} \right\} \right|^2
-	\label{eq:cepstrum}
-\end{equation}
-%-------------------------------------------------------
 
 Strain analysis at the micrometre-scale hinges on capturing clear convergent- or nano-beam electron diffraction patterns as the locations of the peaks therein hold the valuable crystallographic information and the by strain induced deviation thereof, thickness and local sample tilt affect the intensity distributions of the patterns in such a way that tracking the peaks over micrometre distances is challenging. % SC show this with an image
 %
@@ -27,6 +21,16 @@ The average distance between folds, wrinkles, or, the sides of holes in the lacy
 %
 The power cepstrum transform (equation \ref{eq:cepstrum}) was originally developed for speech analysis \cite{1570854175999207936, oppenheimDspHistoryFrequency2004,nollCepstrumPitchDetermination1967} and later adapted for application to the post-specimen electron exit-wave ($\psi(\mathbf{q})$) whose magnitude is directly probed by the EMPAD \cite{padgettExitwavePowercepstrumTransform2020} as this is the CBED/NBED pattern.
 
+%-------------------------------------------------------
+\begin{equation}
+	PC\{f(t)\} = \left| \mathscr{F} \left\{ \ln{\left| \mathscr{F}\{f(t)\} \right|^2} \right\} \right|^2
+	\label{eq:cepstrum}
+\end{equation}
+%-------------------------------------------------------
+
+The intensity of the recorded pattern can be described as a convolution between the image of the electron beam probe function in momentum-space ($\Phi(\mathbf{q})$) convoluted with the by the envelope function ($E(\mathbf{q})$) multiplied true object function ($\mathcal{O}(\mathbf{q})$) (equation \ref{eq:cbed_comp}); the envelope function encompasses the intensity attenuation due to local sample tilt and thickness, the true tilt-free object function is a sum of delta-peaks describing the crystal structure in momentum space; such that the result is an attenuated pattern formed by placing an image of the electron-beam probe on each delta-peak. 
+
+%-------------------------------------------------------
 \begin{alignat}{2}
 	I(\vec{q}) &  & = \left| \Phi(\vec{q}) \otimes \left( E(\vec{q}) \cdot \mathcal{O}(\vec{q}) \right) \right|^2 & = \left| \psi(\vec{q}) \right|^2
 	\label{eq:cbed_comp}                                                                                                                             \\
@@ -34,8 +38,7 @@ The power cepstrum transform (equation \ref{eq:cepstrum}) was originally develop
 	I(\vec{q}) &  & \approx \left|E(\vec{q}) \right|^2 \left|\Phi(\vec{q}) \otimes \mathcal{O}(\vec{q}) \right|^2 &
 	\label{eq:cbed_approx}
 \end{alignat}
-
-The intensity of the recorded pattern can be described as a convolution between the image of the electron beam probe function in momentum-space ($\Phi(\mathbf{q})$) convoluted with the by the envelope function ($E(\mathbf{q})$) multiplied true object function ($\mathcal{O}(\mathbf{q})$) (equation \ref{eq:cbed_comp}); the envelope function encompasses the intensity attenuation due to local sample tilt and thickness, the true tilt-free object function is a sum of delta-peaks describing the crystal structure in momentum space; such that the result is an attenuated pattern formed by placing an image of the electron-beam probe on each delta-peak. 
+%-------------------------------------------------------
 
 As can be seen in Figure \ref{fig:adf_nbed_ewpc}b where the intensity of the disks is suppressed towards the edges of the pattern. Under the ideal conditions used for strain-analysis the probe-image is very small, and the envelope function varies little over the whole pattern resulting in a relatively unvarying offset. Therefore; assumption $\downarrow^1$ states that multiplication by the envelope function after convolution is approximately similar to convolution of the multiplied result, such that the intensity distribution can be rewritten to the form of equation \ref{eq:cbed_approx}. Using this simplification, the definition of the power-cepstrum, and, the knowledge that the CBED/NBED patterns are a mechanically computed Fourier transform of the real-space intensity distribution; the exit-wave power-cepstrum of the CBED/NBED pattern can be written as in equation \ref{eq:cepstrum_unsimp}.
 
@@ -57,7 +60,7 @@ Since the envelope function in the CBED/NBED pattern varies slowly over the imag
 	\centering
 	\def\svgwidth{0.9\linewidth}
 	\import{resources/Figures}{adf_cbed_ewpc.pdf_tex}
-	\caption{\textbf{a}) virtual annular dark-field image reconstructed by masking the dataset such that the detector geometry is equivalent to that of the HAADF-detector. Image is taken at the transition region of monolayer $MoSe_2$ (bottom) to a heterostructure of $MoSe_2$ and $WSe_2$ (top) on a lacy carbon grid. The faint circles in the middle of the image are contamination from inspection in TEM mode. Contamination in STEM mode caused the bright white spots on the left side of the image. \textbf{b}) logarithm of the nanobeam electron-diffraction pattern captured in the heterobilayer region of the image in \textbf{a}. Two sets of six diffraction disks, one set of six for each material, can be seen in the pattern. Due to local tilt of the crystalline layers diffraction disks on one side of the central $000$-disk, in this case the bottom, are brighter than disks on the opposing side. \textbf{c}) Exit-wave power cepstrum (EWPC) transform of the NBED pattern displayed in \textbf{b}. The EWPC pattern does not suffer from unequal intensity distributions. Peaks in the pattern are distinguishable in the EWPC transform.}
+	\caption{\textbf{a}) virtual annular dark-field image reconstructed by masking the dataset such that the detector geometry is equivalent to that of the HAADF-detector. Image is taken at the transition region of monolayer \ce{MoSe_2} (bottom) to a heterostructure of \ce{MoSe_2} and \ce{WSe_2} (top) on a lacy carbon grid. The faint circles in the middle of the image are contamination from inspection in TEM mode. Contamination in STEM mode caused the bright white spots on the left side of the image. \textbf{b}) logarithm of the nanobeam electron-diffraction pattern captured in the heterobilayer region of the image in \textbf{a}. Two sets of six diffraction disks, one set of six for each material, can be seen in the pattern. Due to local tilt of the crystalline layers diffraction disks on one side of the central $000$-disk, in this case the bottom, are brighter than disks on the opposing side. \textbf{c}) Exit-wave power cepstrum (EWPC) transform of the NBED pattern displayed in \textbf{b}. The EWPC pattern does not suffer from unequal intensity distributions. Peaks in the pattern are distinguishable in the EWPC transform.}
 	\label{fig:adf_nbed_ewpc}
 \end{figure}
 %-------------------------------------------------------
@@ -65,7 +68,7 @@ Since the envelope function in the CBED/NBED pattern varies slowly over the imag
 Beam conditions optimised for strain analysis at the micrometre-scale need to result in being able to separate the Bragg disk on the EMPAD sensor as well as fitting as many spots within the bright part of the envelope on the sensor by optimising the camera length. Generally a smaller spot size, around 5-6, is used to increase electron brightness and the semi-convergence angle of the electron probe is situated around $\approx$\SI{5}{\milli\radian} to achieve well-defined round disks. 
 
 
-\section{Analysis of hetero-strain in $MoSe_2$/$WSe_2$ heterostructures}
+\section{Analysis of hetero-strain in \ce{MoSe_2}/\ce{WSe_2} heterostructures}
 
 %---------------------------------------------------------------------------------------
 \begin{figure}[t]
@@ -79,9 +82,9 @@ Beam conditions optimised for strain analysis at the micrometre-scale need to re
 
 For the heterostrain analysis, the heterostructure shown in Figure~\ref{fig:moire_overview}\textbf{d} was selected because its transfer to the TEM grid was problem-free, eliminating any ambiguities in the material. In contrast, for the other two heterostructures depicted in Figure~\ref{fig:moire_overview}, numerous flakes swirled around in the IPA during the dissolution of the PVA substrate. The two layers were stamped on top of each other at an angle of \SI{12.2}{\degree}, forming a moiré lattice with a periodicity of \SI{1.06}{\nano\meter}.
 
-The heterostrain analysis was carried out using the exit-wave power cepstrum (EWPC) transform method. Both layers were analysed separately, tracking the corresponding EWPC peaks to solely consider the strain and rotation within each single layer. For this, peaks 7 and 10 were used for the top layer that extends for half the image, and peaks 4 and 1 were used for the bottom layer the bottom layer. Figure~\ref{fig:strain_overview} presents the results, with each layer shown in a separate column. 
-%
-From top to bottom, the rows represent compressive/tensile strain in the $x$ and $y$ directions, shear strain, and layer rotation, all relative to the reference area denoted by the red square. 
+Heterostrain analysis was performed using the exit wave power cepstrum (EWPC) transform method. A single 4D-dataset was captured for the heterostructure, the nano-beam electron diffraction pattern of the exit-wave contains crystallographic information on both layers, such that only a single NBED pattern (Fig.~\ref{fig:point_cloud}\textbf{a}) is needed at every probe position to capture strain information in both layers. After applying the EWPC transform (Fig.~\ref{fig:point_cloud}\textbf{b}) both layers were analysed separately, tracking the corresponding EWPC peaks to only consider the strain and rotation within each single layer. For this, peaks 7 and 10 were used for the top layer that extends for half the image (Fig.~\ref{fig:adf_nbed_ewpc}\textbf{a}), and peaks 4 and 1 were used for the bottom layer. Point clouds are shown, both filtered (top half) and unfiltered (bottom half), in Figure \ref{fig:point_cloud}\textbf{c}. Filtering in this context means rejecting positions where less than 80 peaks have been found.
+
+Figure~\ref{fig:strain_overview} presents the results, with each layer shown in a separate column. From top to bottom, the rows represent compressive/tensile strain in the $x$ and $y$ directions, shear strain, and layer rotation, all relative to the reference area denoted by the red square. 
 %
 The rotation in the bottom row differs from the moiré angle under which the layers were stamped. White areas indicate regions where the targeted peaks were not detected, thus no information could be retrieved.
 %

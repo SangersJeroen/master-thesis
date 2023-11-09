@@ -12,12 +12,12 @@ The TEM works by emitting electrons from an electron source and accelerating the
     \label{eq:acc_volts}
 \end{equation}
 
-\begin{figure}
-    \centering
-    \includegraphics[keepaspectratio, width=0.5\linewidth]{resources/Figures/feg.png} 
-    \caption{Pictured is the tip of a field emission gun \cite{Williams2009-ww}. The tapered tip facilitates the creation of a strongly varying potential that eases the expulsion of electrons from the material. These electrons are then accelerated along the optical axis.}
-    \label{fig:feg}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[keepaspectratio, width=0.5\linewidth]{resources/Figures/feg.png} 
+%     \caption{Pictured is the tip of a field emission gun \cite{Williams2009-ww}. The tapered tip facilitates the creation of a strongly varying potential that eases the expulsion of electrons from the material. These electrons are then accelerated along the optical axis.}
+%     \label{fig:feg}
+% \end{figure}
 
 \begin{figure}
     \centering
@@ -26,7 +26,7 @@ The TEM works by emitting electrons from an electron source and accelerating the
     \label{fig:stem_operating}
 \end{figure}
 
-In a TEM the electrons are released from a field emission gun (FEG, pictured in Figure \ref{fig:feg}). 
+In a TEM the electrons are released from a field emission gun (FEG). 
 The FEG is placed in proximity to two anodes, the first anode is positively charged to several kilovolts such that it extracts electrons from the tip of the FEG, the second anode is charged to the wanted acceleration voltage \cite{Williams2009-ww}.
 FEGs are about three orders of magnitude brighter than thermionic emission electron sources \cite{field-emission}.
 After being emitted the electrons pass through a monochromator that reduces the energy spread of the emitted electrons. An electron then continues along the optical axis into an illuminating system consisting of multiple electromagnetic lenses, which lenses are activated and to what extent depends on the operating mode of the electron microscope.
@@ -49,7 +49,8 @@ Dark-field images use electrons scattered away from the optical axis to form an 
 These ring-shaped detectors encircle the central bright field detector and can collect electrons that have been scattered at various angles. Normal dark-field detectors collect electrons scattered up to an angle of \SI{50}{\milli \radian}. The outermost detector is the high angle annular dark-field detector (HAADF), which collects electrons scattered beyond \SI{50}{\milli \radian} and can be used to create Z-contrast (atomic number Z) or mass-thickness images.
 The HAADF detector is used, since the electrons it collects are almost exclusively incoherently elastically scattered, of which the amount is proportional to the atomic number Z.
 The scanning beam then gathers this atomic number information as intensity information for every probe position in the sample.
-Layering two monolayers such that the atoms are aligned and the probe is perpendicularly incident on the sample will sum the intensity of the two atomic weights of the stacked atoms in the image. The stacking pattern can then be determined by looking at a line plot of the atomic mass over the atoms.  
+Layering two monolayers such that the atoms are aligned and the probe is perpendicularly incident on the sample will sum the intensity of the two atomic weights of the stacked atoms in the image. The stacking pattern can then be determined by looking at a line plot of the atomic mass over the atoms. All the data recorded for the analysis in this report is captured in scanning transmission mode.
+
 
 
 % \subsubsection{Energy-dispersive x-ray spectroscopy}
@@ -62,13 +63,13 @@ Layering two monolayers such that the atoms are aligned and the probe is perpend
 % \end{minipage}
 
 
-\section{Crystallography of Transition Metal Dichalcogenides (TMDs)}
-\subsection{Transition metal dichalcogenides}
-Transition metal dichalcogenides or TMDCs are a family of materials consisting of transition metals (group 3 through 12 on the periodic table) and chalcogen atoms (Sulphur, Selenium or Tellurium) in an \ce{MX_2}-configuration, where \ce{M} is the metal atom and \ce{X_2} are the chalcogen atoms \cite{C7TA04268J}.
-The properties of TMDCs depend greatly on the amount of stacked layers and with individual layers being as thin as \SI{6.5}{\angstrom} for \ce{MoS_2} these materials are often referred to as layered or two-dimensional materials.
-Decreasing the amount of layers from bulk changes electrical properties such as the bandgap which for some TMDCs can go from an indirect to a direct bandgap.
-These electrical properties make TMDCs useful in electronics as transistors and in optoelectronics as emitters and detectors \cite{emerg_photolum, LopezSanchez2013, Radisavljevic2011}. 
-If present, multiple layers of TMDCs are held together by weak interlayer Van der Waals forces making these materials flexible and transferable using polymer based techniques \cite{reganEmergingExcitonPhysics2022a}.
+\section{Crystallography and Diffraction}
+% \subsection{Transition metal dichalcogenides}
+% Transition metal dichalcogenides or TMDCs are a family of materials consisting of transition metals (group 3 through 12 on the periodic table) and chalcogen atoms (Sulphur, Selenium or Tellurium) in an \ce{MX_2}-configuration, where \ce{M} is the metal atom and \ce{X_2} are the chalcogen atoms \cite{C7TA04268J}.
+% The properties of TMDCs depend greatly on the amount of stacked layers and with individual layers being as thin as \SI{6.5}{\angstrom} for \ce{MoS_2} these materials are often referred to as layered or two-dimensional materials.
+% Decreasing the amount of layers from bulk changes electrical properties such as the bandgap which for some TMDCs can go from an indirect to a direct bandgap.
+% These electrical properties make TMDCs useful in electronics as transistors and in optoelectronics as emitters and detectors \cite{emerg_photolum, LopezSanchez2013, Radisavljevic2011}. 
+% If present, multiple layers of TMDCs are held together by weak interlayer Van der Waals forces making these materials flexible and transferable using polymer based techniques \cite{reganEmergingExcitonPhysics2022a}.
 
 \subsection{Crystal lattice and primitive unit cell concepts}
 An infinitely repeating group of atoms is called an ideal crystal, such a crystal is constructed by attaching the same group of atoms, often called a unit cell, to a lattice.
@@ -92,7 +93,18 @@ The reciprocal lattice, just as the crystal lattice, is constructed by vectors; 
 The reciprocal lattice vectors are constructed from the real-space lattice vectors using equation (\ref{eq:lattice_ortho_norm}) and satisfy relation (\ref{eq:lattice_vec_prop}) with their real-space counterpart.
 Using these definitions, the reciprocal lattice vectors are unique.
 Any reciprocal vector can now be composed uniquely by a linear combination of the reciprocal lattice vectors such that any vector is scaled and summed.
-The scattering off of planes shows as a series of high-intensity spots in a diffraction pattern image (Figure \ref{fig:diffraction_pattern}), such an image can be taken in the diffraction mode of a scanning transmission electron microscope (STEM). \\
+The scattering off of planes shows as a series of high-intensity spots in a diffraction pattern image (Figure \ref{fig:scatt_angle}\textbf{b}), such an image can be taken in the diffraction mode of a scanning transmission electron microscope (STEM). \\
+
+
+
+\begin{figure}[h]
+    \centering
+    \def\svgwidth{.9\linewidth}
+    \import{resources/Figures}{scat_diag.pdf_tex}
+    \caption{\textbf{a}) Scattering diagram shows a parallel plane wave scattering off of a plane of atoms with spacing $d_{hkl}$ such that the electron plane waves' phase match before $\vec{K}_I$ and after $\vec{K}_O$. textbf{b}) Diffraction pattern of $WSe_2$ crystalline material. The bright Bragg spots are the result of coherent scattering of a family of planes in the crystal lattice.}
+    \label{fig:scatt_angle}
+\end{figure}
+
 
 \begin{minipage}{0.5\textwidth}
     \begin{equation}
@@ -114,7 +126,7 @@ In a transmission electron microscope, the electrons emanating from the field em
     \label{eq:bragg_angle}
 \end{equation}
 
-If both outgoing rays from the same incoming beam wavefront are then in phase, meaning that the extra distance travelled by on of the rays is a multiple of the wavelength, it shows as a bright spot in the image and then the following condition is met for the Bragg angle:
+If both outgoing rays from the same incoming beam wavefront are then in phase, meaning that the extra distance travelled by one of the rays is a multiple of the wavelength (Fig.~\ref{fig:scatt_angle}\textbf{b}), it shows as a bright spot in the image (Fig.~\ref{fig:scatt_angle}\textbf{a}) as all outgoing scattered waves get focused, and then the following condition is met for the Bragg angle:
 
 \begin{equation}
     n \lambda_e = 2 d \sin{\theta_B}
@@ -126,49 +138,35 @@ Just as the real-space lattice has a unit cell, so does the reciprocal lattice. 
 
 
 
-\begin{minipage}[t]{0.49\textwidth}
-    \centering
-    \includegraphics[width=0.95\linewidth, keepaspectratio]{resources/Figures/fft_of_ml.png}
-    \captionof{figure}{Diffraction pattern of $WSe_2$ crystalline material. The bright Bragg spots are the result of coherent scattering of a family of planes in the crystal lattice.}
-    \label{fig:diffraction_pattern}
-\end{minipage}\hspace{0.02\textwidth}
-\begin{minipage}[t]{0.49\textwidth}
-    \centering
-    \def\svgwidth{.7\linewidth}
-    \import{resources/Figures}{scat_diag.pdf_tex}
-    \captionof{figure}{Scattering diagram shows a parallel plane wave scattering off of a plane of atoms with spacing $d_{hkl}$ such that the electron plane waves' phase match before $\vec{K}_I$ and after $\vec{K}_O$.}
-    \label{fig:scatt_angle}
-\end{minipage}
-
 
 \subsection{Convergent beam electron diffraction}
 In convergent beam electron diffraction the sample is not illuminated by a parallel beam of electrons but instead the electron microscope forms a cone-like shape such that all electrons are focused onto a area only a few atoms wide. The convergence of the electron beam is characterised by the semi-convergence angle $\alpha$ and is usually a few to tens of \si{\milli\radian} in size.
 Since the local crystal structure is now imaged by a cone-like probe and not a parallel beam, it is illuminated from multiple different incoming angles; this distribution of incoming angles is then scattered due to the planes in the crystal lattice with the effect of opening the Bragg spots from the previous section to Bragg disks. A typical CBED pattern is shown in Figure \ref{fig:pacbed}.
-
-\begin{figure}
+\begin{figure}[hb]
     \centering
-    \includegraphics[width=0.5\textwidth, keepaspectratio]{resources/Figures/pacbed_hole.png}
-    \caption{A convergent-beam electron diffraction pattern imaged using the EMPAD sensor. The pattern looks similar to a regular electron diffraction pattern, but instead of Bragg spots, Bragg disks appear as the sample is not illuminated by a parallel bundle but instead by a cone-shape probe, greatly varying the incoming and outgoing electron path angles. Image was calibrated by determining the distance in pixels between Bragg disks and comparing to the FFT of the same crystal imaged using the calibrated CETA camera.}
+    \def\svgwidth{.95\linewidth}
+    \import{resources/Figures}{pacbed_hole.pdf_tex}
+    \caption{\textbf{a}) Schematic overview of a convergent electron probe scattering due to the crystal structure of a sample. \textbf{b}) Convergent-beam electron diffraction pattern imaged using the EMPAD sensor. The pattern looks similar to a regular electron diffraction pattern, but instead of Bragg spots, Bragg disks appear as the sample is not illuminated by a parallel bundle but instead by a cone-shape probe, greatly varying the incoming and outgoing electron path angles. Image was calibrated by determining the distance in pixels between Bragg disks and comparing to the FFT of the same crystal imaged using the calibrated CETA camera.}
     \label{fig:pacbed}
 \end{figure}
 
-\section{Moiré Physics in two-dimensional heterostructures}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth, keepaspectratio]{resources/Figures/moire_transition.png}
-    \caption{\textbf{a} High-resolution TEM image of a transition region between singular TMDC material and a twisted heterostructure showing the smallest possible moiré supercell. Dashed regions correspond to subfigures of the same letter, the with white outlined inset is a post-measurement zoomed in image of the transition region with a dashed line guiding the eye towards the flake edge that causes the visual transition. \textbf{b,c} Fast-Fourier transforms of the dashed regions in \textbf{a}. \textbf{b} Shows twelve first-order diffraction peaks indicating that this region consists of two different layers with a roughly \SI{30}{\degree} twist, leading to the smallest possible moiré cell. \textbf{c} Shows six first-order diffraction peaks indicating that its from a single untwisted  crystal. }
-    \label{fig:moire_trans}
-\end{figure}
+\section{Moiré Physics in two-dimensional heterostructures}
 
 Interaction between imaging electrons and crystal lattices lead to the effects described in the previous section, adding a second crystalline structure rotated with respect to the first will affect both lattices as well as create a larger also periodic moiré lattice.
 Figure \ref{fig:moire_trans}\textbf{a} shows the transition from single crystal layer to a bilayer region where the constituent layers are rotated from one another, in this bilayer region the effective enlargement of periodic structure is visible as the repeating moiré unit cell is significantly larger than the periodic unit cell of the single layer. The periodicity of the moiré cell is dependent on the rotation between layers and is smallest for \SI{30}{\degree} rotation and increases as the rotation decreases. The exact periodicity depends on the combination of materials but can be as large as tens of nanometres for transition-metal dichalcogenides with small lattice mismatch~\cite{rosenbergerAtomicReconstructionMoire}.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth, keepaspectratio]{resources/Figures/moire_transition.png}
+    \caption{\textbf{a} High-resolution TEM image of a transition region between singular TMDC material (\ce{WSe_2}) and a twisted heterostructure (\ce{WSe_2}/\ce{MoSe_2}) showing the smallest possible moiré supercell. Dashed regions correspond to subfigures of the same letter, the with white outlined inset is a post-measurement zoomed in image of the transition region with a dashed line guiding the eye towards the flake edge that causes the visual transition. \textbf{b,c} Fast-Fourier transforms of the dashed regions in \textbf{a}. \textbf{b} Shows twelve first-order diffraction peaks, highlighted with red and green for different layers, indicating that this region consists of two different layers with a roughly \SI{30}{\degree} twist, leading to the smallest possible moiré cell. \textbf{c} Shows six first-order diffraction peaks indicating that its from a single untwisted  crystal. }
+    \label{fig:moire_trans}
+\end{figure}
+
 \subsection{Diffraction patterns of moiré heterostructures}
-The diffraction patterns displayed in Figure \ref{fig:moire_trans}\textbf{b,c} corresponding to the moiré region and the single layer region in Figure \ref{fig:moire_trans}\textbf{a} respectively share some peaks but not all and the extra peaks can not be explained by rotating the diffraction pattern in Figure \ref{fig:moire_trans}\textbf{c} and superimposing on the pattern in Figure \ref{fig:moire_trans}\textbf{b}.
+The diffraction patterns displayed in Figure \ref{fig:moire_trans}\textbf{b,c} corresponding to the moiré region of a \ce{WSe_2}/\-\ce{MoSe_2} heterostructure and the single layer region in Figure \ref{fig:moire_trans}\textbf{a} respectively share some peaks but not all and the extra peaks can not be explained by rotating the diffraction pattern in Figure \ref{fig:moire_trans}\textbf{c} and superimposing on the pattern in Figure \ref{fig:moire_trans}\textbf{b}.
 These extra satellite peaks that emerge between the main Bragg spots and surround the central spot are attributed to the electrons scattering twice, once off the first layer and then a second time off the second layer, transferring momentum between the layers while doing so. As these satellite peaks are second-order effects they appear dimmer than the main Bragg diffraction spots.
 These extra momenta transfer possibilities that open up are shown schematically in Figure \ref{fig:moire_saed}. In Figure \ref{fig:moire_saed}\textbf{a} the diffraction patterns of two crystal lattices, one red and one blue, are presented; these two lattices each allow six first-order momenta transfers by themselves, but when brought into proximity the second layer allows scattered electrons to scatter again of its lattice creating the compounded scattering vectors displayed in orange in Figure \ref{fig:moire_saed}\textbf{a,b}. In Figure \ref{fig:moire_saed}\textbf{c} a moiré diffraction pattern is indexed by the cause of the peaks.
-
 
 \begin{figure}[h]
     \centering
@@ -178,4 +176,3 @@ These extra momenta transfer possibilities that open up are shown schematically 
     \label{fig:moire_saed}
 \end{figure}
 
-\clearpage

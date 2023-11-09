@@ -131,37 +131,9 @@ The equations associated with these processes are as follows:
     I^{dCOM}(\vec{r}_p) &\propto -\frac{\sigma}{\epsilon_0}\rho_z(\vec{r}_p) 
 \end{align}
 
-\section{Analysis of momentum transfer in twisted $WSe_2$ moiré superlattice}
 
-%---------------------------------------------------------------------------------------
-\begin{figure}
-    \centering
-    \def\svgwidth{.95\linewidth}
-    \import{resources/Figures}{e2_overview.pdf_tex}
-    \caption{\textbf{a}) High-angle annular dark field photograph, image shows material increasing in layer number from the bottom left to the top right. These layers were slightly rotated during transfer, leading to the formation of the moiré pattern. Across this material, another thin strip has settled during transfer, causing a further modulation of the moiré period. \textbf{b}) High-resolution TEM image of the region highlighted in \textbf{a} with a moiré unit cell outlined. \textbf{c}) FFT of the high-resolution image showing a \SI{2.3}{\degree} rotation between the strip and the larger layers.}
-    \label{fig:dub_moire}
-\end{figure}
-%---------------------------------------------------------------------------------------
+\section{Implementation and Validation of COM analysis tools}
 
-This sample of stamped $WSe_2$ was created using the described mechanical transfer. Upon inspection in STEM mode, the large features highlighted with the green outline in Figure~\ref{fig:dub_moire}\textbf{a} appeared and are the effect of three different layers of material slightly out of alignment with each other. 
-%
-The resulting moiré unit cell is highlighted with the dashed outline in Figure~\ref{fig:dub_moire}\textbf{b} and is measured to be caused a \SI{2.3}{\degree} rotation between the thin strip's crystal lattice (highlighted in green) and the moiré pattern present in the underlying layers (highlighted in blue).
-
-%Missing a justification what we are looking at "electric field measurements?"
-
-In the following sections, we will examine three distinct regions from our previously discussed sample: i) a singular hole in otherwise uniform material (to validate our centre-of-mass (COM) analysis tools), ii) a pronounced periodicity within the moiré lattice (to gauge anticipated outcomes), and  iii) a region characterised by double misalignment.
-
-\section{Validation of COM analysis tools}
-
-%-----------------------------------------------------------------------------------
-\begin{figure}
-    \centering
-    \def\svgwidth{.95\linewidth}
-    \import{resources/Figures}{hole_displacement.pdf_tex}
-    \caption{Result of performing CBED shift analysis on a large hole in otherwise uniform material. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift, and, the angle of the displacement respectively. All values are given are (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
-    \label{fig:hole_dis}
-\end{figure}
-%-----------------------------------------------------------------------------------
 
 In the previous theory section on centre-of-mass (COM) analysis, we highlighted two different scenarios, each necessitating a different analysis approach to COM due to varying effects on the diffracted electron beam.
 %
@@ -173,8 +145,18 @@ This deflection tends towards the thicker regions in the sample~\cite{ophusFourD
 %
 By monitoring the periphery of the bright field (BF) disk and its variation relative to its average position, we can discern the deflection of the BF disk in both the $x$- and $y$-directions. 
 %
-This deflection in the $x$ and $y$ direction is shown in Figure~\ref{fig:hole_dis}\textbf{a,b}, while the combined deflection magnitude and angle are illustrated in Figure~\ref{fig:hole_dis}\textbf{c,d} respectively. 
+This deflection in the $x$ and $y$ direction is shown in Figure~\ref{fig:hole_dis}\textbf{a,b}, while the combined deflection magnitude and angle are illustrated in Figure~\ref{fig:hole_dis}\textbf{c,d} respectively
 %
+%-----------------------------------------------------------------------------------
+\begin{figure}[h]
+    \centering
+    \def\svgwidth{1\linewidth}
+    \import{resources/Figures}{hole_displacement.pdf_tex}
+    \caption{Result of performing CBED shift analysis on a large hole in otherwise uniform material. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift, and, the angle of the displacement respectively. All values are given are (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
+    \label{fig:hole_dis}
+\end{figure}
+
+%-----------------------------------------------------------------------------------
 The observed phenomena align with expectations, with the electron beam displacements moving towards the material. 
 %
 Interestingly, several probe points in the hole's center show minimal displacement, indicating that the beam's cross-sectional area is indeed smaller than the hole itself.
@@ -183,66 +165,72 @@ Leveraging the data on  BF disk displacement, we can also calculate the momentum
 %
 The net momentum transfer and its direction are plotted in Figure \ref{fig:hole_mom}, accompanied by a virtual-HAADF image for context. 
 %
-The plot shows higher momenta transfer at probe positions nearer to the hole's edge, which diminishes as the probe moves further across the sample or nearer to the hole's center.
+The plot shows higher momenta transfer at probe positions nearer to the hole's edge, which diminishes as the probe moves further across the sample or nearer to the hole's centre.
+
 
 \begin{figure}
     \centering
-    \def\svgwidth{.7\linewidth}
+    \def\svgwidth{.95\linewidth}
     \import{resources/Figures}{hole_momentum_transfered.pdf_tex}
     \caption{Left panel show a virtual-HAADF image taken by masking the dataset. Right panel shows the momentum transfer imparted on the electron beam by the sample, the electron beam gets deflected towards the thicker material.}
     \label{fig:hole_mom}
 \end{figure}
 
-\section{Mapping electric field in a Sub-\SI{1}{\degree} $WSe_2$ Moiré superlattice}
+\section{Analysis of momentum transfer in twisted $WSe_2$ moiré superlattice}
+
+
+This sample of stamped \ce{WSe_2} was created using the described mechanical transfer. Upon inspection in STEM mode, the large features highlighted with the green outline in Figure~\ref{fig:dub_moire}\textbf{a} appeared and are the effect of three different layers of material slightly out of alignment with each other. 
+%
+The resulting moiré unit cell is highlighted with the dashed outline in Figure~\ref{fig:dub_moire}\textbf{b} and is measured to be caused a \SI{2.3}{\degree} rotation between the thin strip's crystal lattice (highlighted in green) and the moiré pattern present in the underlying layers (highlighted in blue).
+
+%Missing a justification what we are looking at "electric field measurements?"
+
+In the following sections, we will examine three distinct regions from our previously discussed sample: i) a singular hole in otherwise uniform material (to validate our centre-of-mass (COM) analysis tools), ii) a pronounced periodicity within the moiré lattice (to gauge anticipated outcomes), and  iii) a region characterised by double misalignment.
+%---------------------------------------------------------------------------------------
+\begin{figure}[h]
+    \centering
+    \def\svgwidth{.95\linewidth}
+    \import{resources/Figures}{e2_overview.pdf_tex}
+    \caption{\textbf{a}) High-angle annular dark field photograph, image shows material increasing in layer number from the bottom left to the top right. These layers were slightly rotated during transfer, leading to the formation of the moiré pattern. Across this material, another thin strip has settled during transfer, causing a further modulation of the moiré period. \textbf{b}) High-resolution TEM image of the region highlighted in \textbf{a} with a moiré unit cell outlined. \textbf{c}) FFT of the high-resolution image showing a \SI{2.3}{\degree} rotation between the strip and the larger layers.}
+    \label{fig:dub_moire}
+\end{figure}
+%---------------------------------------------------------------------------------------
+
+
+\section{Mapping electric field in a Sub-\SI{1}{\degree} \ce{WSe_2} Moiré superlattice}
 
 Data pertaining to the moiré lattice was collected from the region highlighted in blue in Figure~\ref{fig:moire_overview}.
 %
 The moiré angle is estimated to be \SI{\leq 1}{\degree}. Analogous to the hole dataset, we calculated the shift in the BF disk for probe positions and subsequently made corrections in the dataset to align all the BF disks appropriately. This shift in the BF disk is plotted in Figure~\ref{fig:m_dis}. 
 
-%--------------------------------------------------------------------------------------
-\begin{figure}[h]
-    \centering
-    \def\svgwidth{.95\linewidth}
-    \import{resources/Figures}{moire_displacement.pdf_tex}
-    \caption{Result of performing CBED shift analysis on the region of a moiré lattice highlighted in blue in Figure \ref{fig:dub_moire}. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift, and, the angle of the displacement respectively. All values are given are (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
-    \label{fig:m_dis}
-\end{figure}
-%--------------------------------------------------------------------------------------
+
 
 A clear distinction between the unit cell's interior and its walls is evident, as they appear to displace the electron beam diffraction pattern in opposing directions.
 %
 Upon aligning all the BF disks, we can calculate the COM based solely on the intensity distribution within these disks.
 %
-The results of this computation are presented in Figure~\ref{fig:m_mom}. 
+The results of this calculation are presented in Figure~\ref{fig:m_mom} in Appendix \ref{appendix:a}. 
 %
 This figure showcases, from top to bottom: a virtual-HAADF image created by masking the dataset, the magnitude and direction of the momentum transfer within the sample plane, and the distribution of charges responsible for this momentum transfer. 
 %
 Intriguingly, despite showcasing two moiré unit cells, no recurrent features within the COM analysis of the moiré unit cell are discernible.
 
-%--------------------------------------------------------------------------------------
-\begin{figure}
-    \centering
-    \def\svgwidth{.5\linewidth}
-    \import{resources/Figures}{moire_efield_charge.pdf_tex}
-    \caption{\textbf{top}) Reconstructed high-angle annular dark field photograph of two moiré unit cells. \textbf{middle}) Momentum transferred to the passing electron probe by the sample. \textbf{bottom}) Electric field direction and charge density that would create the electric field such that the momentum transferred to the electron probe would be the same as in the \textbf{middle} plot.}
-    \label{fig:m_mom}
-\end{figure}
+% %--------------------------------------------------------------------------------------
+% \begin{figure}[h]
+%     \centering
+%     \def\svgwidth{.5\linewidth}
+%     \import{resources/Figures}{moire_efield_charge.pdf_tex}
+%     \caption{\textbf{top}) Reconstructed high-angle annular dark field photograph of two moiré unit cells. \textbf{middle}) Momentum transferred to the passing electron probe by the sample. \textbf{bottom}) Electric field direction and charge density that would create the electric field such that the momentum transferred to the electron probe would be the same as in the \textbf{middle} plot.}
+%     \label{fig:m_mom}
+% \end{figure}
 
-\section{Mapping momentum transfer in a Sub-\SI{2.3}{\degree} $WSe_2$ Moiré superlattice}
+\clearpage
+\section{Mapping momentum transfer in a Sub-\SI{2.3}{\degree} \ce{WSe_2} Moiré superlattice}
 \label{sec:large_moire}
 % Vortices at the vertices
 %--------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------
-\begin{figure}
-    \centering
-    \def\svgwidth{.95\linewidth}
-    \import{resources/Figures}{trip_moire_displacement.pdf_tex}
-    \caption{Results from the centre-of-mass analysis performed bright field disk of the double moiré region highlighted in Figure \ref{fig:dub_moire} after the electron diffraction pattern shift was accounted for. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift, and, the angle of the displacement respectively. All values are given are (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
-    \label{fig:trip_m_dis}
-\end{figure}
-%--------------------------------------------------------------------------------------
 
-In the green-highlighted region of Figure~\ref{fig:moire_overview}\textbf{a}, a double moiré pattern emerges from three layers showcasing two distinct moiré angles.
+In the green-highlighted region of Figure~\ref{fig:moire_overview}\textbf{a}, a double moiré pattern emerges from three layers showing two distinct moiré angles.
 %
 One is near zero degrees, while the other is roughly \SI{2.3}{\degree}.
 %
@@ -252,8 +240,17 @@ From the virtual-HAADF image derived from this dataset, the probe's cross-sectio
 %
 Given this, we adjusted for the CBED shift and executed a COM analysis on the BF disk, aiming to delve deeper into the moiré unit cell's structure. 
 %
-The CBED shift analysis outcomes are displayed in Appendix \ref{appendix:a}.
+The CBED shift analysis are displayed in Appendix \ref{appendix:b}.
 
+%--------------------------------------------------------------------------------------
+\begin{figure}[h]
+    \centering
+    \def\svgwidth{.95\linewidth}
+    \import{resources/Figures}{trip_moire_displacement.pdf_tex}
+    \caption{Results from the centre-of-mass analysis performed bright field disk of the double moiré region highlighted in Figure \ref{fig:dub_moire} after the electron diffraction pattern shift was accounted for. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift, and, the angle of the displacement respectively. All values are given are (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
+    \label{fig:trip_m_dis}
+\end{figure}
+%--------------------------------------------------------------------------------------
 The subsequent COM analysis, targeting intensity variations due to electric and/or magnetic field, is depicted in Figure~\ref{fig:trip_m_dis}. 
 %
 One can observe a discernible periodicity in all displacement measurements that aligns with the nuances in the virtual-HAADF image, and a congruence in values across moiré unit cells. 
@@ -264,6 +261,16 @@ Here, a clear distinction between the high-symmetry points, which manifest as wh
 %
 Notably, the COM magnitude redistribution intensifies as one  moves radially from a high-symmetry region's center. 
 %
+%--------------------------------------------------------------------------------------
+\begin{figure}[h]
+    \centering
+    \def\svgwidth{.9\linewidth}
+    \import{resources/Figures}{trip_moire_momentum.pdf_tex}
+    \caption{Image shows the momentum transfer imparted on the electron beam by features in the sample. The moiré unit cell is highlighted and the same as in Figure \ref{fig:dub_moire}\textbf{b}.}
+    \label{fig:trip_m_mom}
+\end{figure}
+%--------------------------------------------------------------------------------------
+%
 The calculated momentum transfer, shown in Figure \ref{fig:dub_moire}, highlights this effect even more. 
 %
 For clarity,  the moiré unit cell's outline has been sketched, encircling two high symmetry points, with a third at the vertex. 
@@ -272,12 +279,3 @@ Interestingly, the two enclosed vortices have a greater magnitude than the verte
 %
 This observation remains not fully grasped at present and calls for deeper analysis, and theoretical calculations.
 
-%--------------------------------------------------------------------------------------
-\begin{figure}
-    \centering
-    \def\svgwidth{.9\linewidth}
-    \import{resources/Figures}{trip_moire_momentum.pdf_tex}
-    \caption{Image shows the momentum transfer imparted on the electron beam by features in the sample. The moiré unit cell is highlighted and the same as in Figure \ref{fig:dub_moire}\textbf{b}.}
-    \label{fig:trip_m_mom}
-\end{figure}
-%--------------------------------------------------------------------------------------
