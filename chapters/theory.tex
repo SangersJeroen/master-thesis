@@ -19,12 +19,6 @@ The TEM works by emitting electrons from an electron source and accelerating the
 %     \label{fig:feg}
 % \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\textwidth, keepaspectratio]{resources/Figures/stem_operating.png}
-    \caption{Illumination system for convergent beam.}
-    \label{fig:stem_operating}
-\end{figure}
 
 In a TEM the electrons are released from a field emission gun (FEG). 
 The FEG is placed in proximity to two anodes, the first anode is positively charged to several kilovolts such that it extracts electrons from the tip of the FEG, the second anode is charged to the wanted acceleration voltage \cite{Williams2009-ww}.
@@ -44,23 +38,21 @@ After being emitted the electrons pass through a monochromator that reduces the 
 %     \label{fig:tem_operating}
 % \end{figure}
 \section{Dark Field and Z-contrast Imaging}
-For dark field and Z-contrast the electron beam is focused to a small area, this creates a higher intensity electron beam with a probe-like point as can be seen in Figure \ref{fig:stem_operating}. Since all of the electrons are focused on a small area, there is no phase-contrast information that can be used to form an image. To form an image using such an electron beam, the probe point needs to be scanned over the sample, leading to the term Scanning Transmission Electron Microscopy.
+For dark field and Z-contrast the electron beam is focused to a small area, this creates a higher intensity electron beam with a probe-like point as can be seen in Figure \ref{fig:stem_operating}\textbf{a}. Since all of the electrons are focused on a small area, there is no phase-contrast information that can be used to form an image. To form an image using such an electron beam, the probe point needs to be scanned over the sample, leading to the term Scanning Transmission Electron Microscopy.
 Dark-field images use electrons scattered away from the optical axis to form an image, to achieve this most STEMs have a series of annular dark-field detectors.
-These ring-shaped detectors encircle the central bright field detector and can collect electrons that have been scattered at various angles. Normal dark-field detectors collect electrons scattered up to an angle of \SI{50}{\milli \radian}. The outermost detector is the high angle annular dark-field detector (HAADF), which collects electrons scattered beyond \SI{50}{\milli \radian} and can be used to create Z-contrast (atomic number Z) or mass-thickness images.
+These ring-shaped detectors encircle the central bright field detector and can collect electrons that have been scattered at various angles. Normal dark-field detectors collect electrons scattered up to an angle of \SI{50}{\milli \radian}. The outermost detector is the high angle annular dark-field detector (HAADF), which collects electrons scattered beyond \SI{50}{\milli \radian} and can be used to create Z-contrast (atomic number Z) or mass-thickness images, an example image is displayed in Figure~\ref{fig:stem_operating}\textbf{b}.
 The HAADF detector is used, since the electrons it collects are almost exclusively incoherently elastically scattered, of which the amount is proportional to the atomic number Z.
 The scanning beam then gathers this atomic number information as intensity information for every probe position in the sample.
 Layering two monolayers such that the atoms are aligned and the probe is perpendicularly incident on the sample will sum the intensity of the two atomic weights of the stacked atoms in the image. The stacking pattern can then be determined by looking at a line plot of the atomic mass over the atoms. All the data recorded for the analysis in this report is captured in scanning transmission mode.
 
+\begin{figure}
+    \centering
+    \def\svgwidth{.95\linewidth}
+    \import{resources/Figures}{stem_operating.pdf_tex}
+    \caption{\textbf{a}) Illumination system of a STEM set up in scanning mode with a focused convergent beam for probing localised features in the sample. Using the C2 diaphragm the operator is able to select what part of the probe to use and restrict the semi-convergence angle $\alpha$. \textbf{b}) Z-contrast image of \ce{SrTiO_3} with a model structure at the boundary super-imposed. The difference in brightness between light and heavy atoms can be seen. Both images are adapted from~\cite{Williams2009-ww}. }
+    \label{fig:stem_operating}
+\end{figure}
 
-
-% \subsubsection{Energy-dispersive x-ray spectroscopy}
-% %Pagina 581 W\&C
-% \begin{minipage}[h]{0.6\linewidth}
-%         \def\svgwidth{0.66\linewidth}
-%         \import{resources/Figures}{Titan_full_column.pdf_tex}
-%         \captionof{figure}{Cross-section of an aberration corrected electron microscope}
-%         \label{fig:tem_crossection}
-% \end{minipage}
 
 
 \section{Crystallography and Diffraction}
