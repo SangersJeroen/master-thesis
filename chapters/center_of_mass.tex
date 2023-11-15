@@ -2,7 +2,7 @@
 \chapter{Centre-of-mass (COM) analysis for potential field mapping and phase object retrieval}
 \label{sec:COM}
 %
-In the context of electron diffraction, the Bragg condition, as described by Bragg's law, play a crucial role. It states that the interference of waves becomes constructive when the path difference between them is an integer multiple of the wavelength. This fundamental principle leads to the formation of the Bragg diffraction spots or disks, which are the prominent features in the diffraction pattern.
+In the context of electron diffraction, the Bragg condition, as described by Bragg's law, play a crucial role. It states that the interference of waves becomes constructive when the path difference between them is an integer multiple of the wavelength. This fundamental principle leads to the formation of Bragg diffraction spots or disks, which are the prominent features in the diffraction pattern.
 %
 \blfootnote{The content of this chapter is included in an ongoing manuscript authored by J.J.M. Sangers, M. Bolhuis, A. Brokkelkamp, and S. Conesa-Boj, scheduled for publication in 2024.}
 %
@@ -20,9 +20,9 @@ The central Bragg diffraction spot or disk is often described as unscattered, bu
 %
 While it is true that the spot/disk is not scattered by the crystal structure, it can be deflected from its  unperturbed position by angles much smaller than the Bragg angles. 
 %
-This deflections occurs due to the phase acquired by the electrons in the beam during their interaction with electric or magnetic fields.
+These deflections occur as a result of the phase acquired by the electrons in the beam during their interaction with electric or magnetic fields.
 
-This shift in position is only detectable when the electron probe is physically much smaller than the electric or magnetic field it interacts with.
+This shift in position is detectable only when the electron probe is physically much smaller than the electric or magnetic field with which it interacts.
 %
 Conversely,if the probe is much larger than the probed feature, one instead observed a redistribution of the intensity within the bright field disk.
 %
@@ -134,69 +134,66 @@ The equations associated with these processes are as follows:
 
 \section{Implementation and Validation of COM analysis tools}
 
+In the previous theory section on centre-of-mass (COM) analysis, we highlighted two different scenarios, each necessitating a distinct approach to COM analysis due to varying effects on the diffracted electron beam.
+%
+Both scenarios require different methods of data analysis because computing the COM of the magnitude of the exit-wave would not effectively separate deviations in COM from the displacement of the diffraction pattern caused by large features and the redistribution of intensity within the bright-field disk resulting from small features.
 
-In the previous theory section on centre-of-mass (COM) analysis, we highlighted two different scenarios, each necessitating a different analysis approach to COM due to varying effects on the diffracted electron beam.
-%
-Such that both require different methods of data analysis as computing the centre-of-mass of the magnitude of the exit-wave would not disentangle deviations in COM from displacement of the diffraction pattern due to large features and the redistribution of intensity within the bright-field disk coming from small features.
-%
-Separating both contributions to the COM signal is performed by a newly written Python program that first shifts all individual diffraction patterns for all probe positions and then computes the COM of the aligned bright field disks.
-%
-Shifting the diffraction patterns is performed by first carrying out a 2d convolution with both Sobel matrices on all diffraction patterns to compute the edges of all disks in a diffraction pattern, these computed edge frames are then averaged over the probe positions to gain a mean position of all edges in momentum space.
-%
-Then, secondly, every diffraction pattern frame is shifted towards the mean edge position frame by a subpixel shift function in SciPy~\cite{2020SciPy-NMeth}. The subpixel shift value is determined by computing the cross-correlation and fitting either a Gaussian or Lorentzian distribution to find the subpixel centre and error therein.
-%
-Thirdly, the computation of the mean edge frame and the shift towards the mean can then be performed as many times as needed to converge to an exact location to negate the shift of the diffraction pattern. In practise one such iteration provided sufficient and all following results were achieved with one such iteration.
-%
-To benchmark the correction of the CBED shift a scenario such as when the electron probe's cross-sectional area is significantly smaller than the feature under investigation is needed. As seen with the hole in the otherwise uniform moiré bilayer depicted in Figure~\ref{fig:hole_dis}\textbf{e} this conditions is met, since the hole can be imaged with well-defined edges. 
-%
 %-----------------------------------------------------------------------------------
-\begin{figure}
+\begin{figure}[h]
     \centering
     \def\svgwidth{1\linewidth}
     \import{resources/Figures}{hole_displacement.pdf_tex}
-    \caption{Result of performing CBED shift analysis on a large hole in otherwise uniform material. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift, and, the angle of the displacement respectively. All values are given are (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
+    \caption{Result of performing CBED shift analysis on a large hole in otherwise uniform material. \textbf{a,b,c,d}) Highlight the shift in the y-direction, the shift in the x-direction, the magnitude of the shift and the angle of the displacement, respectively. All values are given as (sub)pixel shifts across the sensor. The axes correspond with those given in the vHAADF image \textbf{e}.}
     \label{fig:hole_dis}
 \end{figure}
-%-----------------------------------------------------------------------------------
-%
-As reported in other works, changes in sample geometry, such as edges and slopes, can deflect the electron bundle. 
-%
-This deflection tends towards the thicker regions in the sample~\cite{ophusFourDimensionalScanningTransmission2019a,dekkers1974differential}. 
-%
-By monitoring the periphery of the bright field (BF) disk and its variation relative to its average position, we can discern the deflection of the BF disk in both the $x$- and $y$-directions. 
-%
-This deflection in the $x$ and $y$ direction is shown in Figure~\ref{fig:hole_dis}\textbf{a,b}, while the combined deflection magnitude and angle are illustrated in Figure~\ref{fig:hole_dis}\textbf{c,d} respectively
-%
-The observed phenomena align with expectations, with the electron beam displacements moving towards the material. 
-%
-Interestingly, several probe points in the hole's centre show minimal displacement, indicating that the beam's cross-sectional area is indeed smaller than the hole itself.
-%
-Leveraging the data on CBED pattern displacement, we can also calculate the momentum transfer conferred to the electron beam, using similar methods as described in~\cite{mullerAtomicElectricFields2014}. 
-%
-The net momentum transfer and its direction are plotted in Figure \ref{fig:hole_mom}, accompanied by a virtual-HAADF image for context. 
-%
-The plot shows higher momenta transfer at probe positions nearer to the hole's edge, which diminishes as the probe moves further across the sample or nearer to the hole's centre.
+%-------------------------------------------------------------------------------
 
-
-\begin{figure}
+The separation of both contributions to the COM signal is performed by a newly developed Python program. This program first shifts all individual diffraction patterns for all probe positions and then computes the COM of the aligned bright field disks.
+%
+Shifting the diffraction patterns is achieved by initially applying a 2D convolution with both Sobel matrices to all diffraction patterns to compute the edges of all disks within a diffraction pattern. These computed edge frames are then averaged over the probe positions to obtain the mean position of all edges in momentum space.
+%
+Subsequently, each diffraction pattern frame is shifted toward the mean edge position frame using a subpixel shift function in SciPy~\cite{2020SciPy-NMeth}. The subpixel shift value is determined by computing the cross-correlation and fitting either a Gaussian or Lorentzian distribution to find the subpixel centre and its associated error.
+%
+Finally, the computation of the mean edge frame and the shift towards the mean can be repeated as many times as needed to converge to an exact location and eliminate the shift of the diffraction pattern. In practise, one such iteration proved sufficient, and all subsequent results were obtained with a single iteration.
+To benchmark the correction of the CBED shift a scenario such as when the electron probe's cross-sectional area is significantly smaller than the feature under investigation is needed. As seen with the hole in the otherwise uniform moiré bilayer depicted in Figure~\ref{fig:hole_dis}\textbf{e}, this conditions is met, since the hole can be imaged with well-defined edges. 
+%
+As mentioned in previous studies, changes in sample geometry, such as edges and slopes, can cause the electron beam to deflect.  
+%
+This deflection tends to occur towards the thicker regions within the sample~\cite{ophusFourDimensionalScanningTransmission2019a,dekkers1974differential}. 
+%
+By monitoring the periphery of the bright field disk and observing its variation relative to its average position, we can identify the deflection of the BF disk in both the $x$- and $y$-directions. 
+%
+This deflection in the $x$ and $y$ direction is shown in Figure~\ref{fig:hole_dis}\textbf{a,b}, while the combined deflection magnitude and angle are illustrated in Figure~\ref{fig:hole_dis}\textbf{c,d}, respectively
+%
+The observed phenomena are consistent with expectations, as the electron beam displacements move toward the material. 
+%
+Interestingly, several probe points at the center of the hole exhibit minimal displacement, indicating that the beam's cross-sectional area is indeed smaller than the hole itself.
+%------------------------------------------------------------------------------
+\begin{figure}[h!]
     \centering
     \def\svgwidth{.75\linewidth}
     \import{resources/Figures}{hole_momentum_transfered.pdf_tex}
     \caption{Left panel shows a virtual-HAADF image taken by masking the dataset. Right panel shows the momentum transfer imparted on the electron beam by the sample, the electron beam gets deflected towards the thicker material.}
     \label{fig:hole_mom}
 \end{figure}
+%------------------------------------------------------------------------------
 
-\clearpage
-\section{Analysis of momentum transfer in twisted \ce{WSe_2} moiré superlattice}
-
-
-This sample of stamped \ce{WSe_2} was created using the described mechanical transfer method. Upon inspection in STEM mode, the large features highlighted with the green outline in Figure~\ref{fig:dub_moire}\textbf{a} appeared and are the effect of three separate layers of material slightly out of alignment with each other. 
+Using the data on CBED pattern displacement, we can also calculate the momentum transfer imparted to the electron beam, employing methods similar to those described in~\cite{mullerAtomicElectricFields2014}. 
 %
-The resulting moiré unit cell is highlighted with the dashed outline in Figure~\ref{fig:dub_moire}\textbf{b} and is measured to be caused a \SI{2.3}{\degree} rotation between the thin strip's crystal lattice (highlighted in green) and the moiré pattern present in the underlying layers (highlighted in blue).
+The net momentum transfer and its direction are plotted in Figure \ref{fig:hole_mom}, accompanied by a virtual high-angle annular dark field image for context. 
+%
+The plot reveals higher momentum transfer at probe positions nearer to the hole's edge, which diminishes as the probe moves further across the sample or closer to the hole's centre.
+%
+
+
+\section{Analysis of momentum transfer in twisted \ce{WSe_2} moiré superlattice}
+%
+This sample of stamped \ce{WSe_2} was created using the mechanical transfer method described earlier. Upon inspection in STEM mode, the large features highlighted with the green outline in Figure~\ref{fig:dub_moire}\textbf{a} appeared as a result of three separate layers of material slightly out of alignment with each other. 
+%
+The resulting moiré unit cell is outlined with dashed lines in Figure~\ref{fig:dub_moire}\textbf{b} and is measured to be caused by a \SI{2.3}{\degree} rotation between the crystal lattice of the this strip (highlighted in green) and the moiré pattern present in the underlying layers (highlighted in blue).
 
 %Missing a justification what we are looking at "electric field measurements?"
-
-In the following sections, two distinct moiré regions from our previously discussed sample will be examined; a moiré periodic lattice formed by a sub \SI{1}{\degree} misalignment and a region characterised by double misalignment caused by another layer twisted by about \SI{2.3}{\degree} on top a region otherwise similar to the previous case.
+In the following sections, I will examine two distinct moiré regions from our previously discussed sample: one characterised by a moiré periodic lattice formed by a sub \SI{1}{\degree} misalignment, and another characterised by double misalignment, caused by another layer twisted by about \SI{2.3}{\degree} on top a region otherwise similar to the previous case.
 %---------------------------------------------------------------------------------------
 \begin{figure}[h]
     \centering
@@ -207,31 +204,25 @@ In the following sections, two distinct moiré regions from our previously discu
 \end{figure}
 %---------------------------------------------------------------------------------------
 
+First, let's look at the larger moiré cell characterised by the sub-\SI{1}{\degree} stacking angle between layers. The data for the moiré lattice were collected from the region highlighted in blue in Figure~\ref{fig:dub_moire}.
+Second, we will compare the smaller moiré cell characterised by a double stacking angle mismatch (highlighted in green in Fig.~\ref{fig:dub_moire}\textbf{a}) to the previously mentioned region.
+%
+Similar to the hole dataset, we calculated the shift in the bright field disk for probe positions using the edge-detect method and subpixel shift correction as described previously, for one iteration.
 
-First, looking at the larger moiré cell characterised by the sub-\SI{1}{\degree} stacking angle between layers, for which the
-data of the moiré lattice was collected from the region highlighted in blue in Figure~\ref{fig:dub_moire}.
-Secondly, we will be comparing the smaller moiré cell that was characterised by a double stacking angle mismatch (highlighted in green Fig.~\ref{fig:dub_moire}\textbf{a}) to the previously mentioned region.
+The results of the diffraction pattern shifts for the green highlighted area are shown in Figures~\ref{fig:appendix_cbed_trip_moire} in Appendix A. 
 %
-Analogous to the hole dataset, we calculated the shift in the BF disk for probe positions applying the edge-detect method and subpixel shift correction described previously for one iteration.
+From the virtual-HAADF image derived from these datasets, we determined that the probe's cross-sectional area is approximately half the size of a moiré unit cell. 
 %
-The results of the diffraction pattern shifts are shown in Figures~\ref{fig:appendix_cbed_trip_moire} in Appendix A for the green highlighted area.
-%
-From the virtual-HAADF image derived from these datasets, the probe's cross-sectional area is approximately half the size of a moiré unit cell. 
-%
-Since were interested in features within the moiré unit cell, the diffraction pattern shift was corrected for and further corrections to the dataset were made by subtracting the bright-field disk of the shift corrected probe position averaged diffraction pattern from every diffraction pattern to approximately remove the constant contributions of the uncorrected probe.
+Since were are interested in features within the moiré unit cell, the diffraction pattern shift was corrected, and further corrections to the dataset were made by subtracting the bright field disk of the shift-corrected probe position-averaged diffraction pattern from every diffraction pattern to approximately remove the constant contributions of the uncorrected probe.
 %
 The BF disk COM analyses were carried out after all corrections and are shown in Figures~\ref{fig:m_dis}~and~\ref{fig:trip_m_dis} in Appendix A for the larger (highlighted in blue) and smaller (highlighted in green) moiré lattices.
 %
-In the COM analysis of the intensity redistribution for the larger moiré lattice shows a clear distinction between the unit cell's interior and its walls, as they appear to displace the electron beam diffraction pattern in opposing directions.
+In the COM analysis of the intensity redistribution for the larger moiré lattice, a clear distinction between the unit cell's interior and its walls is observed, as they appear to displace the electron beam diffraction pattern opposing directions.
 %
 In contrast, the smaller moiré lattice's unit cell walls appear to have no effect on the COM.
-%
-To investigate further the momentum imparted on the electron probe was calculated from the COM measurements.
-%
-The magnitude and direction of momentum transferred into the electron probe by features within the moiré cell are shown in Figure~\ref{fig:trip_m_mom}. In this figure the reconstructed virtual-HAADF photographs are shown in Fig.~\ref{fig:trip_m_mom}\textbf{a,c} for the large and small moiré lattice. Fig~\ref{fig:trip_m_mom}\textbf{b,d} show the magnitude and direction of momentum transfer, note the different scale for the colourbar. The plots for the larger moiré lattice display two moiré unit cell outlines. The plots for the smaller moiré lattice display one moiré unit cell.\\
-%
+
 %--------------------------------------------------------------------------------------
-\begin{figure}[ht]
+\begin{figure}[h!]
     \centering
     \def\svgwidth{.7\linewidth}
     \import{resources/Figures}{trip_moire_momentum.pdf_tex}
@@ -239,24 +230,30 @@ The magnitude and direction of momentum transferred into the electron probe by f
     \label{fig:trip_m_mom}
 \end{figure}
 %--------------------------------------------------------------------------------------
+
+To investigate further, the momentum imparted on the electron probe was calculated from the COM measurements.
 %
-One can observe a discernible periodicity in both momentum measurements (Fig.~\ref{fig:trip_m_mom}~\textbf{b,d}) that align with the nuances in their respective virtual-HAADF images (Fig.~\ref{fig:trip_m_mom}~\textbf{a,c}), and a congruence in values across moiré unit cells. 
+The magnitude and direction of momentum transferred into the electron probe by features within the moiré cell are shown in Figure~\ref{fig:trip_m_mom}. In this figure, the reconstructed virtual-HAADF photographs are shown in Fig.~\ref{fig:trip_m_mom}\textbf{a,c} for the large and small moiré lattice. Fig~\ref{fig:trip_m_mom}\textbf{b,d} show the magnitude and direction of momentum transfer. Please note the different scale for the colour bar. The plots for the larger moiré lattice display two moiré unit cell outlines, while the plots for the smaller moiré lattice display one moiré unit cell.
+
+
+
+One can discern a noticeably periodicity in both momentum measurements (Fig.~\ref{fig:trip_m_mom}~\textbf{b,d}) that aligns with the nuances in their respective virtual-HAADF images (Fig.~\ref{fig:trip_m_mom}~\textbf{a,c}), and there is a consistency in values across moiré unit cells. 
 %
-For the larger moiré lattice the contrast between moiré cell centre and border in the COM are also reflected in the momentum transfer with the centre of the moiré cell imparting momentum in the opposing direction as the cell border. The magnitude of momentum transfer within the moiré cell appears to be double that at the border.
+For the larger moiré lattice, the contrast between moiré cell center and its border in the COM is also reflected in the momentum transfer, with the center of the moiré cell imparting momentum in the opposite direction as the cell border. The magnitude of momentum transfer within the moiré cell appears to be approximately twice that at the border.
 %
-Overall the momentum transfer of the larger moiré cell (Fig.~\ref{fig:trip_m_mom}\textbf{b}) also appears to be almost curlless indicating that the most prominent effect within the moiré unit cell affecting the electron probe is an electric potential gradient.
+Overall the momentum transfer of the larger moiré cell (Fig.~\ref{fig:trip_m_mom}\textbf{b}) also appears to be nearly curl-free, indicating that the most significant effect within the moiré unit cell affecting the electron probe is an electric potential gradient.
 %
-In contrast, the momentum transfer of the smaller moiré lattice into the electron probe (Fig.~\ref{fig:trip_m_mom}\textbf{d}) is almost solely comprised of a curl component.
+In contrast, the momentum transfer of the smaller moiré lattice into the electron probe (Fig.~\ref{fig:trip_m_mom}\textbf{d}) is primarily comprised of a curl component.
+
+Here, a clear distinction can be observed between the high-symmetry points, which manifest as white blobs in the virtual-HAADF image (see Figure~\ref{fig:trip_m_mom}\textbf{c}), and the thin semi-disordered regions that connect them.
 %
-Here, a clear distinction between the high-symmetry points, which manifest as white blobs in the virtual-HAADF image (see Figure~\ref{fig:trip_m_mom}\textbf{c}), and the thin semi-disordered regions that connect them can be seen.
+To enhance clarity, the moiré unit cell's outline has been sketched (Fig.~\ref{fig:trip_m_mom}\textbf{c,d}), encircling two high symmetry points, with a third at the vertex. 
 %
-For clarity, the moiré unit cell's outline has been sketched (Fig.~\ref{fig:trip_m_mom}\textbf{c,d}), encircling two high symmetry points, with a third at the vertex. 
+Interestingly, the two enclosed vortices have a greater magnitude than the vertex vortex, even if their intensity in the virtual-HAADF image doesn't reflect this. 
 %
-Interestingly, the two enclosed vortices have a greater magnitude than the vertex vortex, even if their intensity in the virtual-HAADF don't reflect this. 
+Since the momentum transfer only shows these vortices, it is likely caused by an in-sample-plane magnetic field.
 %
-Since the momentum transfer only shows these vortices it is likely caused by an in-sample-plane magnetic field.
+Similar effects have been predicted in homobilayer  structures using density functional theory~\cite{wuTopologicalInsulatorsTwisted2019} as well as \ce{MoTe_2}/~\ce{WSe_2} heterostructures~\cite{zhangSpintexturedChernBands2021}.
 %
-Effects like these have been predicted in homobilayer  structures using density functional theory~\cite{wuTopologicalInsulatorsTwisted2019} as well as \ce{MoTe_2}/~\ce{WSe_2} heterostructures~\cite{zhangSpintexturedChernBands2021}.
-%
-This observation in our current \ce{WSe_2} structure remains not fully grasped at present and calls for deeper analysis, and theoretical calculations.
+This observation in our current \ce{WSe_2} structure remains not fully understood at present and calls for deeper analysis and theoretical calculations.
 

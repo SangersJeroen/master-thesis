@@ -2,10 +2,10 @@
 \label{sec:theory}
 
 \section{The Transmission electron microscope (TEM)}
-The Transmission electron microscope (TEM) is a microscope that far exceeds the capabilities of a normal light microscope. Both types of microscope use a series of lenses to magnify the image of a specimen.
+The Transmission Electron Microscope (TEM) is a microscope that far exceeds the capabilities of a normal light microscope. Both types of microscopes use a series of lenses to magnify the image of a sample.
 A normal light microscope can amplify an image up to about 1500$\times$ and is limited by the diffraction limit of light. Assuming an average wavelength of \SI{550}{\nm} for green light, a high-end microscope is limited to resolving features \SI{100}{\nm} apart. This limit is insufficient for looking at atomic structures \cite{PhysRevLett.106.193905}.\\
-An electron microscope circumvents this limit by using electrons, not light, to probe the specimen. Electrons, when accelerated, have a wavelength smaller than that of light, allowing for images with resolved features as small as \SI{0.05}{\nm}~\cite{kisielowski_freitag_bischoff_van}. 
-The TEM works by emitting electrons from an electron source and accelerating them to an energy typically expressed in kilo-electronvolt; as shown in Equation\ref{eq:acc_volts}, the higher the accelerating voltage of the microscope the smaller the de Broglie wavelength of an electron, resulting in a higher resolving power. Modern electron microscopes accelerate electrons to \SI{300}{\kilo \electronvolt} to achieve high resolution.
+An electron microscope circumvents this limit by using electrons, not light, to probe the specimen. Electrons, when accelerated, have a wavelength smaller than that of light, allowing images with resolved features as small as \SI{0.05}{\nm}~\cite{kisielowski_freitag_bischoff_van}. 
+The TEM works by emitting electrons from an electron source and accelerating them to an energy typically expressed in kilo-electronvolt; as shown in Equation\ref{eq:acc_volts}, the higher the accelerating voltage of the microscope, the smaller the de Broglie wavelength of an electron, resulting in a higher resolving power. Modern electron microscopes accelerate electrons to \SI{300}{\kilo \electronvolt} to achieve high resolution.
 
 \begin{equation}
     \lambda_e = h\cdot \left[ 2 \cdot e \cdot m_e \cdot V_a \right]^{-1/2}
@@ -21,9 +21,9 @@ The TEM works by emitting electrons from an electron source and accelerating the
 
 
 In a TEM the electrons are released from a field emission gun (FEG). 
-The FEG is placed in proximity to two anodes, the first anode is positively charged to several kilovolts such that it extracts electrons from the tip of the FEG, the second anode is charged to the wanted acceleration voltage \cite{Williams2009-ww}.
+The FEG is placed in proximity to two anodes, the first anode is positively charged to several kilovolts such that it extracts electrons from the tip of the FEG, the second anode is charged to the desired acceleration voltage \cite{Williams2009-ww}.
 FEGs are about three orders of magnitude brighter than thermionic emission electron sources \cite{field-emission}.
-After being emitted the electrons pass through a monochromator that reduces the energy spread of the emitted electrons. An electron then continues along the optical axis into an illuminating system consisting of multiple electromagnetic lenses, which lenses are activated and to what extent depends on the operating mode of the electron microscope.
+After being emitted, the electrons pass through a monochromator that reduces the energy spread of the emitted electrons. An electron then continues along the optical axis into an illuminating system consisting of multiple electromagnetic lenses, which lenses are activated and to what extent depends on the operating mode of the electron microscope.
 
 % \subsubsection{Bright Field}
 % A bright field (BF) image of the sample is acquired by using a parallel electron beam. This beam is formed using the lens configuration shown in figure \ref{fig:tem_operating}. This parallel beam is typically several micrometers in size at magnifications up to 20k-100k$\times$.
@@ -38,9 +38,9 @@ After being emitted the electrons pass through a monochromator that reduces the 
 %     \label{fig:tem_operating}
 % \end{figure}
 \section{Dark Field and Z-contrast Imaging}
-For dark field and Z-contrast the electron beam is focused to a small area, this creates a higher intensity electron beam with a probe-like point as can be seen in Figure \ref{fig:stem_operating}\textbf{a}. Since all of the electrons are focused on a small area, there is no phase-contrast information that can be used to form an image. To form an image using such an electron beam, the probe point needs to be scanned over the sample, leading to the term Scanning Transmission Electron Microscopy.
+For dark field and Z-contrast the electron beam is focused to a small area, this creates a higher intensity electron beam with a probe-like point as can be seen in Figure \ref{fig:stem_operating}\textbf{a}. Because all of the electrons are focused on a small area, there is no phase-contrast information that can be used to form an image. To form an image using such an electron beam, the probe point needs to be scanned over the sample, leading to the term Scanning Transmission Electron Microscopy.
 Dark-field images use electrons scattered away from the optical axis to form an image, to achieve this most STEMs have a series of annular dark-field detectors.
-These ring-shaped detectors encircle the central bright field detector and can collect electrons that have been scattered at various angles. Normal dark-field detectors collect electrons scattered up to an angle of \SI{50}{\milli \radian}. The outermost detector is the high angle annular dark-field detector (HAADF), which collects electrons scattered beyond \SI{50}{\milli \radian} and can be used to create Z-contrast (atomic number Z) or mass-thickness images, an example image is displayed in Figure~\ref{fig:stem_operating}\textbf{b}.
+These ring-shaped detectors encircle the central bright field detector and can collect electrons that have been scattered at various angles. Normal dark-field detectors collect electrons scattered up to an angle of \SI{50}{\milli \radian}. The outermost detector is the high angle annular dark-field detector (HAADF), which collects electrons scattered beyond \SI{50}{\milli \radian} and can be used to create Z contrast images (atomic number Z) or mass-thickness images, an example image is displayed in Figure~\ref{fig:stem_operating}\textbf{b}.
 The HAADF detector is used, since the electrons it collects are almost exclusively incoherently elastically scattered, of which the amount is proportional to the atomic number Z.
 The scanning beam then gathers this atomic number information as intensity information for every probe position in the sample.
 Layering two monolayers such that the atoms are aligned and the probe is perpendicularly incident on the sample will sum the intensity of the two atomic weights of the stacked atoms in the image. The stacking pattern can then be determined by looking at a line plot of the atomic mass over the atoms. All the data recorded for the analysis in this report is captured in scanning transmission mode.
@@ -66,7 +66,7 @@ Layering two monolayers such that the atoms are aligned and the probe is perpend
 \subsection{Crystal lattice and primitive unit cell concepts}
 An infinitely repeating group of atoms is called an ideal crystal, such a crystal is constructed by attaching the same group of atoms, often called a unit cell, to a lattice.
 The lattice can be constructed from $n$ independent lattice vectors. $n=1$ for an atomic chain, $n=2$ for a two-dimensional monolayer, and $n=3$ for a three-dimensional crystal.
-If no smaller repeating group of atoms can be constructed to fill the lattice then this group of atoms is called the primitive unit cell and the $n$ independent lattice vectors are then called the primitive translation vectors $a_{n}$ \cite{Kittel1995-qt}.
+If no smaller repeating group of atoms can be constructed to fill the lattice, then this group of atoms is called the primitive unit cell and the $n$ independent lattice vectors are then called the primitive translation vectors $a_{n}$ \cite{Kittel1995-qt}.
 Each of the $n$ lattice vectors signifies a direction and a length of displacement needed such that the shifted crystal lattice is indistinguishable from the original crystal lattice \ref{eq:lattice_equivalent}.
 Lattice vectors are also used to specify the orientation of a crystal plane by denoting where the plane intersects the lattice vectors; this procedure allows for unique indexing of crystallographic planes. The use of these planes will be discussed in Section \ref{sec:diffraction}.
 \begin{equation}
@@ -76,12 +76,12 @@ Lattice vectors are also used to specify the orientation of a crystal plane by d
 
 \subsection{Reciprocal lattice and electron diffraction}
 \label{sec:diffraction}
-In the previous section, the crystal lattice was introduced, and it was mentioned that there were unique planes characterised by the points where they intersect the lattice vectors.
+In the previous section, the crystal lattice was introduced and it was mentioned that there were unique planes characterised by the points where they intersect the lattice vectors.
 In reciprocal space, every lattice point is equivalent to one set of these planes.
 To better understand a crystal, it is helpful to conceptualise it as having two lattices. The first lattice pertains to the organisation of the atoms within the unit cells of the crystal. The second lattice is a pattern of points that is specific to each crystal and does not correspond to the atom arrangement. Rather, each point in the lattice is linked to a particular set of planes within the crystal \cite{Williams2009-ww}.
 Both lattice constructions are equally valid but are helpful under different circumstances; the reciprocal lattice, for instance, is a useful geometrical construct when talking about diffraction.
 
-The reciprocal lattice, just as the crystal lattice, is constructed by vectors; in the case for the reciprocal lattice, these are the reciprocal lattice vectors $\vec{b}_n$.
+The reciprocal lattice, just as the crystal lattice, is constructed by vectors; in the case of the reciprocal lattice, these are the reciprocal lattice vectors $\vec{b}_n$.
 The reciprocal lattice vectors are constructed from the real-space lattice vectors using equation (\ref{eq:lattice_ortho_norm}) and satisfy relation (\ref{eq:lattice_vec_prop}) with their real-space counterpart.
 Using these definitions, the reciprocal lattice vectors are unique.
 Any reciprocal vector can now be composed uniquely by a linear combination of the reciprocal lattice vectors such that any vector is scaled and summed.
@@ -111,7 +111,7 @@ The scattering off of planes shows as a series of high-intensity spots in a diff
     \end{equation}
 \end{minipage}\\
 
-In a transmission electron microscope, the electrons emanating from the field emission gun are modelled as plane waves. When incident on an atomically thin crystalline sample, the plane waves scatter predictably following the physical criteria that incoming and outgoing electron beams are plane waves with wave vectors $\vec{k_I}$ and $\vec{k_O}$ for incoming and outgoing waves. The resulting change in wave vector due to the scattering of the sample is then equal to $\vec{K} = \vec{k_I}-\vec{k_O}$. As seen in Figure \ref{fig:scatt_angle}, the wavefront of the outgoing electron beam is deflected by an angle $\theta$ from the incident electron beam such that both are in phase, this angle is the Bragg angle \cite{Williams2009-ww}; and using that $\vert \vec{k_I} \vert = \vert \vec{k_O} \vert = \vert \vec{K} \vert =\lambda_e^{-1}$, with $\lambda_e$ the electron wavelength, the scattering angle can be expressed as:
+In a transmission electron microscope, the electrons emanating from the field emission gun are modelled as plane waves. When incident on an atomically thin crystalline sample, the plane waves scatter predictably following the physical criteria that incoming and outgoing electron beams are plane waves with wave vectors $\vec{k_I}$ and $\vec{k_O}$ for incoming and outgoing waves. The resulting change in the wave vector due to the scattering of the sample is then equal to $\vec{K} = \vec{k_I}-\vec{k_O}$. As seen in Figure \ref{fig:scatt_angle}, the wavefront of the outgoing electron beam is deflected by an angle $\theta$ from the incident electron beam such that both are in phase, this angle is the Bragg angle \cite{Williams2009-ww}; and using that $\vert \vec{k_I} \vert = \vert \vec{k_O} \vert = \vert \vec{K} \vert =\lambda_e^{-1}$, with $\lambda_e$ the electron wavelength, the scattering angle can be expressed as:
 
 \begin{equation}
     \sin{\theta}=\frac{\vert \vec{K}\vert / 2}{\vert \vec{k_I}\vert}
@@ -125,28 +125,28 @@ If both outgoing rays from the same incoming beam wavefront are then in phase, m
     \label{eq:bragg_angle_ser}
 \end{equation}
 
-This shows that scattering allows for a finite quantised momentum transfer from the electron to the crystal lattice or vice versa. In a crystalline sample, this results in bright spots in the diffraction image, where each bright spot can be indexed and attributed to a family of planes in the crystal that facilitate the momentum transfer for the electrons to reach that spot on the detector or phosphor film.
+This shows that scattering allows for a finite quantised momentum transfer from the electron to the crystal lattice or vice versa. In a crystalline sample, this results in bright spots in the diffraction image, where each bright spot can be indexed and attributed to a family of planes in the crystal that facilitate momentum transfer for the electrons to reach that spot on the detector or phosphor film.
 Just as the real-space lattice has a unit cell, so does the reciprocal lattice. In reciprocal space, this unit cell is called the Brillouin zone.
 
 
 
 
 \subsection{Convergent beam electron diffraction}
-In convergent beam electron diffraction the sample is not illuminated by a parallel beam of electrons but instead the electron microscope forms a cone-like shape such that all electrons are focused onto a area only a few atoms wide. The convergence of the electron beam is characterised by the semi-convergence angle $\alpha$ and is usually a few to tens of \si{\milli\radian} in size.
+In convergent beam electron diffraction, the sample is not illuminated by a parallel beam of electrons, but instead the electron microscope forms a cone-like shape such that all electrons are focused onto a area only a few atoms wide. The convergence of the electron beam is characterised by the semi-convergence angle $\alpha$ and is usually a few to tens of \si{\milli\radian} in size.
 Since the local crystal structure is now imaged by a cone-like probe and not a parallel beam, it is illuminated from multiple different incoming angles; this distribution of incoming angles is then scattered due to the planes in the crystal lattice with the effect of opening the Bragg spots from the previous section to Bragg disks. A typical CBED pattern is shown in Figure \ref{fig:pacbed}.
 \begin{figure}[hb]
     \centering
     \def\svgwidth{.95\linewidth}
     \import{resources/Figures}{pacbed_hole.pdf_tex}
-    \caption{\textbf{a}) Schematic overview of a convergent electron probe scattering due to the crystal structure of a sample. \textbf{b}) Convergent-beam electron diffraction pattern imaged using the EMPAD sensor. The pattern looks similar to a regular electron diffraction pattern, but instead of Bragg spots, Bragg disks appear as the sample is not illuminated by a parallel bundle but instead by a cone-shape probe, greatly varying the incoming and outgoing electron path angles. Image was calibrated by determining the distance in pixels between Bragg disks and comparing to the FFT of the same crystal imaged using the calibrated CETA camera.}
+    \caption{\textbf{a}) Schematic overview of a convergent electron probe scattering due to the crystal structure of a sample. \textbf{b}) Convergent-beam electron diffraction pattern imaged using the EMPAD sensor. The pattern looks similar to a regular electron diffraction pattern, but instead of Bragg spots, Bragg disks appear, as the sample is not illuminated by a parallel bundle but instead by a cone-shaped probe, greatly varying the incoming and outgoing electron path angles. The image was calibrated by determining the distance in pixels between Bragg disks and comparing it with the FFT of the same crystal imaged using the calibrated CETA camera.}
     \label{fig:pacbed}
 \end{figure}
 
 
 \section{Moiré Physics in two-dimensional heterostructures}
 
-Interaction between imaging electrons and crystal lattices lead to the effects described in the previous section, adding a second crystalline structure rotated with respect to the first will affect both lattices as well as create a larger also periodic moiré lattice.
-Figure \ref{fig:moire_trans}\textbf{a} shows the transition from single crystal layer to a bilayer region where the constituent layers are rotated from one another, in this bilayer region the effective enlargement of periodic structure is visible as the repeating moiré unit cell is significantly larger than the periodic unit cell of the single layer. The periodicity of the moiré cell is dependent on the rotation between layers and is smallest for \SI{30}{\degree} rotation and increases as the rotation decreases. The exact periodicity depends on the combination of materials but can be as large as tens of nanometres for transition-metal dichalcogenides with small lattice mismatch~\cite{rosenbergerAtomicReconstructionMoire}.
+Interaction between imaging electrons and crystal lattices leads to the effects described in the previous section, adding a second crystalline structure rotated with respect to the first will affect both lattices as well as create a larger periodic moiré lattice.
+Figure \ref{fig:moire_trans}\textbf{a} shows the transition from a single crystal layer to a bilayer region where the constituent layers are rotated from one another, in this bilayer region the effective enlargement of periodic structure is visible as the repeating moiré unit cell is significantly larger than the periodic unit cell of the single layer. The periodicity of the moiré cell is dependent on the rotation between layers and is smallest for \SI{30}{\degree} rotation and increases as the rotation decreases. The exact periodicity depends on the combination of materials, but can be as large as tens of nanometres for transition-metal dichalcogenides with small lattice mismatch~\cite{rosenbergerAtomicReconstructionMoire}.
 
 \begin{figure}[h]
     \centering

@@ -7,13 +7,13 @@ The electron microscope pixel-array detector (EMPAD),  is as the name suggest a 
 %
 Even though the EMPAD can be used in standard transmission electron imaging its strengths lie in scanning-TEM imaging due to the relatively little pixels but greater dynamic range of said pixels.
 %
-In a scanning-TEM (STEM) mode the beam is cone-shaped and converges to a thin point-like spot that scans over the specimen, for small semi-convergence angles the zeroth order diffraction disk is a magnitude higher in intensity than the first order Bragg reflection disks.
+In a scanning-TEM (STEM) mode the beam is cone-shaped and converges to a thin point-like spot that scans over the specimen; for small semi-convergence angles, the zeroth-order diffraction disk is a magnitude higher in intensity than the first-order Bragg reflection disks.
 %
 Since there is valuable information in the distribution of intensity in all disks its important that the detector has sufficient dynamic range to count individual electrons at all intensity ranges simultaneously using a high-gain per pixel charge integration circuit. 
 %
 The second major advantage of the EMPAD is the pixelated-array of detectors that, contrary to the regular monolithic annular dark field detectors, preserves the deflection angle information of the transmitted electron beams.
 %
-Traditionally, elastic scattering deflects the electrons from the optical axis onto one of the annular ring shaped detectors encircling the optical axis, these detectors are called the dark field detectors.
+Traditionally, elastic scattering deflects the electrons from the optical axis onto one of the annular ring-shaped detectors encircling the optical axis; these detectors are called the dark-field detectors.
 %
 These singular annular detectors have a fixed detector geometry that only captures signals at certain camera lengths when diffracted beams are impinging on the detector, as schematically shown in Figure \ref{fig:empad_haadf_comparison}. 
 
@@ -25,7 +25,7 @@ The EMPAD solves this problem by measuring the whole convergent-beam electron-di
 	\import{resources/Figures}{empad-haadf.pdf_tex}
 	\caption{The figure schematically shows the difference between a monolithic fixed geometry high-angle annular dark field (HAADF) detector and a pixelated-array detector on the left- and right-hand side of the image respectively. 
     %
-    As shown, the HAADF detector is only able to resolve features whose scattering diffracts the beam onto the monolithic annular detector. Since the Bragg angle is fixed for each feature, the signal can only be captures at a certain camera length. 
+    As shown, the HAADF detector is only able to resolve features whose scattering diffracts the beam onto the monolithic annular detector. Since the Bragg angle is fixed for each feature, the signal can only be captured at a certain camera length. 
     %
     The HAADF detector is a single large punctured "pixel" that bunches all incident signals together.
     %
@@ -46,9 +46,9 @@ Every pixel counts single electron charges and stores the count in a 32-bit numb
 %
 The EMPAD is able to equal the field-of-view of the HAADF-detector with a maximum of 512 by 512 equally positioned scan points. 
 %
-A schematic showing the geometry of a measurement is given in Figure \ref{fig:4d_dataset}a where a scanning probe is shown to scan over a diamond shaped Moiré unit cell creating a CBED pattern on the EMPAD's pixel-array sensor. 
+A schematic showing the geometry of a measurement is given in Figure \ref{fig:4d_dataset}a where a scanning probe is shown to scan over a diamond-shaped Moiré unit cell creating a CBED pattern on the EMPAD's pixel-array sensor. 
 %
-Nine CBED patterns for differing probe positions are displayed in Figure \ref{fig:4d_dataset}b. By virtually masking and integrating the first-order Bragg reflections for every CBED pattern to a single electron count one is able to recover a virtual annular dark-field image. % SC, define first-order bragg
+Nine CBED patterns for differing probe positions are shown in Figure \ref{fig:4d_dataset} b. By virtually masking and integrating the first-order Bragg reflections for every CBED pattern to a single electron count, one is able to recover a virtual annular dark-field image. % SC, define first-order bragg
 
 %-------------------------------------------------------
 \begin{figure}[b]
